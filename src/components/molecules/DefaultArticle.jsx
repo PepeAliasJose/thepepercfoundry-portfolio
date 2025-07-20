@@ -21,7 +21,7 @@ function DefaultArticle ({
           </h4>
           <div className='font-normal self-start text-xs mt-1'>{date}</div>
         </section>
-        <section className='max-w-lg w-full ml-auto'>{data}</section>
+        <section className='max-w-lg w-full md:ml-auto'>{data}</section>
       </div>
     </article>
   )

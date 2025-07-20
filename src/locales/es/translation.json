@@ -87,11 +87,12 @@
         ],
         "school": "IES Laguna de Tollón",
         "date": "2023-2025",
-        "content": "- Creación y pruebas de aplicaciones Java.:- Creación de sitios web dinámicos y responsivos usando NextJS y ReactJS.:- CRUDs a bases de datos MySQL Y APIs.:- Gestión de hilos y procesos en Java.:- Aplicaciones Android en Java.",
+        "content": "- Creación y pruebas de BackEnds Java y Node.:- Creación de sitios web dinámicos y responsivos usando NextJS y ReactJS.:- CRUDs a bases de datos MySQL Y APIs.:- Gestión de hilos y procesos en Java.:- Aplicaciones Android en Java.",
         "id": "dam"
       },
       {
         "title": "Desarrollo de aplicaciones web",
+        "hl": true,
         "highlight": [
           0,
           3

@@ -87,11 +87,12 @@
         ],
         "school": "IES Laguna de Tollón",
         "date": "2023-2025",
-        "content": "- Developing and test Java apps.:- Developing responsive user interface web pages with NextJS and ReactJS.:- MySQL and API CRUD operations.:- Java threads and processes management.:- Java Android apps.",
+        "content": "- Developing and test Java & Node backend.:- Developing responsive user interface web pages with NextJS and ReactJS.:- MySQL and API CRUD operations.:- Java threads and processes management.:- Java Android apps.",
         "id": "dam"
       },
       {
         "title": "Web app developer associate degree",
+        "hl": true,
         "highlight": [
           0,
           2

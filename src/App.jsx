@@ -16,19 +16,19 @@ const Education = lazy(() => import('./pages/Education'))
 import global_en from './locales/en/translation.json'
 import global_es from './locales/es/translation.json'
 
-function App () {
-  i18n
-    .use(LanguageDetector)
-    .use(initReactI18next)
-    .init({
-      debug: false,
-      resources: {
-        'en-EN': { translation: global_en },
-        'es-ES': { translation: global_es }
-      },
-      fallbackLng: 'en-EN'
-    })
+i18n
+  .use(LanguageDetector)
+  .use(initReactI18next)
+  .init({
+    debug: false,
+    resources: {
+      'en-EN': { translation: global_en },
+      'es-ES': { translation: global_es }
+    },
+    fallbackLng: 'en-EN'
+  })
 
+function App () {
   return (
     <BrowserRouter>
       <Switch />
@@ -70,7 +70,7 @@ const Switch = () => {
 
   useLayoutEffect(() => {
     if (show) {
-      document.body.className = 'overflow-y-hidden w-screen h-dvh'
+      document.body.className = 'overflow-hidden w-screen h-dvh'
     } else {
       document.body.className = ''
     }

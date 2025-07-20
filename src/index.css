@@ -13,6 +13,7 @@
   --dark-bg: #00000020;
 
   --hl: #7df7fb;
+  --golden: #ffdf20;
 
   color: white;
 
@@ -36,6 +37,7 @@
   --dark-bg: #10101007;
 
   --hl: hsl(182, 94%, 34%);
+  --golden: #f0b100;
 
   color: black;
 
@@ -69,6 +71,7 @@
 
 body {
   background-color: var(--bg);
+  height: 100dvh;
 }
 
 .hide-scroll::-webkit-scrollbar {

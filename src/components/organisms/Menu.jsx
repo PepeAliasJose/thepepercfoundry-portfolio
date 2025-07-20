@@ -120,10 +120,10 @@ const MotionDiv = ({ children }) => {
       id='div_hero'
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className='w-full object-cover h-full absolute '
+      className='w-full object-cover h-full absolute p-20'
     >
-      <div className='flex flex-col justify-center gap-3 items-center h-dvh'>
-        <h1 className=' text-5xl text-center font-bold w-fit'>
+      <div className='flex flex-col justify-center gap-3 items-start h-full'>
+        <h1 className=' text-6xl text-center font-semibold w-fit'>
           {t('menu.main.title')}
         </h1>
         <h2 className='text-center text-lg'>{t('menu.main.subtitle')}</h2>
@@ -193,8 +193,8 @@ const SectionButton = memo(({ onClick, option, selected, content }) => {
     <p
       onClick={onClick}
       className={
-        ' hover:cursor-pointer p-2 md:p-2 px-4 md:px-4 ' +
-        (option == selected && ' down in-rounded ')
+        ' hover:cursor-pointer p-2 px-4 ' +
+        (option == selected && ' down in-rounded')
       }
     >
       {content}
