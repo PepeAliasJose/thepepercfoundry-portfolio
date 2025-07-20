@@ -1,0 +1,127 @@
+{
+  "menu": {
+    "about": "Sobre mí",
+    "header": [
+      {
+        "content": "Proyectos"
+      },
+      {
+        "content": "Experiencia"
+      },
+      {
+        "content": "Estudios"
+      },
+      {
+        "content": "Contáctame"
+      }
+    ],
+    "projects": [
+      {
+        "content": "DRAGONBALL DLE",
+        "subtitle": "Juego diario popular"
+      },
+      {
+        "content": "VIRTUAL SKY",
+        "subtitle": "Sistema solar 3D"
+      },
+      {
+        "content": "NX INVENTORY",
+        "subtitle": "MySQL flexible"
+      },
+      {
+        "content": "AI VISION",
+        "subtitle": "Fábrica con visión artificial"
+      }
+    ],
+    "experience": [
+      {
+        "content": "AKTIOS S.L. / 2023",
+        "subtitle": "Programador React"
+      }
+    ],
+    "education": [
+      {
+        "content": "DAM / 2025",
+        "subtitle": "Desarrollo de aplicaciones multiplataforma"
+      },
+      {
+        "content": "DAW / 2023",
+        "subtitle": "Desarrollo de aplicaciones web"
+      },
+      {
+        "content": "A&RI / 2021",
+        "subtitle": "Automatización y Robótica Industrial"
+      },
+      {
+        "content": "SMR / 2019"
+      }
+    ],
+    "main": {
+      "title": "Desarrollador Full-Stack",
+      "subtitle": "+2 años de experiencia en web / multiplatadorma / PLC",
+      "hire": "Disponible para trabajar"
+    }
+  },
+  "education": {
+    "laboral": "Experiencia Laboral",
+    "education": "Educación",
+    "desc": "No me gusta estancarme sin hacer nada, así que siempre que puedo me gusta estudiar cosas que mejoren mis conocimientos o me enseñen cosas nuevas.",
+    "experience": [
+      {
+        "title": "Desarrollador Full-Stack",
+        "company": "Aktios S.L.",
+        "date": "03/2023 - 07/2023",
+        "highlight": [
+          1
+        ],
+        "content": "- Creación de componentes en NextJS y React.:- Creación de funciones en TypeScript.:- Creación de interfaces de usuario responsivas con Chakra UI.:- Verificación de calidad de código.:- Git y Scrum.",
+        "id": "aks"
+      }
+    ],
+    "studies": [
+      {
+        "title": "Desarrollo de aplicaciones multiplataforma",
+        "highlight": [
+          0,
+          3
+        ],
+        "school": "IES Laguna de Tollón",
+        "date": "2023-2025",
+        "content": "- Creación y pruebas de aplicaciones Java.:- Creación de sitios web dinámicos y responsivos usando NextJS y ReactJS.:- CRUDs a bases de datos MySQL Y APIs.:- Gestión de hilos y procesos en Java.:- Aplicaciones Android en Java.",
+        "id": "dam"
+      },
+      {
+        "title": "Desarrollo de aplicaciones web",
+        "highlight": [
+          0,
+          3
+        ],
+        "school": "CDP José Cabrera",
+        "date": "2021-2023",
+        "content": "- Creación y pruebas de aplicaciones Java.:- Creación de sitios web dinámicos usando ReactJS.:- Administración de sistemas operativos y redes.:- CRUDs a bases de datos MySQL y Oracle SQL junto PL/SQL.:- Gestión de Bases de Datos Oracle.",
+        "id": "daw"
+      },
+      {
+        "title": "Automatización y robótica industrial",
+        "highlight": [
+          2
+        ],
+        "school": "Colegio Salesiano Manuel Lora Tamayo",
+        "date": "2019-2021",
+        "content": "- Programación IA en Python:- Instalación de redes eléctricas de potencia.:- Programación en C++ y de robots ABB y FANUC.:- Desarrollo de programas de control de instalaciones con PLC Siemens usando módulos digitales y analógicos.:- Comunicación en red de varios PLC Siemens.:- Programación de pantallas SCADA.",
+        "id": "rob"
+      },
+      {
+        "title": "Sistemas microinformaticos y redes",
+        "highlight": [
+          0,
+          3
+        ],
+        "school": "IES Laguna de Tollón",
+        "date": "2017-2019",
+        "content": "",
+        "id": "smr"
+      }
+    ]
+  }
+}

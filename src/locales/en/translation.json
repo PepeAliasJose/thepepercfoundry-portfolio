@@ -1,0 +1,128 @@
+{
+  "menu": {
+    "about": "About me",
+    "header": [
+      {
+        "content": "Projects"
+      },
+      {
+        "content": "Experience"
+      },
+      {
+        "content": "Education"
+      },
+      {
+        "content": "Reach me out"
+      }
+    ],
+    "projects": [
+      {
+        "content": "DRAGONBALL DLE",
+        "subtitle": "Daily popular game"
+      },
+      {
+        "content": "VIRTUAL SKY",
+        "subtitle": "3D solar system"
+      },
+      {
+        "content": "NX INVENTORY",
+        "subtitle": "Flexible MySQL"
+      },
+      {
+        "content": "AI VISION",
+        "subtitle": "Factory with artificial vision"
+      }
+    ],
+    "experience": [
+      {
+        "content": "AKTIOS S.L. / 2023",
+        "subtitle": "React Developer"
+      }
+    ],
+    "education": [
+      {
+        "content": "DAM / 2025",
+        "subtitle": "Cross-platform app developer associate degree"
+      },
+      {
+        "content": "DAW / 2023",
+        "subtitle": "Web app developer associate degree"
+      },
+      {
+        "content": "A&RI / 2021",
+        "subtitle": "Industrial automation and robotics associate degree"
+      },
+      {
+        "content": "SMR / 2019"
+      }
+    ],
+    "main": {
+      "title": "Full-Stack Developer",
+      "subtitle": "2+ years of experience in web / multiplatform / PLC",
+      "hire": "Available to work"
+    }
+  },
+  "education": {
+    "laboral": "Experience",
+    "education": "Education",
+    "desc": "I like to keep updated, so whenever I can, I like to study things that improve my knowledge or teach me new things.",
+    "experience": [
+      {
+        "title": "Full-Stack Developer",
+        "company": "Aktios S.L.",
+        "date": "03/2023 - 07/2023",
+        "highlight": [
+          0
+        ],
+        "content": "- Developing NextJS and React components.:- TypeScript.:- Styling and theming responsive user interfaces with Chakra UI.:- Code quality.:- Git and Scrum.",
+        "id": "aks"
+      }
+    ],
+    "studies": [
+      {
+        "title": "Cross-platform app developer associate degree",
+        "highlight": [
+          0,
+          2
+        ],
+        "school": "IES Laguna de Tollón",
+        "date": "2023-2025",
+        "content": "- Developing and test Java apps.:- Developing responsive user interface web pages with NextJS and ReactJS.:- MySQL and API CRUD operations.:- Java threads and processes management.:- Java Android apps.",
+        "id": "dam"
+      },
+      {
+        "title": "Web app developer associate degree",
+        "highlight": [
+          0,
+          2
+        ],
+        "school": "CDP José Cabrera",
+        "date": "2021-2023",
+        "content": "- Develop and test Java apps.:- Dynamic web development with ReactJS.:- OS and network management.:- MySQL, Oracle SQL CRUD operations and Oracle PL/SQL.:- Oracle database DBA training.",
+        "id": "daw"
+      },
+      {
+        "title": "Industrial automation and robotics associate degree",
+        "highlight": [
+          1,
+          3
+        ],
+        "school": "Colegio Salesiano Manuel Lora Tamayo",
+        "date": "2019-2021",
+        "content": "- AI development in Python:- Electrical power network installations.:- Development of C++ apps and ABB and FANUC robots.:- Development of Siemens PLC using digital and analog I/O.:- Siemens PLC networking.:- SCADA development.",
+        "id": "rob"
+      },
+      {
+        "title": "Microcomputer systems and networks technician ",
+        "highlight": [
+          0,
+          3
+        ],
+        "school": "IES Laguna de Tollón",
+        "date": "2017-2019",
+        "content": "",
+        "id": "smr"
+      }
+    ]
+  }
+}

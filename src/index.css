@@ -1,0 +1,109 @@
+@import 'tailwindcss';
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  --bg: #27282a;
+  --bgT: #27282a00;
+
+  --light-border: hsla(0, 0%, 100%, 0.15);
+  --dark-border: rgba(0, 0, 0, 0.15);
+
+  --light-bg: #ffffff09;
+  --dark-bg: #00000020;
+
+  --hl: #7df7fb;
+
+  color: white;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[data-theme='light'] {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  --bg: #f3f3fa;
+  --bgT: #f3f3fa00;
+
+  --light-border: hsla(0, 0%, 100%, 1);
+  --dark-border: rgba(0, 0, 0, 0.15);
+
+  --light-bg: #ffffff50;
+  --dark-bg: #10101007;
+
+  --hl: hsl(182, 94%, 34%);
+
+  color: black;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: 'Bio Sans';
+  src: url('./fonts/biosans/Flat-it-BioSans-SemiBold.otf');
+}
+
+@font-face {
+  font-family: 'Koulen';
+  src: url('./fonts/Koulen/Koulen-Regular.ttf');
+}
+
+.bio-sans {
+  font-family: Bio Sans;
+}
+
+.koulen {
+  font-family: Koulen;
+}
+
+.helvetica {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+}
+
+.hide-scroll::-webkit-scrollbar {
+  display: none !important;
+  width: 0px;
+}
+.hide-scroll {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.up {
+  border-radius: 25px;
+  box-shadow: 3px 3px 4px var(--dark-border),
+    inset 1px 1px 2px var(--light-border);
+}
+
+.down {
+  border-radius: 25px;
+  box-shadow: 1px 1px 2px var(--light-border),
+    inset 2px 2px 2px var(--dark-border);
+}
+
+.out-rounded {
+  border-radius: 25px;
+  background: linear-gradient(155deg, var(--light-bg), var(--dark-bg));
+  backdrop-filter: blur(10px);
+}
+
+.in-rounded {
+  border-radius: 25px;
+  background: linear-gradient(155deg, var(--dark-bg), var(--light-bg));
+  backdrop-filter: blur(10px);
+}
+
+.default {
+  background: linear-gradient(135deg, hsl(40, 1%, 53%), hsl(187, 98%, 56%));
+}
