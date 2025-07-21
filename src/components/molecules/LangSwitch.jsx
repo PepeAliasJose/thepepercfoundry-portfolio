@@ -14,7 +14,7 @@ function LangSwitch () {
     <div
       className={
         (lang == 'es-ES' ? ' up out-rounded ' : ' down in-rounded ') +
-        ' w-24 p-2 md:p-3 px-3 md:px-5 hover:cursor-pointer text-center'
+        ' w-28 p-2 md:p-3 px-3 md:px-5 hover:cursor-pointer text-center '
       }
       onClick={changeLang}
     >

@@ -21,9 +21,9 @@ function ThemeSwitch () {
     <div className='inline-flex gap-2 items-center justify-center '>
       <div
         style={{ borderRadius: '100%' }}
-        className={currentTheme == 'light' && ' up p-1 '}
+        className={currentTheme == 'light' ? ' up p-1 ' : ''}
       >
-        <div className={currentTheme == 'light' && ' down rounded-full'}>
+        <div className={currentTheme == 'light' ? ' down rounded-full' : ''}>
           <div
             className={
               ' hover:cursor-pointer p-1.5 ' +
@@ -39,9 +39,9 @@ function ThemeSwitch () {
       </div>
       <div
         style={{ borderRadius: '100%' }}
-        className={currentTheme == 'dark' && ' up p-1'}
+        className={currentTheme == 'dark' ? ' up p-1' : ''}
       >
-        <div className={currentTheme == 'dark' && ' down rounded-full'}>
+        <div className={currentTheme == 'dark' ? ' down rounded-full' : ''}>
           <div
             className={
               ' hover:cursor-pointer p-1.5 ' +

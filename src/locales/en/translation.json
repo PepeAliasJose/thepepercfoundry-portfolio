@@ -36,24 +36,29 @@
     "experience": [
       {
         "content": "AKTIOS S.L. / 2023",
-        "subtitle": "React Developer"
+        "subtitle": "React Developer",
+        "link": "/education#aks"
       }
     ],
     "education": [
       {
         "content": "DAM / 2025",
-        "subtitle": "Cross-platform app developer associate degree"
+        "subtitle": "Cross-platform app developer associate degree",
+        "link": "/education#dam"
       },
       {
         "content": "DAW / 2023",
-        "subtitle": "Web app developer associate degree"
+        "subtitle": "Web app developer associate degree",
+        "link": "/education#daw"
       },
       {
         "content": "A&RI / 2021",
-        "subtitle": "Industrial automation and robotics associate degree"
+        "subtitle": "Industrial automation and robotics associate degree",
+        "link": "/education#rob"
       },
       {
-        "content": "SMR / 2019"
+        "content": "SMR / 2019",
+        "link": "/education#smr"
       }
     ],
     "main": {
@@ -68,7 +73,7 @@
     "desc": "I like to keep updated, so whenever I can, I like to study things that improve my knowledge or teach me new things.",
     "experience": [
       {
-        "title": "Full-Stack Developer",
+        "title": "React Developer",
         "company": "Aktios S.L.",
         "date": "03/2023 - 07/2023",
         "highlight": [

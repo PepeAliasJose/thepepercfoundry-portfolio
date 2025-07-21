@@ -36,24 +36,29 @@
     "experience": [
       {
         "content": "AKTIOS S.L. / 2023",
-        "subtitle": "Programador React"
+        "subtitle": "Programador React",
+        "link": "/education#aks"
       }
     ],
     "education": [
       {
         "content": "DAM / 2025",
-        "subtitle": "Desarrollo de aplicaciones multiplataforma"
+        "subtitle": "Desarrollo de aplicaciones multiplataforma",
+        "link": "/education#dam"
       },
       {
         "content": "DAW / 2023",
-        "subtitle": "Desarrollo de aplicaciones web"
+        "subtitle": "Desarrollo de aplicaciones web",
+        "link": "/education#daw"
       },
       {
         "content": "A&RI / 2021",
-        "subtitle": "Automatización y Robótica Industrial"
+        "subtitle": "Automatización y Robótica Industrial",
+        "link": "/education#rob"
       },
       {
-        "content": "SMR / 2019"
+        "content": "SMR / 2019",
+        "link": "/education#smr"
       }
     ],
     "main": {
@@ -68,7 +73,7 @@
     "desc": "No me gusta estancarme sin hacer nada, así que siempre que puedo me gusta estudiar cosas que mejoren mis conocimientos o me enseñen cosas nuevas.",
     "experience": [
       {
-        "title": "Desarrollador Full-Stack",
+        "title": "Desarrollador React",
         "company": "Aktios S.L.",
         "date": "03/2023 - 07/2023",
         "highlight": [

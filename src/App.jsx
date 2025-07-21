@@ -57,6 +57,8 @@ const Switch = () => {
   useEffect(() => {
     if (location.pathname == '/') {
       setShow(true)
+    } else {
+      setShow(false)
     }
     console.log('Check path')
   }, [location])
@@ -84,9 +86,7 @@ const Switch = () => {
         <Route path='/test' element={<Test />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
-      <AnimatePresence mode='await' key={location.pathname}>
-        {show && <Menu key={'menu'} />}
-      </AnimatePresence>
+      <AnimatePresence>{show && <Menu key={'menu'} />}</AnimatePresence>
       {location.pathname !== '/' && (
         <MenuSwitch setShow={setShow} show={show} location={location} />
       )}

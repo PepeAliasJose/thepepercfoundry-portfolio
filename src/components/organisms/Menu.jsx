@@ -59,14 +59,14 @@ function Menu () {
       initial={{ backdropFilter: 'blur(0px)' }}
       animate={{ backdropFilter: 'blur(25px)' }}
       exit={{ backdropFilter: 'blur(0px)' }}
-      transition={{ duration: 0.35, ease: 'easeInOut' }}
+      transition={{ duration: 0.25, ease: 'easeInOut', delay: 0 }}
       className='fixed top-0 left-0  w-screen h-dvh overflow-clip inline-flex bg-[var(--bgT)]'
     >
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        transition={{ duration: 0.35, ease: 'easeInOut' }}
+        transition={{ duration: 0.25, ease: 'easeInOut', delay: 0 }}
         className=' w-full h-dvh  hidden sm:block relative'
       >
         <AnimatePresence mode='sync'>
@@ -86,7 +86,7 @@ function Menu () {
         initial={{ translateX: '100%' }}
         animate={{ translateX: '0%' }}
         exit={{ translateX: '100%' }}
-        transition={{ duration: 0.35, ease: 'easeInOut' }}
+        transition={{ duration: 0.25, ease: 'easeInOut', delay: 0 }}
         className=' w-full sm:w-sm lg:w-full  xl:w-4xl
        h-dvh lg:min-w-xl flex flex-col justify-between bg-[var(--bgT)]'
       >
@@ -120,16 +120,16 @@ const MotionDiv = ({ children }) => {
       id='div_hero'
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className='w-full object-cover h-full absolute p-20'
+      className='w-full object-cover h-full absolute p-10 lg:p-20'
     >
       <div className='flex flex-col justify-center gap-3 items-start h-full'>
-        <h1 className=' text-6xl text-center font-semibold w-fit'>
+        <h1 className='text-4xl md:text-6xl text-left font-semibold w-fit'>
           {t('menu.main.title')}
         </h1>
-        <h2 className='text-center text-lg'>{t('menu.main.subtitle')}</h2>
+        <h2 className='text-left md:text-lg'>{t('menu.main.subtitle')}</h2>
         <p
-          className='text-[var(--hl)] text-lg font-semibold flex flex-row gap-2 up out-rounded
-        px-4 py-2'
+          className=' md:text-lg font-semibold flex flex-row gap-2 up bg-blue-400
+        px-4 py-2 text-white'
         >
           {t('menu.main.hire')}
         </p>
@@ -193,8 +193,7 @@ const SectionButton = memo(({ onClick, option, selected, content }) => {
     <p
       onClick={onClick}
       className={
-        ' hover:cursor-pointer p-2 px-4 ' +
-        (option == selected && ' down in-rounded')
+        ' hover:cursor-pointer p-2 px-4 ' + (option == selected && ' down ')
       }
     >
       {content}
