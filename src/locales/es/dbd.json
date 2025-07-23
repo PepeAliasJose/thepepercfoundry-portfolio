@@ -1,0 +1,19 @@
+{
+  "subtitle": "Juego diario de dragon ball",
+  "title": "DRAGONBALL DLE",
+  "hero_large": "projectsResources/dbd/dbd_laptop_esp.webp",
+  "hero_small": "projectsResources/dbd/dbd_phone_esp.webp",
+  "link": "Ver sitio",
+  "section_1_title": "Un personaje distinto cada día.",
+  "section_1_p1": "En cada uno de los 4 modos de juego aparece un personaje distinto de Dragon Ball que cambia diariamente, si no logras acertarlo, al dia siguiente siempre te revela quein fue el dia anterior.",
+  "section_1_p2": "Mantiene tu historial de partidas para que sepas cuantas veces has acertado el personaje en total y la racha de aciertos que has conseguido.",
+  "section_1_image": "projectsResources/dbd/dbd_goku_esp.webp",
+  "section_2_title": "Optimización para reducir costes.",
+  "section_2_graph_user": "Usuarios mensuales.",
+  "section_2_graph_usage": "Descargas mensuales.",
+  "section_2_graph_price": "Coste mensual.",
+  "section_2_p1": "La nueva versión de la aplicación consume un 88.35% menos de ancho de banda incluso con un nuevo modo de juego. Lo que implica un ahorro aproximado del 90% en la factura respecto al mes anterior manteniendo los usuarios activos.",
+  "section_2_may": "Mayo",
+  "section_2_june": "Junio",
+  "section_2_july": "Julio"
+}

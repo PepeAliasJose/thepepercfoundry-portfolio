@@ -1,4 +1,7 @@
 {
+  "honors": "Matrícula de honor",
+  "work": "Experiencia laboral",
+  "school": "Estudios",
   "menu": {
     "about": "Sobre mí",
     "header": [
@@ -18,7 +21,8 @@
     "projects": [
       {
         "content": "DRAGONBALL DLE",
-        "subtitle": "Juego diario popular"
+        "subtitle": "Juego diario popular",
+        "link": "/dragonballdle"
       },
       {
         "content": "VIRTUAL SKY",
@@ -37,7 +41,7 @@
       {
         "content": "AKTIOS S.L. / 2023",
         "subtitle": "Programador React",
-        "link": "/education#aks"
+        "link": "/education#main-content"
       }
     ],
     "education": [

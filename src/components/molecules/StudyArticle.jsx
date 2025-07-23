@@ -1,5 +1,6 @@
 import { BuildingLibraryIcon } from '@heroicons/react/24/outline'
 import { StarIcon } from '@heroicons/react/24/solid'
+import { useTranslation } from 'react-i18next'
 
 function StudyArticle ({
   title,
@@ -11,6 +12,8 @@ function StudyArticle ({
   id,
   hl
 }) {
+  const { t } = useTranslation()
+
   const data = content.split(':').map((info, i) => {
     return <p key={title + '-' + i}>{info}</p>
   })
@@ -34,7 +37,7 @@ function StudyArticle ({
              md:my-2 ml-auto sm:ml-0 text-nowrap font-bold '
             >
               <StarIcon className='size-4 ' />
-              Matricula de honor
+              {t('honors')}
             </div>
           )}
         </section>

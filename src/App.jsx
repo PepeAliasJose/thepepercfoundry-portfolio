@@ -12,9 +12,13 @@ const Index = lazy(() => import('./pages/Index'))
 const Test = lazy(() => import('./pages/Test'))
 const NotFound = lazy(() => import('./pages/_404'))
 const Education = lazy(() => import('./pages/Education'))
+const DBD = lazy(() => import('./pages/DBD'))
 
 import global_en from './locales/en/translation.json'
 import global_es from './locales/es/translation.json'
+//Dragonball-dle
+import dbd_en from './locales/en/dbd.json'
+import dbd_es from './locales/es/dbd.json'
 
 i18n
   .use(LanguageDetector)
@@ -22,8 +26,8 @@ i18n
   .init({
     debug: false,
     resources: {
-      'en-EN': { translation: global_en },
-      'es-ES': { translation: global_es }
+      'en-EN': { translation: global_en, dbd: dbd_en },
+      'es-ES': { translation: global_es, dbd: dbd_es }
     },
     fallbackLng: 'en-EN'
   })
@@ -83,6 +87,7 @@ const Switch = () => {
       <Routes location={location} key={location.pathname + ':'}>
         <Route path='/' element={<Index />} />
         <Route path='/education' element={<Education />} />
+        <Route path='/dragonballdle' element={<DBD />} />
         <Route path='/test' element={<Test />} />
         <Route path='*' element={<NotFound />} />
       </Routes>

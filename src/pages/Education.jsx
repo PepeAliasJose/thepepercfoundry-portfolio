@@ -4,6 +4,7 @@ import StudyArticle from '../components/molecules/StudyArticle'
 import { AcademicCapIcon, BriefcaseIcon } from '@heroicons/react/24/outline'
 import { useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
+import Footer from '../components/organisms/Footer'
 
 function Education () {
   const { t } = useTranslation()
@@ -17,9 +18,11 @@ function Education () {
   )
 
   const { hash, key } = useLocation()
+
   useEffect(() => {
     if (hash) {
       const targetElement = document.getElementById(hash.substring(1))
+      console.log(targetElement)
       targetElement?.scrollIntoView({ behavior: 'smooth' })
     }
   }, [key, hash])
@@ -31,19 +34,21 @@ function Education () {
         <section className='mx-auto w-full max-w-5xl md:max-w-5xl px-5 md:p-10 flex flex-col gap-10'>
           <h2 className='text-3xl md:text-4xl font-semibold inline-flex gap-4 items-center'>
             <BriefcaseIcon className='size-6 md:size-8' />
-            Experiencia laboral
+            {t('work')}
           </h2>
           {listaExp}
         </section>
         <section className='mx-auto w-full max-w-5xl md:max-w-5xl px-5 md:p-10 flex flex-col gap-10'>
           <h2 className='text-3xl md:text-4xl font-semibold inline-flex gap-4 items-center '>
             <AcademicCapIcon className='size-6 md:size-8' />
-            Estudios
+            {t('school')}
           </h2>
           {listaEdu}
         </section>
       </main>
-      <footer>Footer</footer>
+      <footer>
+        <Footer />
+      </footer>
     </>
   )
 }

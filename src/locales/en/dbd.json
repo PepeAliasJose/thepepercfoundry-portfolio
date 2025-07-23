@@ -1,0 +1,19 @@
+{
+  "subtitle": "DragonBall daily game",
+  "title": "DRAGONBALL DLE",
+  "hero_large": "projectsResources/dbd/dbd_laptop_eng.webp",
+  "hero_small": "projectsResources/dbd/dbd_phone_eng.webp",
+  "link": "Website",
+  "section_1_title": "A different character every day.",
+  "section_1_p1": "In any of the four different game modes, a new Dragon Ball character appears daily. If you cannot guess it, you can always find it out the next day.",
+  "section_1_p2": "Now, the game keeps your history safe, so you know how many days you have won the game. Also, it displays your winning streak.",
+  "section_1_image": "projectsResources/dbd/dbd_goku_eng.webp",
+  "section_2_title": "Optimization that reduces costs.",
+  "section_2_graph_user": "Monthly users.",
+  "section_2_graph_usage": "Monthly traffic.",
+  "section_2_graph_price": "Monthly cost.",
+  "section_2_p1": "This new version reduces its network consumption by 88.35% despite including a new game mode. This means a 90% cost savings compared to the previous month while keeping active users.",
+  "section_2_may": "May",
+  "section_2_june": "June",
+  "section_2_july": "July"
+}

@@ -8,7 +8,10 @@ export const MotionVideo = ({ src }) => {
         opacity: 1,
         transition: { duration: 0.4, ease: 'easeIn' }
       }}
-      exit={{ opacity: 0, transition: { duration: 0.3, ease: 'easeIn' } }}
+      exit={{
+        opacity: 0,
+        transition: { duration: 0.2, ease: 'easeIn' }
+      }}
       src={src}
       autoPlay
       muted

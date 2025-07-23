@@ -4,7 +4,7 @@
   line-height: 1.5;
   font-weight: 400;
   --bg: #27282a;
-  --bgT: #27282a00;
+  --bgT: #27282aa0;
 
   --light-border: hsla(0, 0%, 100%, 0.2);
   --dark-border: rgba(0, 0, 0, 0.15);
@@ -14,6 +14,9 @@
 
   --hl: oklch(70.7% 0.165 254.624);
   --golden: #ffdf20;
+
+  --soft-text: #ffffff90;
+  --pure: #101010;
 
   color: white;
 
@@ -28,13 +31,16 @@
   line-height: 1.5;
   font-weight: 400;
   --bg: #f3f3fa;
-  --bgT: #f3f3fa00;
+  --bgT: #f3f3faa0;
 
   --light-border: hsla(0, 0%, 100%, 1);
   --dark-border: rgba(0, 0, 0, 0.15);
 
   --light-bg: #ffffff50;
   --dark-bg: #10101007;
+
+  --soft-text: #20202090;
+  --pure: #fefefe;
 
   --hl: oklch(70.7% 0.165 254.624);
   --golden: #fdc700;
@@ -55,6 +61,10 @@
 @font-face {
   font-family: 'Koulen';
   src: url('./fonts/Koulen/Koulen-Regular.ttf');
+}
+
+.helvetica {
+  font-family: Helvetica;
 }
 
 .bio-sans {
@@ -109,4 +119,9 @@ body {
 
 .default {
   background: linear-gradient(135deg, hsl(40, 1%, 53%), hsl(187, 98%, 56%));
+}
+
+.vertical {
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
 }

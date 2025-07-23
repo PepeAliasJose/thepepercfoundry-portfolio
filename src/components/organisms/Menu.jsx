@@ -28,10 +28,12 @@ function Menu () {
     />
   ))
 
+  const def = <MotionDiv key={'default'} />
+
   //Lista de cosas que mostrar en el contenido
   const hero_content = [
     [
-      <MotionDiv key={'default'} />,
+      def,
       <MotionVideo key={'dbd'} src={'projectsResources/dbd/dbd_hero.webm'} />,
       <MotionVideo key={'daw'} src={'projectsResources/daw/daw_hero.webm'} />,
       <MotionImg
@@ -41,9 +43,9 @@ function Menu () {
       />,
       <MotionImg key={'rob'} src={'projectsResources/rob/rob_wallp.webp'} />
     ],
-    [<MotionDiv key={'default'} />],
-    [<MotionDiv key={'default'} />],
-    [<MotionDiv key={'default'} />]
+    [def],
+    [def],
+    [def]
   ]
 
   const lista = [
@@ -56,18 +58,18 @@ function Menu () {
   return (
     <motion.div
       key={'menu'}
-      initial={{ backdropFilter: 'blur(0px)' }}
-      animate={{ backdropFilter: 'blur(25px)' }}
-      exit={{ backdropFilter: 'blur(0px)' }}
+      initial={{ backdropFilter: 'blur(0px)', opacity: 0 }}
+      animate={{ backdropFilter: 'blur(25px)', opacity: 1 }}
+      exit={{ backdropFilter: 'blur(0px)', opacity: 0 }}
       transition={{ duration: 0.25, ease: 'easeInOut', delay: 0 }}
-      className='fixed top-0 left-0  w-screen h-dvh overflow-clip inline-flex bg-[var(--bgT)]'
+      className='fixed top-0 left-0 w-screen h-dvh overflow-clip inline-flex bg-[var(--bgT)]'
     >
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.25, ease: 'easeInOut', delay: 0 }}
-        className=' w-full h-dvh  hidden sm:block relative'
+        className=' w-full h-dvh  hidden sm:block relative '
       >
         <AnimatePresence mode='sync'>
           <motion.section
@@ -88,7 +90,7 @@ function Menu () {
         exit={{ translateX: '100%' }}
         transition={{ duration: 0.25, ease: 'easeInOut', delay: 0 }}
         className=' w-full sm:w-sm lg:w-full  xl:w-4xl
-       h-dvh lg:min-w-xl flex flex-col justify-between bg-[var(--bgT)]'
+       h-dvh lg:min-w-xl flex flex-col justify-between '
       >
         <header
           className='inline-flex p-7 py-7 pr-24 font-semibold items-center w-full overflow-scroll

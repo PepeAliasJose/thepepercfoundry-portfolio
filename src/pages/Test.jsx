@@ -1,6 +1,3 @@
-import ThemeSwitch from '../components/molecules/ThemeSwitch'
-import Menu from '../components/organisms/Menu'
-
 function Test () {
   return (
     <>
@@ -26,15 +23,30 @@ function Test () {
             </div>
           </div>
         </div>
-        <p className=' mt-4 font-bold text-[200px]'>404s</p>
-        <div
-          style={{
-            borderRadius: '0px',
-            borderTopRightRadius: '200px',
-            borderBottomLeftRadius: '200px'
-          }}
-          className='down in-rounded w-96 h-60 '
-        ></div>
+
+        <div className='w-xl h-96'>
+          <div
+            data={{
+              labels: ['Mayo', 'Junio', 'Julio'],
+              datasets: [
+                {
+                  label: 'Miles de usuarios mensuales',
+                  data: [21, 15, 16],
+                  fill: true,
+                  borderColor: 'rgb(75, 192, 192)',
+                  tension: 0
+                },
+                {
+                  label: 'Coste mensual',
+                  data: [21, 10, 1],
+                  fill: true,
+                  borderColor: 'rgb(192, 75, 192)',
+                  tension: 0
+                }
+              ]
+            }}
+          />
+        </div>
       </main>
       <footer></footer>
     </>

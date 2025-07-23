@@ -1,4 +1,7 @@
 {
+  "honors": "First class honors",
+  "work": "Work experience",
+  "school": "Education",
   "menu": {
     "about": "About me",
     "header": [
@@ -18,7 +21,8 @@
     "projects": [
       {
         "content": "DRAGONBALL DLE",
-        "subtitle": "Daily popular game"
+        "subtitle": "Daily popular game",
+        "link": "/dragonballdle"
       },
       {
         "content": "VIRTUAL SKY",
@@ -37,7 +41,7 @@
       {
         "content": "AKTIOS S.L. / 2023",
         "subtitle": "React Developer",
-        "link": "/education#aks"
+        "link": "/education#main-content"
       }
     ],
     "education": [
@@ -63,7 +67,7 @@
     ],
     "main": {
       "title": "Full-Stack Developer",
-      "subtitle": "2+ years of experience in web / multiplatform / PLC",
+      "subtitle": "2+ years of experience in web / cross-platform / PLC",
       "hire": "Available to work"
     }
   },
