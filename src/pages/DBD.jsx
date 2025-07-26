@@ -18,7 +18,7 @@ function DBD () {
           <p className='ml-1 text-center font-semibold text-[var(--soft-text)]'>
             {t('subtitle')}
           </p>
-          <h1 className='text-5xl md:text-6xl md:mb-10 font-black koulen text-center leading-none'>
+          <h1 className='text-5xl sm:text-7xl md:text-8xl font-black koulen text-center leading-none'>
             {t('title')}
           </h1>
         </div>
@@ -32,6 +32,7 @@ function DBD () {
           <img
             className='mx-auto -mt-[17%] -mb-[14%] md:my-0'
             src={t('hero_small')}
+            alt='dbd_hero'
             width={350}
           />
         </picture>
@@ -88,6 +89,7 @@ function DBD () {
                 <img
                   src={t('section_1_image')}
                   width={1000}
+                  alt='game_image'
                   className='max-w-[130vw] self-end md:w-full md:max-w-2xl xl:max-w-3xl -mr-10 md:mr-0'
                 />
 

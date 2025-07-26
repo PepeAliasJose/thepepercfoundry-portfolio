@@ -11,6 +11,7 @@ export const MotionImg = ({ src, left = false }) => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.2, ease: 'easeIn' }}
       src={src}
+      alt='hero_image'
       width={1200}
       className={
         'w-full object-cover h-full absolute ' +

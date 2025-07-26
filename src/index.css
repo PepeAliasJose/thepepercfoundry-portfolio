@@ -9,8 +9,8 @@
   --light-border: hsla(0, 0%, 100%, 0.2);
   --dark-border: rgba(0, 0, 0, 0.15);
 
-  --light-bg: #ffffff09;
-  --dark-bg: #00000020;
+  --light-bg: #ffffff10;
+  --dark-bg: #00000010;
 
   --hl: oklch(70.7% 0.165 254.624);
   --golden: #ffdf20;
@@ -36,8 +36,8 @@
   --light-border: hsla(0, 0%, 100%, 1);
   --dark-border: rgba(0, 0, 0, 0.15);
 
-  --light-bg: #ffffff50;
-  --dark-bg: #10101007;
+  --light-bg: #ffffffa0;
+  --dark-bg: #10101009;
 
   --soft-text: #20202090;
   --pure: #fefefe;

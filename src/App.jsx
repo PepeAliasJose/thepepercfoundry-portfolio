@@ -13,6 +13,7 @@ const Test = lazy(() => import('./pages/Test'))
 const NotFound = lazy(() => import('./pages/_404'))
 const Education = lazy(() => import('./pages/Education'))
 const DBD = lazy(() => import('./pages/DBD'))
+const VS = lazy(() => import('./pages/VirtualSky'))
 
 import global_en from './locales/en/translation.json'
 import global_es from './locales/es/translation.json'
@@ -88,6 +89,7 @@ const Switch = () => {
         <Route path='/' element={<Index />} />
         <Route path='/education' element={<Education />} />
         <Route path='/dragonballdle' element={<DBD />} />
+        <Route path='/virtual-sky' element={<VS />} />
         <Route path='/test' element={<Test />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
