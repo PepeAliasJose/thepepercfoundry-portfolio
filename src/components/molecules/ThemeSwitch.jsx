@@ -20,40 +20,27 @@ function ThemeSwitch () {
   return (
     <div className='inline-flex gap-2 items-center justify-center '>
       <div
-        style={{ borderRadius: '100%' }}
-        className={currentTheme == 'light' ? ' up p-1 ' : ''}
+        className={
+          ' hover:cursor-pointer p-1.5 ' +
+          (currentTheme == 'light' && ' text-yellow-400')
+        }
+        onClick={() => {
+          updateTheme('light')
+        }}
       >
-        <div className={currentTheme == 'light' ? ' down rounded-full' : ''}>
-          <div
-            className={
-              ' hover:cursor-pointer p-1.5 ' +
-              (currentTheme == 'light' && ' text-yellow-400')
-            }
-            onClick={() => {
-              updateTheme('light')
-            }}
-          >
-            <SunIcon className='size-6 md:size-7 xl:size-8' />
-          </div>
-        </div>
+        <SunIcon className='size-6 md:size-7 xl:size-8' />
       </div>
+
       <div
-        style={{ borderRadius: '100%' }}
-        className={currentTheme == 'dark' ? ' up p-1' : ''}
+        className={
+          ' hover:cursor-pointer p-1.5 ' +
+          (currentTheme == 'dark' && ' text-cyan-500')
+        }
+        onClick={() => {
+          updateTheme('dark')
+        }}
       >
-        <div className={currentTheme == 'dark' ? ' down rounded-full' : ''}>
-          <div
-            className={
-              ' hover:cursor-pointer p-1.5 ' +
-              (currentTheme == 'dark' && ' text-cyan-500')
-            }
-            onClick={() => {
-              updateTheme('dark')
-            }}
-          >
-            <MoonIcon className='size-6 md:size-7 xl:size-8' />
-          </div>
-        </div>
+        <MoonIcon className='size-6 md:size-7 xl:size-8' />
       </div>
     </div>
   )

@@ -2,7 +2,7 @@ import { ArrowTrendingUpIcon } from '@heroicons/react/24/outline'
 import Footer from '../components/organisms/Footer'
 import { useEffect } from 'react'
 
-function VirtualSky () {
+function Minerva () {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
@@ -14,7 +14,7 @@ function VirtualSky () {
             Simulador del sistema solar
           </p>
           <h1 className='text-6xl sm:text-8xl md:text-9xl font-black koulen text-center leading-none'>
-            VIRTUAL SKY
+            MINERVA I
           </h1>
         </div>
 
@@ -34,11 +34,19 @@ function VirtualSky () {
 
         <div className='inline-flex gap-4 justify-center '>
           <div className='up out-rounded py-2 px-4 hover:cursor-pointer'>
-            <a href='#' target='_blank' rel='noopener noreferrer'>
+            <a
+              href='https://github.com/PepeAliasJose/Project-Minerva'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               GitHub
             </a>
           </div>
-          <a href='#' target='_blank' rel='noopener noreferrer'>
+          <a
+            href='https://minerva-sim.web.app/'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
             <div
               className='up bg-blue-400 text-white py-2 px-4 
             inline-flex gap-2 text-nowrap items-center hover:cursor-pointer'
@@ -60,8 +68,8 @@ function VirtualSky () {
               <li className='up px-4 py-1.5'>Tailwind CSS</li>
               <li className='up px-4 py-1.5'>Three JS</li>
               <li className='up px-4 py-1.5'>Framer motion</li>
-              <li className='up px-4 py-1.5'>Firebase</li>
-              <li className='up px-4 py-1.5'>Google Analytics</li>
+              <li className='up px-4 py-1.5'>WebAssembly</li>
+              <li className='up px-4 py-1.5'>Web Workers</li>
             </ul>
           </article>
         </section>
@@ -73,4 +81,4 @@ function VirtualSky () {
   )
 }
 
-export default VirtualSky
+export default Minerva

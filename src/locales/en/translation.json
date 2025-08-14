@@ -25,9 +25,9 @@
         "link": "/dragonballdle"
       },
       {
-        "content": "VIRTUAL SKY",
+        "content": "MINERVA I",
         "subtitle": "3D solar system",
-        "link": "/virtual-sky"
+        "link": "/minerva"
       },
       {
         "content": "NX INVENTORY",
@@ -67,7 +67,7 @@
       }
     ],
     "main": {
-      "title": "Full-Stack Developer",
+      "title": "FullStack Developer",
       "subtitle": "2+ years of experience in web / cross-platform / PLC",
       "hire": "Available to work"
     }

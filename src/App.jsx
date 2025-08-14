@@ -13,13 +13,14 @@ const Test = lazy(() => import('./pages/Test'))
 const NotFound = lazy(() => import('./pages/_404'))
 const Education = lazy(() => import('./pages/Education'))
 const DBD = lazy(() => import('./pages/DBD'))
-const VS = lazy(() => import('./pages/VirtualSky'))
+const VS = lazy(() => import('./pages/Minerva'))
 
 import global_en from './locales/en/translation.json'
 import global_es from './locales/es/translation.json'
 //Dragonball-dle
 import dbd_en from './locales/en/dbd.json'
 import dbd_es from './locales/es/dbd.json'
+import { create } from 'zustand'
 
 i18n
   .use(LanguageDetector)
@@ -41,6 +42,23 @@ function App () {
   )
 }
 
+const useMenu = create(set => ({
+  show: false,
+  setShow: s => set(state => ({ show: s }))
+}))
+/**
+ *
+ * 0 projects
+ * 1 experience
+ * 2 education
+ * 3 contact
+ *
+ */
+export const useSubmenu = create(set => ({
+  submenu: 0,
+  setSubmenu: s => set(state => ({ submenu: s }))
+}))
+
 const MenuSwitch = ({ setShow, show, location }) => {
   return (
     <div
@@ -57,15 +75,10 @@ const MenuSwitch = ({ setShow, show, location }) => {
 
 const Switch = () => {
   const location = useLocation()
-  const [show, setShow] = useState(location.pathname == '/')
+  const { show, setShow, submenu } = useMenu()
 
   useEffect(() => {
-    if (location.pathname == '/') {
-      setShow(true)
-    } else {
-      setShow(false)
-    }
-    console.log('Check path')
+    setShow(false)
   }, [location])
 
   useLayoutEffect(() => {
@@ -89,16 +102,19 @@ const Switch = () => {
         <Route path='/' element={<Index />} />
         <Route path='/education' element={<Education />} />
         <Route path='/dragonballdle' element={<DBD />} />
-        <Route path='/virtual-sky' element={<VS />} />
+        <Route path='/minerva' element={<VS />} />
         <Route path='/test' element={<Test />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
       <AnimatePresence>{show && <Menu key={'menu'} />}</AnimatePresence>
-      {location.pathname !== '/' && (
-        <MenuSwitch setShow={setShow} show={show} location={location} />
-      )}
+
+      <MenuSwitch setShow={setShow} show={show} location={location} />
     </>
   )
 }
-
+/*
+{location.pathname !== '/' && (
+        <MenuSwitch setShow={setShow} show={show} location={location} />
+      )}
+*/
 export default App

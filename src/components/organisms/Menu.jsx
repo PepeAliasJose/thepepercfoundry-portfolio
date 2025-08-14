@@ -8,9 +8,11 @@ import { MotionImg } from '../atoms/MotionImg'
 import LangSwitch from '../molecules/LangSwitch'
 
 import { useTranslation } from 'react-i18next'
+import { useSubmenu } from '../../App'
 
 function Menu () {
-  const [menuSelected, setMenuSelected] = useState(0)
+  const { submenu, setSubmenu } = useSubmenu()
+
   const [hero, updateHero] = useState(0)
   const { t } = useTranslation()
 
@@ -21,9 +23,9 @@ function Menu () {
       key={i}
       {...x}
       option={i}
-      selected={menuSelected}
+      selected={submenu}
       onClick={() => {
-        setMenuSelected(i)
+        setSubmenu(i)
       }}
     />
   ))
@@ -77,7 +79,7 @@ function Menu () {
             id='hero_content'
             className=' w-full h-dvh  hidden sm:block relative'
           >
-            {hero_content[menuSelected][hero]}
+            {hero_content[submenu][hero]}
           </motion.section>
         </AnimatePresence>
       </motion.div>
@@ -102,7 +104,7 @@ function Menu () {
           className='max-h-full w-full overflow-scroll hide-scroll
          flex flex-col gap-0 text-5xl lg:text-7xl font-bold koulen py-5 '
         >
-          {lista[menuSelected]}
+          {lista[submenu]}
         </main>
         <footer className='inline-flex gap-4 px-7 py-5 font-semibold items-center'>
           <p className=' mr-auto '>{t('menu.about')}</p>
