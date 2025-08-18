@@ -9,6 +9,9 @@
         "content": "Proyectos"
       },
       {
+        "content": "Miscelánea"
+      },
+      {
         "content": "Experiencia"
       },
       {
@@ -36,6 +39,26 @@
       {
         "content": "AI VISION",
         "subtitle": "Fábrica con visión artificial"
+      }
+    ],
+    "miscellany": [
+      {
+        "content": "Decodificador imagenes",
+        "subtitle": "Decodifica de Base64 a png",
+        "link": "/dragonballdle"
+      },
+      {
+        "content": "Agujero negro",
+        "subtitle": "Como un agujero negro curva la luz",
+        "link": "/minerva"
+      },
+      {
+        "content": "Paleta monocromo",
+        "subtitle": "Genera una paleta monocroma"
+      },
+      {
+        "content": "Simulador de gravedad",
+        "subtitle": "Como se comportan los objetos sometidos a gravedad"
       }
     ],
     "experience": [

@@ -9,9 +9,11 @@ import LangSwitch from '../molecules/LangSwitch'
 
 import { useTranslation } from 'react-i18next'
 import { useSubmenu } from '../../App'
+import { useLocation } from 'react-router-dom'
 
 function Menu () {
   const { submenu, setSubmenu } = useSubmenu()
+  const location = useLocation()
 
   const [hero, updateHero] = useState(0)
   const { t } = useTranslation()
@@ -30,14 +32,23 @@ function Menu () {
     />
   ))
 
-  const def = <MotionDiv key={'default'} />
+  //Alternar si esta en /
+  const def =
+    location.pathname == '/' ? (
+      <Landing key={'default'} />
+    ) : (
+      <Logo key={'logo'} />
+    )
 
   //Lista de cosas que mostrar en el contenido
   const hero_content = [
     [
       def,
       <MotionVideo key={'dbd'} src={'projectsResources/dbd/dbd_hero.webm'} />,
-      <MotionVideo key={'daw'} src={'projectsResources/daw/daw_hero.webm'} />,
+      <MotionVideo
+        key={'daw'}
+        src={'projectsResources/minerva/daw_hero.webm'}
+      />,
       <MotionImg
         key={'nxi'}
         src={'projectsResources/nxi/nx-inventory.webp'}
@@ -47,11 +58,13 @@ function Menu () {
     ],
     [def],
     [def],
+    [def],
     [def]
   ]
 
   const lista = [
     <ProjectList update_hero={updateHero} />,
+    <Miscellany updateHero={updateHero} />,
     <ExperienceList update_hero={updateHero} />,
     <StudiesList update_hero={updateHero} />,
     <ContactList update_hero={updateHero} />
@@ -61,10 +74,10 @@ function Menu () {
     <motion.div
       key={'menu'}
       initial={{ backdropFilter: 'blur(0px)', opacity: 0 }}
-      animate={{ backdropFilter: 'blur(25px)', opacity: 1 }}
+      animate={{ backdropFilter: 'blur(50px)', opacity: 1 }}
       exit={{ backdropFilter: 'blur(0px)', opacity: 0 }}
       transition={{ duration: 0.25, ease: 'easeInOut', delay: 0 }}
-      className='fixed top-0 left-0 w-screen h-dvh overflow-clip inline-flex bg-[var(--bgT)]'
+      className='fixed top-0 left-0 w-screen h-dvh overflow-clip inline-flex '
     >
       <motion.div
         initial={{ opacity: 0 }}
@@ -92,7 +105,7 @@ function Menu () {
         exit={{ translateX: '100%' }}
         transition={{ duration: 0.25, ease: 'easeInOut', delay: 0 }}
         className=' w-full sm:w-sm lg:w-full  xl:w-4xl
-       h-dvh lg:min-w-xl flex flex-col justify-between '
+       h-dvh lg:min-w-xl flex flex-col justify-between bg-[var(--bg)]'
       >
         <header
           className='inline-flex p-7 py-7 pr-24 font-semibold items-center w-full overflow-scroll
@@ -116,7 +129,7 @@ function Menu () {
   )
 }
 
-const MotionDiv = ({ children }) => {
+const Landing = () => {
   const { t } = useTranslation()
   return (
     <motion.div
@@ -126,11 +139,21 @@ const MotionDiv = ({ children }) => {
       animate={{ opacity: 1 }}
       className='w-full object-cover h-full absolute p-10 lg:p-20'
     >
-      <div className='flex flex-col justify-center gap-3 items-start h-full'>
-        <h1 className='text-4xl md:text-6xl text-left font-semibold w-fit'>
+      <div className='flex flex-col justify-center items-center gap-3 h-full'>
+        <h1
+          className='text-4xl md:text-6xl w-min font-bold uppercase
+          text-center'
+        >
           {t('menu.main.title')}
         </h1>
-        <h2 className='text-left md:text-lg'>{t('menu.main.subtitle')}</h2>
+        <img
+          alt='hero_main'
+          width={700}
+          height={400}
+          src='/hero_test_1.png'
+          className='-mt-0'
+        />
+        <h2 className='text-center md:text-lg'>{t('menu.main.subtitle')}</h2>
         <p
           className=' md:text-lg font-semibold flex flex-row gap-2 up bg-blue-400
         px-4 py-2 text-white'
@@ -138,8 +161,20 @@ const MotionDiv = ({ children }) => {
           {t('menu.main.hire')}
         </p>
       </div>
-      {children}
     </motion.div>
+  )
+}
+
+const Logo = ({ children }) => {
+  const { t } = useTranslation()
+  return (
+    <motion.div
+      key={'div_hero'}
+      id='div_hero'
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 0, delay: 1000 }}
+      className='w-full object-cover h-full absolute p-10 lg:p-20 default'
+    ></motion.div>
   )
 }
 
@@ -156,6 +191,23 @@ const ProjectList = memo(({ update_hero }) => {
       />
     )
   })
+  return <>{l}</>
+})
+
+const Miscellany = memo(update_hero => {
+  const { t } = useTranslation()
+  const experience = t('menu.miscellany', { returnObjects: true })
+
+  const l = experience.map((x, i) => {
+    return (
+      <ListItem
+        size={'text-4xl md:text-5xl mb-2'}
+        key={'miscellany-' + (i + 1)}
+        {...x}
+      />
+    )
+  })
+
   return <>{l}</>
 })
 

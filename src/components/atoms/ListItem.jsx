@@ -1,6 +1,14 @@
 import { Link } from 'react-router-dom'
 
-const ListItem = ({ hover, unHover, click, content, subtitle, link }) => {
+const ListItem = ({
+  hover,
+  unHover,
+  click,
+  content,
+  subtitle,
+  link,
+  size = ''
+}) => {
   return (
     <Link
       to={link ? link : '#'}
@@ -8,7 +16,7 @@ const ListItem = ({ hover, unHover, click, content, subtitle, link }) => {
       onMouseLeave={unHover}
       className=' hover:cursor-pointer px-7 leading-none overflow-clip hover:text-[var(--hl)] pb-2'
     >
-      <p>{content}</p>
+      <p className={size}>{content}</p>
       {subtitle && (
         <p className='text-lg -mt-2 bio-sans leading-none'>{subtitle}</p>
       )}

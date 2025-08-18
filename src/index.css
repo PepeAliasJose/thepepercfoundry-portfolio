@@ -17,6 +17,7 @@
 
   --soft-text: #ffffff90;
   --pure: #101010;
+  --text: white;
 
   color: white;
 
@@ -45,6 +46,7 @@
   --hl: oklch(70.7% 0.165 254.624);
   --golden: #fdc700;
 
+  --text: black;
   color: black;
 
   font-synthesis: none;
@@ -118,7 +120,11 @@ body {
 }
 
 .default {
-  background: linear-gradient(135deg, hsl(40, 1%, 53%), hsl(187, 98%, 56%));
+  background: linear-gradient(135deg, hsl(195, 100%, 59%), hsl(319, 100%, 70%));
+}
+
+.sombra {
+  text-shadow: var(--bg) 0px 0px 5px;
 }
 
 .vertical {

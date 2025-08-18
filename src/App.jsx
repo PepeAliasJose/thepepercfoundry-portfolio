@@ -43,7 +43,7 @@ function App () {
 }
 
 const useMenu = create(set => ({
-  show: false,
+  show: true,
   setShow: s => set(state => ({ show: s }))
 }))
 /**
@@ -78,7 +78,11 @@ const Switch = () => {
   const { show, setShow, submenu } = useMenu()
 
   useEffect(() => {
-    setShow(false)
+    if (location.pathname == '/') {
+      setShow(true)
+    } else {
+      setShow(false)
+    }
   }, [location])
 
   useLayoutEffect(() => {
@@ -87,14 +91,6 @@ const Switch = () => {
       document.body.setAttribute('data-theme', savedTheme)
     }
   }, [])
-
-  useLayoutEffect(() => {
-    if (show) {
-      document.body.className = 'overflow-hidden w-screen h-dvh'
-    } else {
-      document.body.className = ''
-    }
-  }, [show])
 
   return (
     <>
@@ -108,13 +104,11 @@ const Switch = () => {
       </Routes>
       <AnimatePresence>{show && <Menu key={'menu'} />}</AnimatePresence>
 
-      <MenuSwitch setShow={setShow} show={show} location={location} />
+      {location.pathname !== '/' && (
+        <MenuSwitch setShow={setShow} show={show} location={location} />
+      )}
     </>
   )
 }
-/*
-{location.pathname !== '/' && (
-        <MenuSwitch setShow={setShow} show={show} location={location} />
-      )}
-*/
+
 export default App

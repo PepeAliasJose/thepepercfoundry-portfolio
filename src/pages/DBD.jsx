@@ -63,20 +63,20 @@ function DBD () {
         </div>
       </header>
       <main>
-        <section className='mt-0'>
-          <article className='p-5'>
-            <ul
-              className='inline-flex text-nowrap gap-2 md:gap-3 
+        <section className='p-5'>
+          <ul
+            className='inline-flex text-nowrap gap-2 md:gap-3 
              text-sm md:text-lg font-semibold flex-wrap justify-center w-full'
-            >
-              <li className='up px-4 py-1.5'>React JS</li>
-              <li className='up px-4 py-1.5'>Tailwind CSS</li>
-              <li className='up px-4 py-1.5'>CSS</li>
-              <li className='up px-4 py-1.5'>i18n</li>
-              <li className='up px-4 py-1.5'>Firebase</li>
-              <li className='up px-4 py-1.5'>Google Analytics</li>
-            </ul>
-          </article>
+          >
+            <li className='up px-4 py-1.5'>React JS</li>
+            <li className='up px-4 py-1.5'>Tailwind CSS</li>
+            <li className='up px-4 py-1.5'>CSS</li>
+            <li className='up px-4 py-1.5'>i18n</li>
+            <li className='up px-4 py-1.5'>Firebase</li>
+            <li className='up px-4 py-1.5'>Google Analytics</li>
+          </ul>
+        </section>
+        <section className='mt-0'>
           <article className='w-full p-10 flex flex-col gap-10 md:gap-10'>
             <h2 className='text-3xl md:text-5xl font-bold helvetica w-fit md:mx-auto'>
               {t('section_1_title')}
@@ -90,7 +90,7 @@ function DBD () {
                   src={t('section_1_image')}
                   width={1000}
                   alt='game_image'
-                  className='max-w-[130vw] self-end md:w-full md:max-w-2xl xl:max-w-3xl -mr-10 md:mr-0'
+                  className='max-w-[130vw] self-end md:self-start md:w-full md:max-w-2xl xl:max-w-3xl -mr-10 md:mr-0'
                 />
 
                 <div
@@ -104,7 +104,7 @@ function DBD () {
             </div>
           </article>
           <article className='w-full p-10 flex flex-col gap-10 md:gap-10'>
-            <h2 className='text-3xl md:text-5xl font-bold helvetica w-fit mx-auto'>
+            <h2 className='text-3xl md:text-5xl font-bold helvetica w-fit md:mx-auto'>
               {t('section_2_title')}
             </h2>
             <div className='flex flex-col items-center'>

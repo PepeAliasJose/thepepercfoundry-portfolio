@@ -9,6 +9,9 @@
         "content": "Projects"
       },
       {
+        "content": "Miscellany"
+      },
+      {
         "content": "Experience"
       },
       {
@@ -36,6 +39,26 @@
       {
         "content": "AI VISION",
         "subtitle": "Factory with artificial vision"
+      }
+    ],
+    "miscellany": [
+      {
+        "content": "Image decoder",
+        "subtitle": "Decode Base64 to PNG",
+        "link": "/dragonballdle"
+      },
+      {
+        "content": "Black hole",
+        "subtitle": "How a black hole bends light",
+        "link": "/minerva"
+      },
+      {
+        "content": "Monochrome palette",
+        "subtitle": "Generates a monochrome palette"
+      },
+      {
+        "content": "Gravity simulator",
+        "subtitle": "How objects behave under gravity"
       }
     ],
     "experience": [
