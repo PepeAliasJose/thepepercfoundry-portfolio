@@ -5,11 +5,11 @@ import Footer from '../components/organisms/Footer'
 import { useTranslation } from 'react-i18next'
 
 function DBD () {
+  const { t } = useTranslation(['dbd'])
+
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
-
-  const { t } = useTranslation(['dbd'])
 
   return (
     <>

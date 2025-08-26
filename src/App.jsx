@@ -20,6 +20,10 @@ import global_es from './locales/es/translation.json'
 //Dragonball-dle
 import dbd_en from './locales/en/dbd.json'
 import dbd_es from './locales/es/dbd.json'
+//Minerva I
+import minerva_en from './locales/en/minerva.json'
+import minerva_es from './locales/es/minerva.json'
+
 import { create } from 'zustand'
 
 i18n
@@ -28,8 +32,8 @@ i18n
   .init({
     debug: false,
     resources: {
-      'en-EN': { translation: global_en, dbd: dbd_en },
-      'es-ES': { translation: global_es, dbd: dbd_es }
+      'en-EN': { translation: global_en, dbd: dbd_en, minerva: minerva_en },
+      'es-ES': { translation: global_es, dbd: dbd_es, minerva: minerva_es }
     },
     fallbackLng: 'en-EN'
   })

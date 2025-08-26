@@ -3,6 +3,11 @@
   "work": "Experiencia laboral",
   "school": "Estudios",
   "menu": {
+    "main": {
+      "title": "Desarrollador Full-Stack",
+      "subtitle": "Desarrollador con +2 años de experiencia en tecnologías web, multiplataforma y PLC.",
+      "hire": "Disponible para trabajar"
+    },
     "about": "Sobre mí",
     "header": [
       {
@@ -45,12 +50,7 @@
       {
         "content": "Decodificador imagenes",
         "subtitle": "Decodifica de Base64 a png",
-        "link": "/dragonballdle"
-      },
-      {
-        "content": "Agujero negro",
-        "subtitle": "Como un agujero negro curva la luz",
-        "link": "/minerva"
+        "link": "https://pepercfoundry-miscelanea.web.app/b64/"
       },
       {
         "content": "Paleta monocromo",
@@ -58,7 +58,13 @@
       },
       {
         "content": "Simulador de gravedad",
-        "subtitle": "Como se comportan los objetos sometidos a gravedad"
+        "subtitle": "Como se comportan los objetos sometidos a gravedad",
+        "link": "https://pepercfoundry-miscelanea.web.app/gravity-sim/"
+      },
+      {
+        "content": "Agujero negro",
+        "subtitle": "Como un agujero negro curva la luz",
+        "link": "/minerva"
       }
     ],
     "experience": [
@@ -88,12 +94,7 @@
         "content": "SMR / 2019",
         "link": "/education#smr"
       }
-    ],
-    "main": {
-      "title": "Desarrollador Full-Stack",
-      "subtitle": "+2 años de experiencia en web / multiplatadorma / PLC",
-      "hire": "Disponible para trabajar"
-    }
+    ]
   },
   "education": {
     "laboral": "Experiencia Laboral",

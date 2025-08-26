@@ -1,11 +1,15 @@
 import { ArrowTrendingUpIcon } from '@heroicons/react/24/outline'
 import Footer from '../components/organisms/Footer'
 import { useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 
 function Minerva () {
+  const { t } = useTranslation(['minerva'])
+
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+
   return (
     <>
       <header className='pb-5 md:pb-10 md:pt-10 flex justify-between items-center flex-col h-svh '>
@@ -28,10 +32,10 @@ function Minerva () {
           lg:text-[13em] font-black koulen text-center leading-none 
           sombra'
           >
-            MINERVA <span className='number'>I</span>
+            {t('title')}
           </h1>
           <p className='text-center font-semibold text-[var(--soft-text)] sombra'>
-            Simulador 3D del sistema solar
+            {t('subtitle')}
           </p>
         </div>
 
@@ -54,7 +58,7 @@ function Minerva () {
               className='up bg-blue-400 text-white py-2 px-4 
             inline-flex gap-2 text-nowrap items-center hover:cursor-pointer'
             >
-              Ver sitio
+              {t('link')}
               <ArrowTrendingUpIcon className='size-5 text-white' />
             </div>
           </a>
@@ -76,26 +80,19 @@ function Minerva () {
         </section>
         <section className='text-lg md:text-xl '>
           <article className='p-10 w-full flex flex-col gap-10 items-center'>
-            <MinervaTitle title={'La precisión del modelo VSOP87D'} />
+            <MinervaTitle title={t('t1')} />
             <div
               className='flex flex-col items-center
               gap-10 max-w-4xl '
             >
               <p>
-                <strong>Minerva I</strong> es un simulador 3D para navegador de
-                codigo abierto. Puedes ver un sistema solar con los cuerpos
-                celestes en la posición en las que se encuentran en la vida
-                real.
+                <strong>Minerva I</strong> {t('p1')}
               </p>
               <img
                 alt='minerva screenshot'
                 src='./projectsResources/minerva/min_section_1.webp'
               />
-              <p>
-                Muevete entre los cuerpos celestes en cualquier fecha para
-                verlos de cerca en alta resolución y apreciar las grandes
-                distancias que nos separan y lo pequeños que son en comparación.
-              </p>
+              <p>{t('p2')}</p>
             </div>
             <div
               className='text-sm text-[var(--soft-text)] 
@@ -109,7 +106,7 @@ function Minerva () {
                   width={600}
                 />
                 <figcaption>
-                  Solución de{' '}
+                  {t('img1&2.1')}{' '}
                   <a
                     className='text-[var(--text)] underline'
                     href='https://stellarium-web.org/'
@@ -117,8 +114,8 @@ function Minerva () {
                     rel='noopener noreferrer'
                   >
                     Stellarium
-                  </a>{' '}
-                  de la luna el 1/10/2026 a las 5:40
+                  </a>
+                  {t('img1&2.2')}
                 </figcaption>
               </figure>
               <figure>
@@ -129,7 +126,7 @@ function Minerva () {
                   width={600}
                 />
                 <figcaption>
-                  Solución de{' '}
+                  {t('img1&2.1')}{' '}
                   <a
                     className='text-[var(--text)] underline'
                     href='https://minerva-sim.web.app'
@@ -137,30 +134,22 @@ function Minerva () {
                     rel='noopener noreferrer'
                   >
                     Minerva
-                  </a>{' '}
-                  de la luna el 1/10/2026 a las 5:40
+                  </a>
+                  {t('img1&2.2')}
                 </figcaption>
               </figure>
             </div>
           </article>
           <article className='w-full p-10 flex flex-col gap-10 md:gap-10 '>
-            <MinervaTitle title={'Distancias y trayectorias'} />
+            <MinervaTitle title={t('t2')} />
 
             <p className='max-w-4xl self-center'>
-              Calcula la distancia entre cuerpos celestes (centro a centro).
+              {t('p3.1')}
               <br />
               <br />
-              Muestra la trayectoria que va a seguir o ha seguido un planeta
-              durante el tiempo que indiques junto a un menu con información
-              útil, como la distancia final al cuerpo primario, su altura
-              respecto al plano orbital (inicio y fin), la distancia recorrida y
-              el desplazamiento respecto al inicio.
+              {t('p3.2')}
             </p>
-            <p className='max-w-4xl self-center'>
-              Ademas puedes pulsar en cualquier punto de la trayectoria para ver
-              información adicional sobre sus coordenadas (Esféricas y
-              rectangulares) en el espacio.
-            </p>
+            <p className='max-w-4xl self-center'>{t('p4')}</p>
             <div
               className='flex flex-col  gap-10 items-center
              md:items-start justify-center -mx-10 max-w-screen sm:max-w-full self-center'
@@ -176,11 +165,7 @@ function Minerva () {
                     src='/projectsResources/minerva/orbita_distancias.webp'
                     width={1920}
                   />
-                  <figcaption className='px-5'>
-                    Trayectoria de la tierra de los ultimos 5 días antes de la
-                    fecha marcada, distancia desde Mercurio a la Tierra y Venus
-                    (Kilometros)
-                  </figcaption>
+                  <figcaption className='px-5'>{t('img3')}</figcaption>
                 </figure>
                 <figure className='flex flex-col'>
                   <img
@@ -189,30 +174,18 @@ function Minerva () {
                     src='/projectsResources/minerva/orbita_completa.webp'
                     width={1920}
                   />
-                  <figcaption className='px-5'>
-                    Trayectoria de todos los planetas a su periodo orbital,
-                    distancia de Venus a Mercurio y Marte (ua)
-                  </figcaption>
+                  <figcaption className='px-5'>{t('img4')}</figcaption>
                 </figure>
               </div>
             </div>
           </article>
           <article className='w-full p-10 flex flex-col gap-10 md:gap-10 '>
-            <MinervaTitle title={'Eclipses'} />
-            <p className='max-w-4xl self-center'>
-              Gracias a la representación en 3D del sistema solar, se pueden
-              visualizar aproximaciones de eclipses solares proyectando una luz
-              y unas lineas en dirección contraria al sol. Todo esto es posible
-              sin realizar ningún calculo extra sobre eclipses
-            </p>
+            <MinervaTitle title={t('t3')} />
+            <p className='max-w-4xl self-center'>{t('p5')}</p>
             <div className='flex flex-col items-center'>
               <Eclipse1 />
               <Eclipse2 />
             </div>
-          </article>
-          <article className='w-full p-10 flex flex-col gap-10 md:gap-10'>
-            <MinervaTitle title={'Funciones'} />
-            <div className='flex flex-col items-center'></div>
           </article>
         </section>
       </main>
@@ -224,21 +197,22 @@ function Minerva () {
 }
 
 function Eclipse1 () {
+  const { t } = useTranslation(['minerva'])
   return (
     <>
       <div
         className='text-sm text-[var(--soft-text)] 
             text-center mb-5 -mx-10 w-screen md:w-auto md:-mx-0'
       >
-        <figure>
+        <figure className='flex flex-col items-center'>
           <img
             className=''
             alt=' '
             src='/projectsResources/minerva/2026Aug12-nasa.webp'
             width={600}
           />
-          <figcaption className='px-5'>
-            Mapa de la{' '}
+          <figcaption className='px-5 max-w-xl'>
+            {t('e_map')}{' '}
             <a
               className='text-[var(--text)] underline'
               href='https://eclipse.gsfc.nasa.gov/SEplot/SEplot2001/SE2026Aug12T.GIF'
@@ -246,10 +220,8 @@ function Eclipse1 () {
               rel='noopener noreferrer'
             >
               NASA
-            </a>{' '}
-            del eclipse <br /> el 12 de Agosto de 2026 con la umbra en la costa
-            de Groenlandia las 17:40 UT <br /> y en el norte de España a las
-            18:30 UT
+            </a>
+            {t('e1img1.2')}
           </figcaption>
         </figure>
       </div>
@@ -260,15 +232,15 @@ function Eclipse1 () {
             md:gap-0 justify-center items-center md:items-start
             -mx-10 w-screen md:w-auto md:-mx-0'
       >
-        <figure>
+        <figure className='flex flex-col items-center'>
           <img
             className=''
             alt=' '
             src='/projectsResources/minerva/2026Aug12T17-40.webp'
             width={600}
           />
-          <figcaption className='px-5'>
-            Aproximación de eclipse de{' '}
+          <figcaption className='px-5 max-w-96'>
+            {t('e_aprox')}{' '}
             <a
               className='text-[var(--text)] underline'
               href='https://minerva-sim.web.app'
@@ -276,20 +248,19 @@ function Eclipse1 () {
               rel='noopener noreferrer'
             >
               Minerva
-            </a>{' '}
-            en la costa de <br /> Groenlandia el 12 de Agosto de 2026 a las
-            17:40 UT
+            </a>
+            {t('e1img2.2')}
           </figcaption>
         </figure>
-        <figure>
+        <figure className='flex flex-col items-center'>
           <img
             className=''
             alt=' '
             src='/projectsResources/minerva/2026Aug12T18-30.webp'
             width={600}
           />
-          <figcaption className='px-5'>
-            Aproximación de eclipse de{' '}
+          <figcaption className='px-5 max-w-96'>
+            {t('e_aprox')}{' '}
             <a
               className='text-[var(--text)] underline'
               href='https://minerva-sim.web.app'
@@ -297,8 +268,8 @@ function Eclipse1 () {
               rel='noopener noreferrer'
             >
               Minerva
-            </a>{' '}
-            en el norte de <br /> España el 12 de Agosto de 2026 a las 18:30 UT
+            </a>
+            {t('e1img3.2')}
           </figcaption>
         </figure>
       </div>
@@ -307,21 +278,22 @@ function Eclipse1 () {
 }
 
 function Eclipse2 () {
+  const { t } = useTranslation(['minerva'])
   return (
     <>
       <div
         className='text-sm text-[var(--soft-text)] 
             text-center mb-5 -mx-10 w-screen md:w-auto md:-mx-0 mt-10'
       >
-        <figure>
+        <figure className='flex flex-col items-center'>
           <img
             className=''
             alt=' '
             src='/projectsResources/minerva/2034Mar20-nasa.webp'
             width={600}
           />
-          <figcaption className='px-5'>
-            Mapa de la{' '}
+          <figcaption className='px-5 max-w-xl'>
+            {t('e_map')}{' '}
             <a
               className='text-[var(--text)] underline'
               href='https://eclipse.gsfc.nasa.gov/SEplot/SEplot2001/SE2034Mar20T.GIF'
@@ -329,10 +301,8 @@ function Eclipse2 () {
               rel='noopener noreferrer'
             >
               NASA
-            </a>{' '}
-            del eclipse el 20 de Marzo <br /> de 2034 con la umbra en la costa
-            de Nigeria las 09:20 UT y en en la costa <br /> de Egipto en el Mar
-            Rojo a las 11:00 UT
+            </a>
+            {t('e2img1.2')}
           </figcaption>
         </figure>
       </div>
@@ -343,15 +313,15 @@ function Eclipse2 () {
             md:gap-0 justify-center items-center md:items-start
             -mx-10 w-screen md:w-auto md:-mx-0'
       >
-        <figure>
+        <figure className='flex flex-col items-center'>
           <img
             className=''
             alt=' '
             src='/projectsResources/minerva/2034Mar20T09-20.webp'
             width={600}
           />
-          <figcaption className='px-5'>
-            Aproximación de eclipse de{' '}
+          <figcaption className='px-5 max-w-96'>
+            {t('e_aprox')}{' '}
             <a
               className='text-[var(--text)] underline'
               href='https://minerva-sim.web.app'
@@ -359,19 +329,19 @@ function Eclipse2 () {
               rel='noopener noreferrer'
             >
               Minerva
-            </a>{' '}
-            en la costa de <br /> Nigeria el 20 de Marzo de 2034 a las 09:20 UT
+            </a>
+            {t('e2img2.2')}
           </figcaption>
         </figure>
-        <figure>
+        <figure className='flex flex-col items-center'>
           <img
             className=''
             alt=' '
             src='/projectsResources/minerva/2034Mar20T11-00.webp'
             width={600}
           />
-          <figcaption className='px-5'>
-            Aproximación de eclipse de{' '}
+          <figcaption className='px-5 max-w-96'>
+            {t('e_aprox')}{' '}
             <a
               className='text-[var(--text)] underline'
               href='https://minerva-sim.web.app'
@@ -379,9 +349,8 @@ function Eclipse2 () {
               rel='noopener noreferrer'
             >
               Minerva
-            </a>{' '}
-            la costa de Egipto en el <br /> Mar Rojo el 20 de Marzo de 2034 a
-            las 11:00 UT
+            </a>
+            {t('e2img3.2')}
           </figcaption>
         </figure>
       </div>

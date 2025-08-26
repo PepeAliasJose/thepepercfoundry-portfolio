@@ -3,6 +3,11 @@
   "work": "Work experience",
   "school": "Education",
   "menu": {
+    "main": {
+      "title": "FullStack Developer",
+      "subtitle": "Developer with 2+ years of experience in web, cross-platform and PLC technologies.",
+      "hire": "Available to work"
+    },
     "about": "About me",
     "header": [
       {
@@ -45,12 +50,7 @@
       {
         "content": "Image decoder",
         "subtitle": "Decode Base64 to PNG",
-        "link": "/dragonballdle"
-      },
-      {
-        "content": "Black hole",
-        "subtitle": "How a black hole bends light",
-        "link": "/minerva"
+        "link": "https://pepercfoundry-miscelanea.web.app/b64/"
       },
       {
         "content": "Monochrome palette",
@@ -58,7 +58,13 @@
       },
       {
         "content": "Gravity simulator",
-        "subtitle": "How objects behave under gravity"
+        "subtitle": "How objects behave under gravity",
+        "link": "https://pepercfoundry-miscelanea.web.app/gravity-sim/"
+      },
+      {
+        "content": "Black hole",
+        "subtitle": "How a black hole bends light",
+        "link": "/minerva"
       }
     ],
     "experience": [
@@ -88,12 +94,7 @@
         "content": "SMR / 2019",
         "link": "/education#smr"
       }
-    ],
-    "main": {
-      "title": "FullStack Developer",
-      "subtitle": "2+ years of experience in web / cross-platform / PLC",
-      "hire": "Available to work"
-    }
+    ]
   },
   "education": {
     "laboral": "Experience",

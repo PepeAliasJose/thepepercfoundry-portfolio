@@ -10,6 +10,7 @@ import LangSwitch from '../molecules/LangSwitch'
 import { useTranslation } from 'react-i18next'
 import { useSubmenu } from '../../App'
 import { useLocation } from 'react-router-dom'
+import Landing from '../atoms/Landing'
 
 function Menu () {
   const { submenu, setSubmenu } = useSubmenu()
@@ -129,42 +130,6 @@ function Menu () {
   )
 }
 
-const Landing = () => {
-  const { t } = useTranslation()
-  return (
-    <motion.div
-      key={'div_hero'}
-      id='div_hero'
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      className='w-full object-cover h-full absolute p-10 lg:p-20'
-    >
-      <div className='flex flex-col justify-center items-center gap-3 h-full'>
-        <h1
-          className='text-4xl md:text-6xl w-min font-bold uppercase
-          text-center'
-        >
-          {t('menu.main.title')}
-        </h1>
-        <img
-          alt='hero_main'
-          width={700}
-          height={400}
-          src='/hero_test_1.png'
-          className='-mt-0'
-        />
-        <h2 className='text-center md:text-lg'>{t('menu.main.subtitle')}</h2>
-        <p
-          className=' md:text-lg font-semibold flex flex-row gap-2 up bg-blue-400
-        px-4 py-2 text-white'
-        >
-          {t('menu.main.hire')}
-        </p>
-      </div>
-    </motion.div>
-  )
-}
-
 const Logo = ({ children }) => {
   const { t } = useTranslation()
   return (
@@ -203,6 +168,7 @@ const Miscellany = memo(update_hero => {
       <ListItem
         size={'text-4xl md:text-5xl mb-2'}
         key={'miscellany-' + (i + 1)}
+        newTab
         {...x}
       />
     )

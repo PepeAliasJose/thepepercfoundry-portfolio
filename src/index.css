@@ -3,8 +3,8 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  --bg: #27282a;
-  --bgT: #27282aa0;
+  --bg: #222326;
+  --bgT: #222326a0;
 
   --light-border: hsla(0, 0%, 100%, 0.2);
   --dark-border: rgba(0, 0, 0, 0.15);
@@ -12,8 +12,9 @@
   --light-bg: #ffffff10;
   --dark-bg: #00000010;
 
-  --hl: oklch(70.7% 0.165 254.624);
-  --golden: #ffdf20;
+  --hl: oklch(70.7% 0.13 254.624);
+  --hover: oklch(70.7% 0.13 254.624);
+  --golden: hsl(50, 85%, 50%);
 
   --soft-text: #ffffff90;
   --pure: #101010;
@@ -26,6 +27,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/*
+--bg: #27282a;
+--bgT: #27282aa0;
+*/
 
 [data-theme='light'] {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -44,7 +50,8 @@
   --pure: #fefefe;
 
   --hl: oklch(70.7% 0.165 254.624);
-  --golden: #fdc700;
+  --hover: oklch(70.7% 0.165 254.624);
+  --golden: oklab(79.524% 0.01113 0.16122);
 
   --text: black;
   color: black;
