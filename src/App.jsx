@@ -8,13 +8,17 @@ import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 import LanguageDetector from 'i18next-browser-languagedetector'
 
+//Pages
 const Index = lazy(() => import('./pages/Index'))
 const Test = lazy(() => import('./pages/Test'))
 const NotFound = lazy(() => import('./pages/_404'))
 const Education = lazy(() => import('./pages/Education'))
 const DBD = lazy(() => import('./pages/DBD'))
 const VS = lazy(() => import('./pages/Minerva'))
+const NX = lazy(() => import('./pages/NxInventory'))
+const Selene = lazy(() => import('./pages/Selene'))
 
+//Locales
 import global_en from './locales/en/translation.json'
 import global_es from './locales/es/translation.json'
 //Dragonball-dle
@@ -96,6 +100,10 @@ const Switch = () => {
     }
   }, [])
 
+  useLayoutEffect(() => {
+    document.body.setAttribute('data-menu', show)
+  }, [show])
+
   return (
     <>
       <Routes location={location} key={location.pathname + ':'}>
@@ -103,10 +111,14 @@ const Switch = () => {
         <Route path='/education' element={<Education />} />
         <Route path='/dragonballdle' element={<DBD />} />
         <Route path='/minerva' element={<VS />} />
+        <Route path='/nx-inventory' element={<NX />} />
+        <Route path='/selene' element={<Selene />} />
         <Route path='/test' element={<Test />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
-      <AnimatePresence>{show && <Menu key={'menu'} />}</AnimatePresence>
+      <AnimatePresence>
+        {show && <Menu key={'menu'} fixed={true} />}
+      </AnimatePresence>
 
       {location.pathname !== '/' && (
         <MenuSwitch setShow={setShow} show={show} location={location} />

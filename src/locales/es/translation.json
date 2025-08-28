@@ -28,43 +28,45 @@
     ],
     "projects": [
       {
-        "content": "DRAGONBALL DLE",
-        "subtitle": "Juego diario popular",
-        "link": "/dragonballdle"
-      },
-      {
         "content": "MINERVA I",
         "subtitle": "Sistema solar 3D",
         "link": "/minerva"
       },
       {
         "content": "NX INVENTORY",
-        "subtitle": "MySQL flexible"
+        "subtitle": "MySQL flexible",
+        "link": "/nx-inventory"
       },
       {
-        "content": "AI VISION",
-        "subtitle": "Fábrica con visión artificial"
+        "content": "DRAGONBALL DLE",
+        "subtitle": "Juego diario popular",
+        "link": "/dragonballdle"
+      },
+      {
+        "content": "SELENE III",
+        "subtitle": "Fábrica con visión artificial",
+        "link": "/selene"
       }
     ],
     "miscellany": [
       {
-        "content": "Decodificador imagenes",
+        "content": "B64-PNG",
         "subtitle": "Decodifica de Base64 a png",
         "link": "https://pepercfoundry-miscelanea.web.app/b64/"
       },
       {
-        "content": "Paleta monocromo",
-        "subtitle": "Genera una paleta monocroma"
+        "content": "Paleta monocroma",
+        "subtitle": "Genera una paleta de color monocroma"
       },
       {
-        "content": "Simulador de gravedad",
+        "content": "Ley de gravedad",
         "subtitle": "Como se comportan los objetos sometidos a gravedad",
         "link": "https://pepercfoundry-miscelanea.web.app/gravity-sim/"
       },
       {
         "content": "Agujero negro",
         "subtitle": "Como un agujero negro curva la luz",
-        "link": "/minerva"
+        "link": "https://pepercfoundry-miscelanea.web.app/ray-tracing/"
       }
     ],
     "experience": [

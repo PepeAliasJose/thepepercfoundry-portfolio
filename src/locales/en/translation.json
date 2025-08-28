@@ -28,22 +28,24 @@
     ],
     "projects": [
       {
-        "content": "DRAGONBALL DLE",
-        "subtitle": "Daily popular game",
-        "link": "/dragonballdle"
-      },
-      {
         "content": "MINERVA I",
         "subtitle": "3D solar system",
         "link": "/minerva"
       },
       {
         "content": "NX INVENTORY",
-        "subtitle": "Flexible MySQL"
+        "subtitle": "Flexible MySQL",
+        "link": "/nx-inventory"
       },
       {
-        "content": "AI VISION",
-        "subtitle": "Factory with artificial vision"
+        "content": "DRAGONBALL DLE",
+        "subtitle": "Daily popular game",
+        "link": "/dragonballdle"
+      },
+      {
+        "content": "SELENE III",
+        "subtitle": "Factory with artificial vision",
+        "link": "/selene"
       }
     ],
     "miscellany": [
@@ -64,7 +66,7 @@
       {
         "content": "Black hole",
         "subtitle": "How a black hole bends light",
-        "link": "/minerva"
+        "link": "https://pepercfoundry-miscelanea.web.app/ray-tracing/"
       }
     ],
     "experience": [

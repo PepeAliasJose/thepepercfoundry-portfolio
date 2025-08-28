@@ -11,7 +11,7 @@
   "p3.1": "Calculates the distance between celestial bodies (center to center).",
   "p3.2": "Shows the trajectory that a planet will or has followed during the specified amount of time with some extra information, such as the primary object's final distance, its height relative to the orbital plane (start and end), total distance traveled and displacement.",
   "p4": "In addition, you can click any point in the trajectory to see specific information about its coordinates (rectangular and spherical).",
-  "img3": "Earth trajectory 5 days before the selected date, distance from Mercury to Earth and Venus (kilometers).",
+  "img3": "Earth's trajectory 5 days before the selected date. Distance from Mercury to Earth and Venus (kilometers).",
   "img4": "All planets' trajectories to their orbital period and distance from Venus to Mercury and Mars (ua).",
   "t3": "Eclipses",
   "p5": "Thanks to the 3D representation, you can visualize an approximation of eclipses by projecting some lines and a light from the Moon to the Earth. All this is possible without any specific calculation about eclipses.",

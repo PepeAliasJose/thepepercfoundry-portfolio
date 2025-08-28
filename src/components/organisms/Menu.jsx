@@ -1,4 +1,4 @@
-import { memo, useState } from 'react'
+import { memo, useRef, useState } from 'react'
 import ThemeSwitch from '../molecules/ThemeSwitch'
 
 import ListItem from '../atoms/ListItem'
@@ -12,7 +12,8 @@ import { useSubmenu } from '../../App'
 import { useLocation } from 'react-router-dom'
 import Landing from '../atoms/Landing'
 
-function Menu () {
+function Menu ({ fixed }) {
+  const header = useRef()
   const { submenu, setSubmenu } = useSubmenu()
   const location = useLocation()
 
@@ -33,19 +34,19 @@ function Menu () {
     />
   ))
 
+  const index = location.pathname !== '/'
+
   //Alternar si esta en /
-  const def =
-    location.pathname == '/' ? (
-      <Landing key={'default'} />
-    ) : (
-      <Logo key={'logo'} />
-    )
+  const def = index ? (
+    <Landing key={'default'} />
+  ) : (
+    <Landing key={'default'} /> //<Logo key={'logo'} />
+  )
 
   //Lista de cosas que mostrar en el contenido
   const hero_content = [
     [
       def,
-      <MotionVideo key={'dbd'} src={'projectsResources/dbd/dbd_hero.webm'} />,
       <MotionVideo
         key={'daw'}
         src={'projectsResources/minerva/daw_hero.webm'}
@@ -55,6 +56,7 @@ function Menu () {
         src={'projectsResources/nxi/nx-inventory.webp'}
         left
       />,
+      <MotionVideo key={'dbd'} src={'projectsResources/dbd/dbd_hero.webm'} />,
       <MotionImg key={'rob'} src={'projectsResources/rob/rob_wallp.webp'} />
     ],
     [def],
@@ -73,19 +75,26 @@ function Menu () {
 
   return (
     <motion.div
+      //Blur de pantalla general y foto/video de presentación del proyecto
       key={'menu'}
-      initial={{ backdropFilter: 'blur(0px)', opacity: 0 }}
+      initial={{
+        backdropFilter: index ? 'blur(0px)' : 'blur(50px)',
+        opacity: index ? 0 : 1
+      }}
       animate={{ backdropFilter: 'blur(50px)', opacity: 1 }}
       exit={{ backdropFilter: 'blur(0px)', opacity: 0 }}
       transition={{ duration: 0.25, ease: 'easeInOut', delay: 0 }}
-      className='fixed top-0 left-0 w-screen h-dvh overflow-clip inline-flex '
+      className={
+        'w-screen h-dvh overflow-clip inline-flex bg-[var(--bgT)] ' +
+        (fixed ? ' fixed top-0 left-0 ' : '')
+      }
     >
       <motion.div
-        initial={{ opacity: 0 }}
+        initial={{ opacity: index ? 0 : 1 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.25, ease: 'easeInOut', delay: 0 }}
-        className=' w-full h-dvh  hidden sm:block relative '
+        className=' w-full h-dvh  hidden md:block relative '
       >
         <AnimatePresence mode='sync'>
           <motion.section
@@ -99,26 +108,37 @@ function Menu () {
       </motion.div>
 
       <motion.section
+        //Menu lateral
         key={'lateral_menu'}
         id='Lateral_menu'
-        initial={{ translateX: '100%' }}
+        initial={{ translateX: index ? '100%' : '0%' }}
         animate={{ translateX: '0%' }}
         exit={{ translateX: '100%' }}
         transition={{ duration: 0.25, ease: 'easeInOut', delay: 0 }}
-        className=' w-full sm:w-sm lg:w-full  xl:w-4xl
+        className='w-full md:max-w-[50vw] lg:w-5xl
        h-dvh lg:min-w-xl flex flex-col justify-between bg-[var(--bg)]'
       >
         <header
-          className='inline-flex p-7 py-7 pr-24 font-semibold items-center w-full overflow-scroll
-        text-nowrap hide-scroll relative'
+          className='px-7 text-sm md:text-[1rem] font-semibold 
+             w-full overflow-clip text-nowrap hide-scroll '
         >
-          {menu}
+          <div ref={header} className='w-full'>
+            <motion.div
+              dragConstraints={header}
+              drag='x'
+              className='inline-flex py-7 items-center pr-14 hover:cursor-grab active:cursor-grabbing'
+            >
+              {menu}
+            </motion.div>
+          </div>
         </header>
-        <main
-          className='max-h-full w-full overflow-scroll hide-scroll
-         flex flex-col gap-0 text-5xl lg:text-7xl font-bold koulen py-5 '
-        >
-          {lista[submenu]}
+        <main className='max-h-full w-full overflow-hidden '>
+          <div
+            className=' h-full flex flex-col gap-0 text-5xl lg:text-7xl 
+          font-bold koulen overflow-scroll hide-scroll pt-10'
+          >
+            {lista[submenu]}
+          </div>
         </main>
         <footer className='inline-flex gap-4 px-7 py-5 font-semibold items-center'>
           <p className=' mr-auto '>{t('menu.about')}</p>
@@ -127,19 +147,6 @@ function Menu () {
         </footer>
       </motion.section>
     </motion.div>
-  )
-}
-
-const Logo = ({ children }) => {
-  const { t } = useTranslation()
-  return (
-    <motion.div
-      key={'div_hero'}
-      id='div_hero'
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 0, delay: 1000 }}
-      className='w-full object-cover h-full absolute p-10 lg:p-20 default'
-    ></motion.div>
   )
 }
 
@@ -161,8 +168,8 @@ const ProjectList = memo(({ update_hero }) => {
 
 const Miscellany = memo(update_hero => {
   const { t } = useTranslation()
-  const experience = t('menu.miscellany', { returnObjects: true })
 
+  const experience = t('menu.miscellany', { returnObjects: true })
   const l = experience.map((x, i) => {
     return (
       <ListItem
@@ -173,7 +180,6 @@ const Miscellany = memo(update_hero => {
       />
     )
   })
-
   return <>{l}</>
 })
 
@@ -202,10 +208,10 @@ const StudiesList = memo(() => {
 const ContactList = memo(() => {
   return (
     <div className='flex flex-col gap-2 text-3xl lg:text-4xl px-7 bio-sans'>
-      <p>GitHub</p>
+      <p>781peperc@gmail.com</p>
       <p>LinkedIn</p>
       <p>CV</p>
-      <p>781peperc@gmail.com</p>
+      <p>GitHub</p>
     </div>
   )
 })

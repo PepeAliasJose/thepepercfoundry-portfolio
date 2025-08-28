@@ -1,16 +1,13 @@
 import { useTranslation } from 'react-i18next'
 
 function Index () {
+  const { t } = useTranslation()
   return (
     <>
-      <header className=''></header>
-      <main className=''></main>
+      <header className='p-10 pb-5 md:pb-10 flex justify-between items-center flex-col h-svh'></header>
+      <main className='h-svh'></main>
       <footer className=''></footer>
     </>
   )
 }
-/*
-<div className='fixed top-0 h-dvh overflow-clip '>
-          <Menu />
-        </div>*/
 export default Index
