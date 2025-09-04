@@ -12,15 +12,17 @@
   --light-bg: #ffffff10;
   --dark-bg: #00000010;
 
-  --hl: oklch(70.652% 0.13068 254.655);
-  --hover: oklch(70.652% 0.13068 254.655);
-  --golden: hsl(50, 85%, 50%);
-
   --soft-text: #ffffff90;
   --pure: #101010;
   --text: white;
-
   color: white;
+
+  /*SPECIAL COLORS*/
+  --selene: hsl(15, 98%, 52%);
+
+  --hl: oklch(70.652% 0.13068 254.655);
+  --hover: oklch(70.652% 0.13068 254.655);
+  --golden: hsl(50, 85%, 50%);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -48,13 +50,15 @@
 
   --soft-text: #20202090;
   --pure: #fefefe;
+  --text: black;
+  color: black;
+
+  /*SPECIAL COLORS*/
+  --selene: hsl(15, 98%, 50%);
 
   --hl: oklch(70.652% 0.13068 254.655);
   --hover: oklch(70.652% 0.13068 254.655);
   --golden: oklch(79.524% 0.1616 86.05);
-
-  --text: black;
-  color: black;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -86,8 +90,21 @@ body[data-menu='true'] {
   src: url('./fonts/Stick_No_Bills/static/StickNoBills-ExtraBold.ttf');
 }
 
+@font-face {
+  font-family: 'Kaushan';
+  src: url('./fonts/Kaushan_Script/KaushanScript-Regular.ttf');
+}
+
+.center {
+  object-position: top center;
+}
+
 .bills {
   font-family: Bills;
+}
+
+.kaushan {
+  font-family: Kaushan;
 }
 
 .bio-sans {

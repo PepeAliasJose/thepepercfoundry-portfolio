@@ -1,0 +1,10 @@
+{
+  "subtitle": "Robot con visión artificial",
+  "t1": "Darle ojos a un robot",
+  "p1": "En el corazón de un sistema industrial, se integra un modulo Jetson Nano para extender su funcionalidad. En SELENE III se mejora el programa a una IA completa con detección de objetos en tiempo real.",
+  "p2": "SELENE III es capaz de gestionar el funcionamiento de la instalación regulando las velocidades de las cintas de transporte, guiando al robot e incluyendo un sistema de protección en la que detiene la instalación y manda un mensaje de alerta si alguien entra dentro del area de peligro con la instalación en marcha.",
+  "i1": "Programa funcionando detecta una rueda y una persona en la imagen",
+  "i2": "Bot de Telegram notificando de la parada de la instalación",
+  "v1": "SELENE III activando brazo robot y frenando la cinta al detectar una rueda en ella",
+  "v2": "SELENE II con detección de objetos por color y forma en comparación"
+}

@@ -27,6 +27,9 @@ import dbd_es from './locales/es/dbd.json'
 //Minerva I
 import minerva_en from './locales/en/minerva.json'
 import minerva_es from './locales/es/minerva.json'
+//SELENE III
+import selene_en from './locales/en/selene.json'
+import selene_es from './locales/es/selene.json'
 
 import { create } from 'zustand'
 
@@ -36,8 +39,18 @@ i18n
   .init({
     debug: false,
     resources: {
-      'en-EN': { translation: global_en, dbd: dbd_en, minerva: minerva_en },
-      'es-ES': { translation: global_es, dbd: dbd_es, minerva: minerva_es }
+      'en-EN': {
+        translation: global_en,
+        dbd: dbd_en,
+        minerva: minerva_en,
+        selene: selene_en
+      },
+      'es-ES': {
+        translation: global_es,
+        dbd: dbd_es,
+        minerva: minerva_es,
+        selene: selene_es
+      }
     },
     fallbackLng: 'en-EN'
   })

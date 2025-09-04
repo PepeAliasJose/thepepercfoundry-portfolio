@@ -57,7 +57,11 @@ function Menu ({ fixed }) {
         left
       />,
       <MotionVideo key={'dbd'} src={'projectsResources/dbd/dbd_hero.webm'} />,
-      <MotionImg key={'rob'} src={'projectsResources/rob/rob_wallp.webp'} />
+      <MotionImg
+        key={'rob'}
+        //TODO: video luz parpadenando con la foto buena
+        src={'projectsResources/selene/sel_hero.webp'}
+      />
     ],
     [def],
     [def],
@@ -114,7 +118,7 @@ function Menu ({ fixed }) {
         initial={{ translateX: index ? '100%' : '0%' }}
         animate={{ translateX: '0%' }}
         exit={{ translateX: '100%' }}
-        transition={{ duration: 0.25, ease: 'easeInOut', delay: 0 }}
+        transition={{ duration: 0.3, ease: 'easeInOut', delay: 0 }}
         className='w-full md:max-w-[50vw] lg:w-5xl
        h-dvh lg:min-w-xl flex flex-col justify-between bg-[var(--bg)]'
       >
@@ -126,7 +130,7 @@ function Menu ({ fixed }) {
             <motion.div
               dragConstraints={header}
               drag='x'
-              className='inline-flex py-7 items-center pr-14 hover:cursor-grab active:cursor-grabbing'
+              className='inline-flex py-7 pb-10 items-center pr-14 hover:cursor-grab active:cursor-grabbing'
             >
               {menu}
             </motion.div>
@@ -221,7 +225,8 @@ const SectionButton = memo(({ onClick, option, selected, content }) => {
     <p
       onClick={onClick}
       className={
-        ' hover:cursor-pointer p-2 px-4 ' + (option == selected && ' down ')
+        ' hover:cursor-pointer p-2 px-4 ' +
+        (option == selected ? ' down ' : ' text-[var(--soft-text)] ')
       }
     >
       {content}
