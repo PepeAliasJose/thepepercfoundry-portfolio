@@ -34,11 +34,6 @@
         "link": "/minerva"
       },
       {
-        "content": "NX INVENTORY",
-        "subtitle": "Flexible MySQL",
-        "link": "/nx-inventory"
-      },
-      {
         "content": "DRAGONBALL DLE",
         "subtitle": "Daily popular game",
         "link": "/dragonballdle"
@@ -54,10 +49,6 @@
         "content": "Image decoder",
         "subtitle": "Decode Base64 to PNG",
         "link": "https://pepercfoundry-miscelanea.web.app/b64/"
-      },
-      {
-        "content": "Monochrome palette",
-        "subtitle": "Generates a monochrome palette"
       },
       {
         "content": "Gravity simulator",

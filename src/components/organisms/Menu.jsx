@@ -52,11 +52,7 @@ function Menu ({ fixed }) {
         key={'daw'}
         src={'projectsResources/minerva/daw_hero.webm'}
       />,
-      <MotionImg
-        key={'nxi'}
-        src={'projectsResources/nxi/nx-inventory.webp'}
-        left
-      />,
+
       <MotionVideo key={'dbd'} src={'projectsResources/dbd/dbd_hero.webm'} />,
       <MotionImg
         key={'rob'}
@@ -69,6 +65,14 @@ function Menu ({ fixed }) {
     [def],
     [def]
   ]
+
+  /*
+  <MotionImg
+  key={'nxi'}
+  src={'projectsResources/nxi/nx-inventory.webp'}
+  left
+/>,
+  */
 
   const lista = [
     <ProjectList update_hero={updateHero} />,
