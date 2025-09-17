@@ -9,8 +9,9 @@ import LangSwitch from '../molecules/LangSwitch'
 
 import { useTranslation } from 'react-i18next'
 import { useSubmenu } from '../../App'
-import { useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import Landing from '../atoms/Landing'
+import LinkList from '../molecules/LinkList'
 
 function Menu ({ fixed }) {
   const header = useRef()
@@ -117,7 +118,7 @@ function Menu ({ fixed }) {
         id='Lateral_menu'
         initial={{ translateX: index ? '100%' : '0%' }}
         animate={{ translateX: '0%' }}
-        exit={{ translateX: '100%' }}
+        exit={{ opacity: 0 }}
         transition={{ duration: 0.3, ease: 'easeInOut', delay: 0 }}
         className='w-full md:max-w-[50vw] lg:w-5xl
        h-dvh lg:min-w-xl flex flex-col justify-between bg-[var(--bg)]'
@@ -126,7 +127,7 @@ function Menu ({ fixed }) {
           className='px-7 text-sm md:text-[1rem] font-semibold 
              w-full overflow-clip text-nowrap hide-scroll '
         >
-          <div ref={header} className='w-full'>
+          <div ref={header} className='w-full '>
             <motion.div
               dragConstraints={header}
               drag='x'
@@ -145,7 +146,9 @@ function Menu ({ fixed }) {
           </div>
         </main>
         <footer className='inline-flex gap-4 px-7 py-5 font-semibold items-center'>
-          <p className=' mr-auto '>{t('menu.about')}</p>
+          <Link to={'/about'} className=' mr-auto '>
+            {t('menu.about')}
+          </Link>
           <ThemeSwitch />
           <LangSwitch />
         </footer>
@@ -211,11 +214,11 @@ const StudiesList = memo(() => {
 
 const ContactList = memo(() => {
   return (
-    <div className='flex flex-col gap-2 text-3xl lg:text-4xl px-7 bio-sans'>
-      <p>781peperc@gmail.com</p>
-      <p>LinkedIn</p>
-      <p>CV</p>
-      <p>GitHub</p>
+    <div
+      className='flex flex-col gap-4 text-4xl md:text-5xl px-7 bio-sans leading-none
+    overflow-clip pb-10 '
+    >
+      <LinkList />
     </div>
   )
 })

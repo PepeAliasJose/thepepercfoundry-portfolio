@@ -2,9 +2,9 @@
   "subtitle": "Robot with AI vision",
   "t1": "Make a robot see",
   "p1": "At an industrial system's heart, a Jetson Nano module increases its functionality. SELENE III is improved to be a full AI program with real-time object detection.",
-  "p2": "SELENE III manages the installation's workflow, controlling the conveyor belts' speed and guiding the arm. SELENE III also includes a protection system that stops the installation and sends an alert message in the presence of a person if the installation is on.",
+  "p2": "SELENE III manages the installation's workflow, controlling the conveyor belts' speeds and guiding the robotic arm. SELENE III also includes a protection system that stops the installation and sends an alert message in the presence of a person if the installation is on.",
   "i1": "Wheel and person detection",
   "i2": "Notification of an emergency stop via Telegram bot",
-  "v1": "SELENE III activando brazo robot y frenando la cinta al detectar una rueda en ella",
-  "v2": "SELENE II con detección de objetos por color y forma en comparación"
+  "v1": "SELENE III activating the robotic arm and slowing down the conveyor belt's speed",
+  "v2": "SELENE II with color and shape-based detection in comparison"
 }

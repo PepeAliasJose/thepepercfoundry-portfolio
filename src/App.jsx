@@ -17,6 +17,7 @@ const DBD = lazy(() => import('./pages/DBD'))
 const VS = lazy(() => import('./pages/Minerva'))
 const NX = lazy(() => import('./pages/NxInventory'))
 const Selene = lazy(() => import('./pages/Selene'))
+const About = lazy(() => import('./pages/About'))
 
 //Locales
 import global_en from './locales/en/translation.json'
@@ -31,6 +32,10 @@ import minerva_es from './locales/es/minerva.json'
 import selene_en from './locales/en/selene.json'
 import selene_es from './locales/es/selene.json'
 
+//About me
+import about_en from './locales/en/about.json'
+import about_es from './locales/es/about.json'
+
 import { create } from 'zustand'
 
 i18n
@@ -43,13 +48,15 @@ i18n
         translation: global_en,
         dbd: dbd_en,
         minerva: minerva_en,
-        selene: selene_en
+        selene: selene_en,
+        about: about_en
       },
       'es-ES': {
         translation: global_es,
         dbd: dbd_es,
         minerva: minerva_es,
-        selene: selene_es
+        selene: selene_es,
+        about: about_es
       }
     },
     fallbackLng: 'en-EN'
@@ -70,9 +77,10 @@ const useMenu = create(set => ({
 /**
  *
  * 0 projects
- * 1 experience
- * 2 education
- * 3 contact
+ * 1 miscellany
+ * 2 experience
+ * 3 education
+ * 4 contact
  *
  */
 export const useSubmenu = create(set => ({
@@ -126,6 +134,7 @@ const Switch = () => {
         <Route path='/minerva' element={<VS />} />
         <Route path='/nx-inventory' element={<NX />} />
         <Route path='/selene' element={<Selene />} />
+        <Route path='/about' element={<About />} />
         <Route path='/test' element={<Test />} />
         <Route path='*' element={<NotFound />} />
       </Routes>

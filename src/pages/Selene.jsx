@@ -1,8 +1,14 @@
 import { useTranslation } from 'react-i18next'
 import Footer from '../components/organisms/Footer'
+import { useEffect } from 'react'
 
 function Selene () {
   const { t } = useTranslation(['selene'])
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <>
       <header className='p-10 pb-5 md:pb-10 flex justify-between items-center flex-col h-svh'>
