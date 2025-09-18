@@ -1,8 +1,13 @@
 import { useTranslation } from 'react-i18next'
 import Footer from '../components/organisms/Footer'
+import Logo from '../components/atoms/Logo'
+import { ChevronDownIcon } from '@heroicons/react/24/solid'
+import { useHire } from '../App'
 
 function About () {
   const { t } = useTranslation(['about'])
+  const { t: c } = useTranslation()
+  const { hire } = useHire()
   return (
     <>
       <header className=''></header>
@@ -19,7 +24,8 @@ function About () {
             <p className='max-w-xl'>{t('p2')}</p>
           </div>
         </div>
-        <div className='flex flex-col gap-10 mt-10 max-w-4xl'>
+
+        <div className='flex flex-col gap-10 my-10 max-w-4xl'>
           <AboutImg
             src={'/about/andromeda.webp'}
             alt={'andromeda photography'}
@@ -35,6 +41,12 @@ function About () {
             alt={'andromeda photography'}
             title={t('mil')}
           />
+        </div>
+        <div className='flex flex-col justify-center items-center gap-5'>
+          <Logo />
+          <h1 className='text-center md:text-lg max-w-lg mt-5 md:mt-0'>
+            {c('menu.main.subtitle')}
+          </h1>
         </div>
       </main>
       <footer>

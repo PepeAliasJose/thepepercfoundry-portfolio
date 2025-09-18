@@ -150,7 +150,7 @@ function Menu ({ fixed }) {
           </div>
         </main>
         <footer className='inline-flex gap-4 px-7 py-5 font-semibold items-center'>
-          <Link to={'/about'} className=' mr-auto '>
+          <Link to={'/about'} className=' mr-auto underline'>
             {t('menu.about')}
           </Link>
           <ThemeSwitch />

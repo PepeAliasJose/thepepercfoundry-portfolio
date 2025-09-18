@@ -1,7 +1,9 @@
 import { useTranslation } from 'react-i18next'
+import { useHire } from '../../App'
 
 function LinkList () {
   const { t } = useTranslation()
+  const { hire } = useHire()
   return (
     <>
       <a
@@ -38,6 +40,15 @@ function LinkList () {
         <wbr />
         @gmail.com
       </a>
+      <br />
+      {hire && (
+        <p
+          className='font-semibold text-sm leading-none helvetica text-center flex flex-row gap-2 up bg-blue-400
+        px-4 py-2 text-white w-fit flex-wrap'
+        >
+          {t('menu.main.hire')}
+        </p>
+      )}
     </>
   )
 }
