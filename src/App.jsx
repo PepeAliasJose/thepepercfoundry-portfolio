@@ -70,6 +70,10 @@ function App () {
   )
 }
 
+export const useHire = create(set => ({
+  hire: true
+}))
+
 const useMenu = create(set => ({
   show: true,
   setShow: s => set(state => ({ show: s }))
