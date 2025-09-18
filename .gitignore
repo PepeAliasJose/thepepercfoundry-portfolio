@@ -48,7 +48,7 @@ web_modules/
 
 # TypeScript cache
 *.tsbuildinfo
-
+*firebase*
 # Optional npm cache directory
 .npm
 
