@@ -2,6 +2,7 @@ import { ArrowTrendingUpIcon } from '@heroicons/react/24/outline'
 import Footer from '../components/organisms/Footer'
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
+import { motion } from 'motion/react'
 
 function Minerva () {
   const { t } = useTranslation(['minerva'])
@@ -13,7 +14,12 @@ function Minerva () {
   return (
     <>
       <header className='pb-5 md:pb-10 md:pt-10 flex justify-between items-center flex-col h-svh '>
-        <picture className='h-1/2 self-start md:max-w-4xl xl:maw-w-5xl 2xl:max-w-[69rem] md:self-center'>
+        <motion.picture
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.4, delay: 0.15, ease: 'easeInOut' }}
+          className='h-1/2 self-start md:max-w-4xl xl:maw-w-5xl 2xl:max-w-[69rem] md:self-center'
+        >
           <source
             srcSet={'projectsResources/minerva/min_small.png'}
             media='(width >= 48rem)'
@@ -25,8 +31,17 @@ function Minerva () {
             alt='Virtual sky hero'
             width={770}
           />
-        </picture>
-        <div className='flex flex-col gap-0 absolute translate-y-[calc(50svh-50%)]'>
+        </motion.picture>
+        <motion.div
+          initial={{
+            mask: 'radial-gradient(circle at -150vw 0rem, rgb(0,0,0) 100vw, rgba(0,0,0,0) 150vw)'
+          }}
+          animate={{
+            mask: 'radial-gradient(circle at 0vw 0rem, rgb(0,0,0) 100vw, rgba(0,0,0,0) 150vw)'
+          }}
+          transition={{ duration: 1, delay: 0.35, ease: 'linear' }}
+          className='flex flex-col gap-0 absolute translate-y-[calc(50svh-50%)]'
+        >
           <h1
             className='text-8xl sm:text-9xl 
           lg:text-[13em] font-black koulen text-center leading-none 
@@ -37,7 +52,7 @@ function Minerva () {
           <p className='text-center font-semibold text-[var(--soft-text)] sombra'>
             {t('subtitle')}
           </p>
-        </div>
+        </motion.div>
 
         <div className='inline-flex gap-4 justify-center '>
           <div className='up out-rounded py-2 px-4 hover:cursor-pointer'>
@@ -206,7 +221,7 @@ function Eclipse1 () {
       >
         <figure className='flex flex-col items-center'>
           <img
-            className=''
+            className='px-[2%]'
             alt=' '
             src='/projectsResources/minerva/2026Aug12-nasa.webp'
             width={600}
@@ -287,7 +302,7 @@ function Eclipse2 () {
       >
         <figure className='flex flex-col items-center'>
           <img
-            className=''
+            className='px-[2%]'
             alt=' '
             src='/projectsResources/minerva/2034Mar20-nasa.webp'
             width={600}

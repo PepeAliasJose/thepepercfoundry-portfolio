@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import GraphBar from '../components/atoms/GraphBar'
 import Footer from '../components/organisms/Footer'
 import { useTranslation } from 'react-i18next'
+import { motion } from 'motion/react'
 
 function DBD () {
   const { t } = useTranslation(['dbd'])
@@ -13,8 +14,17 @@ function DBD () {
 
   return (
     <>
-      <header className='p-10 pb-5 md:pb-10 flex justify-between items-center flex-col h-svh'>
-        <div className='flex flex-col gap-2'>
+      <motion.header
+        initial={{
+          mask: 'radial-gradient(circle at 50% -20rem, rgb(0,0,0) 0vh, rgba(0,0,0,0) 10vh)'
+        }}
+        animate={{
+          mask: 'radial-gradient(circle at 50% -20rem, rgb(0,0,0) 150vh, rgba(0,0,0,0) 180vh)'
+        }}
+        transition={{ duration: 1, delay: 0, ease: 'linear' }}
+        className='p-10 pb-5 md:pb-10 flex justify-between items-center flex-col h-svh'
+      >
+        <div className='flex flex-col gap-2 '>
           <p className='ml-1 text-center font-semibold text-[var(--soft-text)]'>
             {t('subtitle')}
           </p>
@@ -23,7 +33,7 @@ function DBD () {
           </h1>
         </div>
 
-        <picture className='max-w-96 md:max-w-3xl 2xl:max-w-5xl'>
+        <picture className='max-w-96 md:max-w-3xl 2xl:max-w-5xl overflow-visible'>
           <source
             srcSet={t('hero_large')}
             media='(width >= 48rem)'
@@ -51,6 +61,7 @@ function DBD () {
             href='https://dragonballdle.web.app/'
             target='_blank'
             rel='noopener noreferrer'
+            className=''
           >
             <div
               className='up bg-blue-400 text-white py-2 px-4 
@@ -61,7 +72,7 @@ function DBD () {
             </div>
           </a>
         </div>
-      </header>
+      </motion.header>
       <main>
         <section className='p-5'>
           <ul

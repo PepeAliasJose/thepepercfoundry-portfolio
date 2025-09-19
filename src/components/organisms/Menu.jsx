@@ -84,10 +84,22 @@ function Menu ({ fixed }) {
       key={'menu'}
       initial={{
         backdropFilter: index ? 'blur(0px)' : 'blur(50px)',
-        opacity: index ? 0 : 1
+        opacity: index ? 0 : 1,
+        mask: index
+          ? 'radial-gradient(circle at calc(100vw - 3rem) 3rem, rgb(0,0,0) 0vmax, rgba(0,0,0,0) 0vmax)'
+          : 'radial-gradient(circle at calc(100vw - 3rem) 3rem, rgb(0,0,0) 120vmax, rgba(0,0,0,0) 130vmax)'
       }}
-      animate={{ backdropFilter: 'blur(50px)', opacity: 1 }}
-      exit={{ backdropFilter: 'blur(0px)', opacity: 0 }}
+      animate={{
+        backdropFilter: 'blur(50px)',
+        opacity: 1,
+        mask: 'radial-gradient(circle at calc(100vw - 3rem) 3rem, rgb(0,0,0) 120vmax, rgba(0,0,0,0) 130vmax)',
+        transition: { duration: 0.5, ease: 'easeInOut' }
+      }}
+      exit={{
+        backdropFilter: 'blur(0px)',
+        opacity: 0
+        //mask: 'radial-gradient(circle at calc(100vw - 3rem) 3rem, rgb(0,0,0) 0vmax, rgba(0,0,0,0) 0vmax)',
+      }}
       transition={{ duration: 0.25, ease: 'easeInOut', delay: 0 }}
       className={
         'w-screen h-dvh overflow-clip inline-flex bg-[var(--bgT)] ' +
@@ -95,10 +107,10 @@ function Menu ({ fixed }) {
       }
     >
       <motion.div
-        initial={{ opacity: index ? 0 : 1 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.25, ease: 'easeInOut', delay: 0 }}
+        //initial={{ opacity: index ? 0 : 1 }}
+        //animate={{ opacity: 1 }}
+        //exit={{ opacity: 0 }}
+        //transition={{ duration: 0.25, ease: 'easeInOut', delay: 0 }}
         className=' w-full h-dvh  hidden md:block relative '
       >
         <AnimatePresence mode='sync'>
@@ -116,10 +128,10 @@ function Menu ({ fixed }) {
         //Menu lateral
         key={'lateral_menu'}
         id='Lateral_menu'
-        initial={{ translateX: index ? '100%' : '0%' }}
-        animate={{ translateX: '0%' }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.3, ease: 'easeInOut', delay: 0 }}
+        //initial={{ translateX: index ? '100%' : '0%' }}
+        //animate={{ translateX: '0%' }}
+        //exit={{ opacity: 0 }}
+        //transition={{ duration: 0.3, ease: 'easeInOut', delay: 0 }}
         className='w-full md:max-w-[50vw] lg:w-5xl
        h-dvh lg:min-w-xl flex flex-col justify-between bg-[var(--bg)]'
       >

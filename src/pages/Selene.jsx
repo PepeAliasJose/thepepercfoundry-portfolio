@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import Footer from '../components/organisms/Footer'
 import { useEffect } from 'react'
+import { motion } from 'motion/react'
 
 function Selene () {
   const { t } = useTranslation(['selene'])
@@ -11,7 +12,12 @@ function Selene () {
 
   return (
     <>
-      <header className='p-10 pb-5 md:pb-10 flex justify-between items-center flex-col h-svh'>
+      <motion.header
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0, ease: 'backInOut' }}
+        className='p-10 pb-5 md:pb-10 flex justify-between items-center flex-col h-svh'
+      >
         <picture className='absolute top-0 w-screen'>
           <img
             className='w-full h-svh object-cover'
@@ -55,7 +61,7 @@ function Selene () {
             </a>
           </div>
         </div>
-      </header>
+      </motion.header>
       <main>
         <section>
           <ul
@@ -111,15 +117,16 @@ function Selene () {
               className='max-w-4xl flex flex-col md:flex-row gap-5 md:gap-10
              items-center md:items-start justify-between self-center'
             >
-              <figure className='w-fit max-w-xl'>
+              <figure className='w-fit max-w-xl '>
                 <video
                   preload='none'
                   loop
                   autoPlay
                   playsInline
                   muted
+                  width={500}
                   src='/projectsResources/selene/rob_vid1.webm'
-                  className='up'
+                  className='up object-cover h-80'
                 />
                 <figcaption className='text-sm text-[var(--soft-text)] text-center mt-2'>
                   {t('v1')}
@@ -132,8 +139,9 @@ function Selene () {
                   autoPlay
                   playsInline
                   muted
+                  width={500}
                   src='/projectsResources/selene/rob_vid2.webm'
-                  className='up'
+                  className='up object-cover h-80'
                 />
                 <figcaption className='text-sm text-[var(--soft-text)] text-center mt-2'>
                   {t('v2')}
