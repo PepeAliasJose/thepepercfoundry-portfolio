@@ -117,9 +117,38 @@ function Menu ({ fixed }) {
           <motion.section
             key={'hero_content'}
             id='hero_content'
-            className=' w-full h-dvh  hidden sm:block relative'
+            className=' w-full h-dvh  hidden sm:grid relative grid-cols-1 grid-rows-1'
           >
-            {hero_content[submenu][hero]}
+            {hero == 0 && <Landing key={'default'} />}
+            <MotionVideo
+              key={'daw'}
+              src={'projectsResources/minerva/daw_hero.webm'}
+              pos={1}
+              selected={hero}
+            />
+
+            <MotionImg
+              key={'nxi'}
+              src={'projectsResources/nxi/nx-inventory.webp'}
+              left
+              pos={2}
+              selected={hero}
+            />
+
+            <MotionVideo
+              key={'dbd'}
+              src={'projectsResources/dbd/dbd_hero.webm'}
+              pos={3}
+              selected={hero}
+            />
+
+            <MotionImg
+              key={'rob'}
+              //TODO: video luz parpadenando con la foto buena
+              src={'projectsResources/selene/sel_hero.webp'}
+              pos={4}
+              selected={hero}
+            />
           </motion.section>
         </AnimatePresence>
       </motion.div>

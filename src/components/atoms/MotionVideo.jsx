@@ -1,11 +1,11 @@
 import { motion } from 'motion/react'
-export const MotionVideo = ({ src }) => {
+export const MotionVideo = ({ src, pos, selected }) => {
   return (
     <motion.video
       key={'video_hero'}
       initial={{ opacity: 0 }}
       animate={{
-        opacity: 1,
+        opacity: pos == selected ? 1 : 0,
         transition: { duration: 0.4, ease: 'easeIn' }
       }}
       exit={{
@@ -16,7 +16,7 @@ export const MotionVideo = ({ src }) => {
       autoPlay
       muted
       loop
-      className='w-full object-cover h-full absolute'
+      className={'w-full object-cover h-full absolute col-start-1 row-start-1'}
     />
   )
 }
