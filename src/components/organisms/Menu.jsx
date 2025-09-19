@@ -131,18 +131,10 @@ function Menu ({ fixed }) {
               selected={hero}
             />
 
-            <MotionImg
-              key={'nxi'}
-              src={'projectsResources/nxi/nx-inventory.webp'}
-              left
-              pos={2}
-              selected={hero}
-            />
-
             <MotionVideo
               key={'dbd'}
               src={'projectsResources/dbd/dbd_hero.webm'}
-              pos={3}
+              pos={2}
               selected={hero}
             />
 
@@ -150,7 +142,7 @@ function Menu ({ fixed }) {
               key={'rob'}
               //TODO: video luz parpadenando con la foto buena
               src={'projectsResources/selene/sel_hero.webp'}
-              pos={4}
+              pos={3}
               selected={hero}
             />
           </motion.section>
