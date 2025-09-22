@@ -68,6 +68,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.selene {
+  text-shadow: 0px 0px 8px var(--selene);
+}
+
 /*
 oklch(80.652% 0.13068 96.259)
 oklch(75.652% 0.13068 96.259);

@@ -12,6 +12,7 @@ import { useSubmenu } from '../../App'
 import { Link, useLocation } from 'react-router-dom'
 import Landing from '../atoms/Landing'
 import LinkList from '../molecules/LinkList'
+import { LinkIcon } from '@heroicons/react/24/outline'
 
 function Menu ({ fixed }) {
   const header = useRef()
@@ -161,7 +162,7 @@ function Menu ({ fixed }) {
         animate={{ translateX: '0%' }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.2, ease: 'easeInOut', delay: 0 }}
-        className='w-full md:max-w-[50vw] lg:w-5xl
+        className=' w-full md:max-w-[50vw] lg:w-5xl
        h-dvh lg:min-w-xl flex flex-col justify-between bg-[var(--bg)]'
       >
         <header
@@ -186,8 +187,13 @@ function Menu ({ fixed }) {
             {lista[submenu]}
           </div>
         </main>
-        <footer className='inline-flex gap-4 px-7 py-5 font-semibold items-center'>
-          <Link to={'/about'} className=' mr-auto underline'>
+        <footer className='inline-flex gap-2 md:gap-4 px-7 py-5 font-semibold items-center'>
+          <Link
+            to={'/about'}
+            className=' mr-auto hover:text-[var(--hover)] 
+           inline-flex gap-1 items-center flex-nowrap'
+          >
+            <LinkIcon className='size-4  stroke-2' />
             {t('menu.about')}
           </Link>
           <ThemeSwitch />

@@ -2,6 +2,8 @@ import { useTranslation } from 'react-i18next'
 import Footer from '../components/organisms/Footer'
 import { useEffect } from 'react'
 import { motion } from 'motion/react'
+import AptLi from '../components/atoms/AptLi'
+import { LinkIcon } from '@heroicons/react/24/outline'
 
 function Selene () {
   const { t } = useTranslation(['selene'])
@@ -18,7 +20,7 @@ function Selene () {
         transition={{ duration: 0.75, delay: 0, ease: 'backInOut' }}
         className='p-10 pb-5 md:pb-10 flex justify-between items-center flex-col h-svh'
       >
-        <picture className='absolute top-0 w-screen'>
+        <picture className='absolute top-0 w-screen -z-30'>
           <img
             className='w-full h-svh object-cover'
             src='/projectsResources/selene/selene2.webp'
@@ -26,11 +28,11 @@ function Selene () {
             width={2000}
           />
         </picture>
-        <div className='flex flex-col gap-2 h-full justify-between mt-10 mb-5'>
+        <div className='flex flex-col gap-2 h-full justify-between mt-10 mb-5 relative -z-20'>
           <h1
             className='text-7xl relative sm:text-[9rem] md:text-[11rem] lg:text-[13rem]
             font-black koulen text-center content-center leading-none
-            text-[var(--selene)] '
+            text-[var(--selene)] selene'
           >
             SELENE III
           </h1>
@@ -41,7 +43,7 @@ function Selene () {
             {t('subtitle')}
           </p>
         </div>
-        <picture className='absolute top-0 w-screen pointer-events-none'>
+        <picture className='absolute top-0 w-screen pointer-events-none -z-10'>
           <img
             className='w-full h-svh object-cover'
             src='/projectsResources/selene/selene_f.webp'
@@ -50,13 +52,19 @@ function Selene () {
           />
         </picture>
 
-        <div className='inline-flex gap-4 justify-center '>
-          <div className='up out-rounded py-2 px-4 hover:cursor-pointer'>
+        <div className='inline-flex gap-4 justify-center items-center '>
+          <div
+            className='border-[1px] border-[var(--soft-text)] rounded-full
+           py-1.5 px-4 hover:cursor-pointer hover:text-[var(--hover)]
+            hover:border-[var(--hover)]'
+          >
             <a
               href='https://github.com/PepeAliasJose/SELENE'
               target='_blank'
               rel='noopener noreferrer'
+              className='inline-flex gap-2 items-center flex-nowrap'
             >
+              <LinkIcon className='size-4 stroke-2 hover:text-[var(--hover)]' />
               GitHub
             </a>
           </div>
@@ -68,12 +76,12 @@ function Selene () {
             className=' p-5 inline-flex text-nowrap gap-2 md:gap-3 
              text-sm md:text-lg font-semibold flex-wrap justify-center w-full'
           >
-            <li className='up px-4 py-1.5'>Tensorflow</li>
-            <li className='up px-4 py-1.5'>Python</li>
-            <li className='up px-4 py-1.5'>NVIDIA Jetson</li>
-            <li className='up px-4 py-1.5'>PLC SIEMENS</li>
-            <li className='up px-4 py-1.5'>KOP / AWL</li>
-            <li className='up px-4 py-1.5'>AI</li>
+            <AptLi>Tensorflow</AptLi>
+            <AptLi>Python</AptLi>
+            <AptLi>NVIDIA Jetson</AptLi>
+            <AptLi>PLC SIEMENS</AptLi>
+            <AptLi>KOP / AWL</AptLi>
+            <AptLi>AI</AptLi>
           </ul>
         </section>
         <section className='text-lg md:text-xl '>

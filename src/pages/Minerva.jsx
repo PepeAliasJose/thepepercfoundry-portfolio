@@ -1,8 +1,9 @@
-import { ArrowTrendingUpIcon } from '@heroicons/react/24/outline'
+import { ArrowTrendingUpIcon, LinkIcon } from '@heroicons/react/24/outline'
 import Footer from '../components/organisms/Footer'
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'motion/react'
+import AptLi from '../components/atoms/AptLi'
 
 function Minerva () {
   const { t } = useTranslation(['minerva'])
@@ -54,13 +55,19 @@ function Minerva () {
           </p>
         </motion.div>
 
-        <div className='inline-flex gap-4 justify-center '>
-          <div className='up out-rounded py-2 px-4 hover:cursor-pointer'>
+        <div className='inline-flex gap-4 justify-center items-center'>
+          <div
+            className='border-[1px] border-[var(--soft-text)] rounded-full
+           py-1.5 px-4 hover:cursor-pointer hover:text-[var(--hover)]
+            hover:border-[var(--hover)]'
+          >
             <a
               href='https://github.com/PepeAliasJose/Project-Minerva'
               target='_blank'
               rel='noopener noreferrer'
+              className='inline-flex gap-2 items-center flex-nowrap'
             >
+              <LinkIcon className='size-4  stroke-2 hover:text-[var(--hover)]' />
               GitHub
             </a>
           </div>
@@ -70,11 +77,11 @@ function Minerva () {
             rel='noopener noreferrer'
           >
             <div
-              className='up bg-blue-400 text-white py-2 px-4 
+              className='rounded-full bg-blue-400 text-white py-2 px-4 
             inline-flex gap-2 text-nowrap items-center hover:cursor-pointer'
             >
+              <LinkIcon className='size-4 text-white stroke-2' />
               {t('link')}
-              <ArrowTrendingUpIcon className='size-5 text-white' />
             </div>
           </a>
         </div>
@@ -85,12 +92,12 @@ function Minerva () {
             className=' p-5 inline-flex text-nowrap gap-2 md:gap-3 
              text-sm md:text-lg font-semibold flex-wrap justify-center w-full'
           >
-            <li className='up px-4 py-1.5'>React JS</li>
-            <li className='up px-4 py-1.5'>Tailwind CSS</li>
-            <li className='up px-4 py-1.5'>Three JS</li>
-            <li className='up px-4 py-1.5'>Framer motion</li>
-            <li className='up px-4 py-1.5'>WebAssembly</li>
-            <li className='up px-4 py-1.5'>Web Workers</li>
+            <AptLi>React JS</AptLi>
+            <AptLi>Tailwind CSS</AptLi>
+            <AptLi>Three JS</AptLi>
+            <AptLi>Framer motion</AptLi>
+            <AptLi>WebAssembly</AptLi>
+            <AptLi>Web Workers</AptLi>
           </ul>
         </section>
         <section className='text-lg md:text-xl '>

@@ -21,7 +21,7 @@ const Landing = () => {
         </h1>
         {hire && (
           <p
-            className='font-semibold text-center flex flex-row gap-2 up bg-blue-400
+            className='font-semibold text-center flex flex-row gap-2 rounded-full bg-blue-400
         px-4 py-2 text-white'
           >
             {t('menu.main.hire')}

@@ -43,8 +43,8 @@ function LinkList () {
       <br />
       {hire && (
         <p
-          className='font-semibold text-sm leading-none helvetica text-center flex flex-row gap-2 up bg-blue-400
-        px-4 py-2 text-white w-fit flex-wrap'
+          className='font-semibold text-sm leading-none helvetica text-center flex flex-row gap-2 bg-blue-400
+        px-4 py-2 text-white w-fit flex-wrap rounded-full'
         >
           {t('menu.main.hire')}
         </p>

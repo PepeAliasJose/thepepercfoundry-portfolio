@@ -1,9 +1,10 @@
-import { ArrowTrendingUpIcon } from '@heroicons/react/24/outline'
+import { ArrowTrendingUpIcon, LinkIcon } from '@heroicons/react/24/outline'
 import { useEffect } from 'react'
 import GraphBar from '../components/atoms/GraphBar'
 import Footer from '../components/organisms/Footer'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'motion/react'
+import AptLi from '../components/atoms/AptLi'
 
 function DBD () {
   const { t } = useTranslation(['dbd'])
@@ -40,7 +41,7 @@ function DBD () {
           </h1>
         </motion.div>
 
-        <picture className='max-w-96 md:max-w-3xl 2xl:max-w-5xl overflow-visible'>
+        <picture className='max-w-96 md:max-w-3xl 2xl:max-w-5xl overflow-visible -z-10'>
           <source
             srcSet={t('hero_large')}
             media='(width >= 48rem)'
@@ -65,13 +66,19 @@ function DBD () {
           />
         </picture>
 
-        <div className='inline-flex gap-4 justify-center '>
-          <div className='up out-rounded py-2 px-4 hover:cursor-pointer'>
+        <div className='inline-flex gap-4 justify-center items-center '>
+          <div
+            className='border-[1px] border-[var(--soft-text)] rounded-full
+           py-1.5 px-4 hover:cursor-pointer hover:text-[var(--hover)]
+            hover:border-[var(--hover)]'
+          >
             <a
               href='https://github.com/PepeAliasJose/dragonballdle-game'
               target='_blank'
               rel='noopener noreferrer'
+              className='inline-flex gap-2 items-center flex-nowrap'
             >
+              <LinkIcon className='size-4 stroke-2 ' />
               GitHub
             </a>
           </div>
@@ -79,14 +86,13 @@ function DBD () {
             href='https://dragonballdle.web.app/'
             target='_blank'
             rel='noopener noreferrer'
-            className=''
           >
             <div
-              className='up bg-blue-400 text-white py-2 px-4 
+              className='rounded-full bg-blue-400 text-white py-2 px-4 
             inline-flex gap-2 text-nowrap items-center hover:cursor-pointer'
             >
+              <LinkIcon className='size-4 text-white stroke-2' />
               {t('link')}
-              <ArrowTrendingUpIcon className='size-5 text-white' />
             </div>
           </a>
         </div>
@@ -97,12 +103,12 @@ function DBD () {
             className='inline-flex text-nowrap gap-2 md:gap-3 
              text-sm md:text-lg font-semibold flex-wrap justify-center w-full'
           >
-            <li className='up px-4 py-1.5'>React JS</li>
-            <li className='up px-4 py-1.5'>Tailwind CSS</li>
-            <li className='up px-4 py-1.5'>CSS</li>
-            <li className='up px-4 py-1.5'>i18n</li>
-            <li className='up px-4 py-1.5'>Firebase</li>
-            <li className='up px-4 py-1.5'>Google Analytics</li>
+            <AptLi>React JS</AptLi>
+            <AptLi>Tailwind CSS</AptLi>
+            <AptLi>CSS</AptLi>
+            <AptLi>i18n</AptLi>
+            <AptLi>Firebase</AptLi>
+            <AptLi>Google Analytics</AptLi>
           </ul>
         </section>
         <section className='mt-0'>
