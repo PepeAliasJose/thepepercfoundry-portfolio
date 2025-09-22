@@ -14,24 +14,31 @@ function DBD () {
 
   return (
     <>
-      <motion.header
-        initial={{
-          mask: 'radial-gradient(circle at 50% -20rem, rgb(0,0,0) 0vh, rgba(0,0,0,0) 10vh)'
-        }}
-        animate={{
-          mask: 'radial-gradient(circle at 50% -20rem, rgb(0,0,0) 150vh, rgba(0,0,0,0) 180vh)'
-        }}
-        transition={{ duration: 1, delay: 0, ease: 'linear' }}
-        className='p-10 pb-5 md:pb-10 flex justify-between items-center flex-col h-svh'
-      >
-        <div className='flex flex-col gap-2 '>
+      <header className='p-10 pb-5 md:pb-10 flex justify-between items-center flex-col h-svh'>
+        <motion.div
+          initial={{
+            willChange: 'transform',
+            scale: 0.875,
+            mask: 'radial-gradient(circle at -90vmax -40vmax, rgb(0,0,0) 70vmax, rgba(0,0,0,0) 90vmax)'
+          }}
+          animate={{
+            willChange: 'transform',
+            scale: 1,
+            mask: 'radial-gradient(circle at 0vmax -40vmax, rgb(0,0,0) 70vmax, rgba(0,0,0,0) 90vmax)'
+          }}
+          transition={{
+            mask: { duration: 1, delay: 0, ease: 'easeIn' },
+            scale: { duration: 1, delay: 0, ease: 'easeInOut' }
+          }}
+          className='flex flex-col gap-2 origin-center'
+        >
           <p className='ml-1 text-center font-semibold text-[var(--soft-text)]'>
             {t('subtitle')}
           </p>
           <h1 className='text-5xl sm:text-7xl md:text-8xl font-black koulen text-center leading-none'>
             {t('title')}
           </h1>
-        </div>
+        </motion.div>
 
         <picture className='max-w-96 md:max-w-3xl 2xl:max-w-5xl overflow-visible'>
           <source
@@ -39,7 +46,18 @@ function DBD () {
             media='(width >= 48rem)'
             width={1400}
           />
-          <img
+          <motion.img
+            initial={{
+              willChange: 'transform',
+              opacity: 0,
+              scale: 1.05
+            }}
+            animate={{
+              willChange: 'transform',
+              opacity: 1,
+              scale: 1
+            }}
+            transition={{ duration: 0.75, delay: 0.2, ease: 'easeOut' }}
             className='mx-auto -mt-[17%] -mb-[14%] md:my-0'
             src={t('hero_small')}
             alt='dbd_hero'
@@ -72,7 +90,7 @@ function DBD () {
             </div>
           </a>
         </div>
-      </motion.header>
+      </header>
       <main>
         <section className='p-5'>
           <ul
@@ -211,13 +229,12 @@ function Tag ({ text, color = 'bg-blue-500' }) {
 export default DBD
 
 /*
-<GraphBar
-                      data={'28.000'}
-                      tag={'Abril'}
-                      height='100%'
-                      color='bg-purple-500 '
-                    />
-
-<GraphBar data={'31€'} tag={'Abril'} height='100%' />
+initial={{
+  mask: 'radial-gradient(circle at 50% 330%, rgb(0,0,0) 100vh, rgba(0,0,0,0) 150vh)'
+}}
+animate={{
+  mask: 'radial-gradient(circle at 50% 50%, rgb(0,0,0) 100vh, rgba(0,0,0,0) 150vh)'
+}}
+transition={{ duration: 1, delay: 0.15, ease: 'linear' }}
 
 */

@@ -15,7 +15,7 @@ function Selene () {
       <motion.header
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0, ease: 'backInOut' }}
+        transition={{ duration: 0.75, delay: 0, ease: 'backInOut' }}
         className='p-10 pb-5 md:pb-10 flex justify-between items-center flex-col h-svh'
       >
         <picture className='absolute top-0 w-screen'>

@@ -6,7 +6,7 @@ export const MotionVideo = ({ src, pos, selected }) => {
       initial={{ opacity: 0 }}
       animate={{
         opacity: pos == selected ? 1 : 0,
-        transition: { duration: 0.4, ease: 'easeIn' }
+        transition: { duration: 0.2, ease: 'easeIn' }
       }}
       exit={{
         opacity: 0,
