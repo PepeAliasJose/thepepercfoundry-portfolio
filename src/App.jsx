@@ -98,10 +98,10 @@ const MenuSwitch = ({ setShow, show, location }) => {
       onClick={() => {
         setShow(!show)
       }}
-      className='fixed top-7 right-7 up out-rounded p-2 md:p-1.5 hover:cursor-pointer'
+      className='fixed top-7 right-7 up-flat out-rounded p-1.5 hover:cursor-pointer'
     >
-      {show && <XMarkIcon className='size-6 md:size-7 ' />}
-      {!show && <Bars2Icon className='size-6 md:size-7 ' />}
+      {show && <XMarkIcon className='size-6 md:size-7 stroke-2' />}
+      {!show && <Bars2Icon className='size-6 md:size-7 stroke-2' />}
     </div>
   )
 }

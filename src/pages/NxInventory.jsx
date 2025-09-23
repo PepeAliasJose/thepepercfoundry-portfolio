@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import Footer from '../components/organisms/Footer'
-import { ArrowTrendingUpIcon } from '@heroicons/react/24/outline'
+import { ArrowTrendingUpIcon, LinkIcon } from '@heroicons/react/24/outline'
 
 function NxInventory () {
   const { t } = useTranslation(['dbd'])
@@ -49,8 +49,8 @@ function NxInventory () {
               className='up bg-blue-400 text-white py-2 px-4 
             inline-flex gap-2 text-nowrap items-center hover:cursor-pointer'
             >
+              <LinkIcon className='size-4 text-white stroke-2' />
               Ver sitio
-              <ArrowTrendingUpIcon className='size-5 text-white' />
             </div>
           </a>
         </div>
