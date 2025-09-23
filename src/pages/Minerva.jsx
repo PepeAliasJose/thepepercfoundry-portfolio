@@ -35,12 +35,19 @@ function Minerva () {
         </motion.picture>
         <motion.div
           initial={{
+            willChange: 'transform',
+            scale: 1.05,
             mask: 'radial-gradient(circle at -150vw 0rem, rgb(0,0,0) 100vw, rgba(0,0,0,0) 150vw)'
           }}
           animate={{
+            willChange: 'transform',
+            scale: 1,
             mask: 'radial-gradient(circle at 0vw 0rem, rgb(0,0,0) 100vw, rgba(0,0,0,0) 150vw)'
           }}
-          transition={{ duration: 1, delay: 0.35, ease: 'linear' }}
+          transition={{
+            mask: { duration: 1.25, delay: 0, ease: 'easeIn' },
+            scale: { duration: 1.25, delay: 0, ease: 'easeInOut' }
+          }}
           className='flex flex-col gap-0 absolute translate-y-[calc(50svh-50%)]'
         >
           <h1

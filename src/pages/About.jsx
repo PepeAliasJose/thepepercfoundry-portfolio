@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next'
 import Footer from '../components/organisms/Footer'
 import Logo from '../components/atoms/Logo'
-import { ChevronDownIcon } from '@heroicons/react/24/solid'
 import { useHire } from '../App'
+import { motion } from 'motion/react'
 
 function About () {
   const { t } = useTranslation(['about'])

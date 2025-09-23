@@ -13,6 +13,7 @@ import { Link, useLocation } from 'react-router-dom'
 import Landing from '../atoms/Landing'
 import LinkList from '../molecules/LinkList'
 import { LinkIcon } from '@heroicons/react/24/outline'
+import OptionMenu from '../molecules/OptionMenu'
 
 function Menu ({ fixed }) {
   const header = useRef()
@@ -170,13 +171,7 @@ function Menu ({ fixed }) {
              w-full overflow-clip text-nowrap hide-scroll '
         >
           <div ref={header} className='w-full '>
-            <motion.div
-              dragConstraints={header}
-              drag='x'
-              className='inline-flex py-7 pb-10 items-center pr-14 hover:cursor-grab active:cursor-grabbing'
-            >
-              {menu}
-            </motion.div>
+            <OptionMenu menu={menu} />
           </div>
         </header>
         <main className='max-h-full w-full overflow-hidden '>

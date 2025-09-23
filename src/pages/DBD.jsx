@@ -59,7 +59,7 @@ function DBD () {
               scale: 1
             }}
             transition={{ duration: 0.75, delay: 0.2, ease: 'easeOut' }}
-            className='mx-auto -mt-[17%] -mb-[14%] md:my-0'
+            className='mx-auto -mt-[17%] -mb-[14%] md:my-0 max-h-[65vh] object-contain'
             src={t('hero_small')}
             alt='dbd_hero'
             width={350}

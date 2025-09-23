@@ -17,7 +17,7 @@ function Selene () {
       <motion.header
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.75, delay: 0, ease: 'backInOut' }}
+        transition={{ duration: 0.75, delay: 0, ease: 'backInOut', bounce: 0 }}
         className='p-10 pb-5 md:pb-10 flex justify-between items-center flex-col h-svh'
       >
         <picture className='absolute top-0 w-screen -z-30'>
@@ -32,7 +32,7 @@ function Selene () {
           <h1
             className='text-7xl relative sm:text-[9rem] md:text-[11rem] lg:text-[13rem]
             font-black koulen text-center content-center leading-none
-            text-[var(--selene)] selene'
+            text-[var(--selene)] '
           >
             SELENE III
           </h1>
