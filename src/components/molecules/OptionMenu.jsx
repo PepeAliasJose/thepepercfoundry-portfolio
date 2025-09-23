@@ -1,8 +1,10 @@
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline'
 import { motion } from 'motion/react'
 import { useEffect, useRef, useState } from 'react'
+import { useLocation } from 'react-router-dom'
 
 function OptionMenu ({ menu }) {
+  const location = useLocation()
   const ref = useRef()
   const list = useRef()
 
@@ -66,8 +68,10 @@ function OptionMenu ({ menu }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.25, ease: 'easeInOut' }}
-          className='absolute top-7 right-12 up-flat out-rounded rounded-full p-2
-      hover:cursor-pointer'
+          className={
+            'absolute top-7 up-flat out-rounded rounded-full p-2 hover:cursor-pointer' +
+            (location.pathname !== '/' ? ' right-12 ' : ' right-0')
+          }
         >
           <ChevronRightIcon
             onClick={() => {

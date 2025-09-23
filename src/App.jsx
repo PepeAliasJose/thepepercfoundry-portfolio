@@ -8,7 +8,7 @@ import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 import LanguageDetector from 'i18next-browser-languagedetector'
 
-//Pages
+/*/Pages
 const Index = lazy(() => import('./pages/Index'))
 const Test = lazy(() => import('./pages/Test'))
 const NotFound = lazy(() => import('./pages/_404'))
@@ -17,7 +17,17 @@ const DBD = lazy(() => import('./pages/DBD'))
 const VS = lazy(() => import('./pages/Minerva'))
 const NX = lazy(() => import('./pages/NxInventory'))
 const Selene = lazy(() => import('./pages/Selene'))
-const About = lazy(() => import('./pages/About'))
+const About = lazy(() => import('./pages/About'))*/
+
+import Index from './pages/Index'
+import Test from './pages/Test'
+import _404 from './pages/_404'
+import Education from './pages/Education'
+import DBD from './pages/DBD'
+import Minerva from './pages/Minerva'
+import NxInventory from './pages/NxInventory'
+import Selene from './pages/Selene'
+import About from './pages/About'
 
 //Locales
 import global_en from './locales/en/translation.json'
@@ -152,12 +162,12 @@ const Switch = () => {
         <Route path='/' element={<Index />} />
         <Route path='/education' element={<Education />} />
         <Route path='/dragonballdle' element={<DBD />} />
-        <Route path='/minerva' element={<VS />} />
-        <Route path='/nx-inventory' element={<NX />} />
+        <Route path='/minerva' element={<Minerva />} />
+        <Route path='/nx-inventory' element={<NxInventory />} />
         <Route path='/selene' element={<Selene />} />
         <Route path='/about' element={<About />} />
         <Route path='/test' element={<Test />} />
-        <Route path='*' element={<NotFound />} />
+        <Route path='*' element={<_404 />} />
       </Routes>
       <AnimatePresence>
         {show && <Menu key={'menu'} fixed={true} />}
