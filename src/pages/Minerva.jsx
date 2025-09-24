@@ -235,8 +235,9 @@ function Eclipse1 () {
       >
         <figure className='flex flex-col items-center'>
           <img
+            loading='lazy'
             className='px-[2%]'
-            alt=' '
+            alt='Nasa eclipse 2026Aug12'
             src='/projectsResources/minerva/2026Aug12-nasa.webp'
             width={600}
           />
@@ -263,8 +264,9 @@ function Eclipse1 () {
       >
         <figure className='flex flex-col items-center'>
           <img
+            loading='lazy'
             className=''
-            alt=' '
+            alt='Minerva eclipse 2026Aug12 1'
             src='/projectsResources/minerva/2026Aug12T17-40.webp'
             width={600}
           />
@@ -283,8 +285,9 @@ function Eclipse1 () {
         </figure>
         <figure className='flex flex-col items-center'>
           <img
+            loading='lazy'
             className=''
-            alt=' '
+            alt='Minerva eclipse 2026Aug12 2'
             src='/projectsResources/minerva/2026Aug12T18-30.webp'
             width={600}
           />
@@ -316,8 +319,9 @@ function Eclipse2 () {
       >
         <figure className='flex flex-col items-center'>
           <img
+            loading='lazy'
             className='px-[2%]'
-            alt=' '
+            alt='Nasa eclipse 2034Mar20'
             src='/projectsResources/minerva/2034Mar20-nasa.webp'
             width={600}
           />
@@ -344,8 +348,9 @@ function Eclipse2 () {
       >
         <figure className='flex flex-col items-center'>
           <img
+            loading='lazy'
             className=''
-            alt=' '
+            alt='Minerva eclipse 2034Mar20 1'
             src='/projectsResources/minerva/2034Mar20T09-20.webp'
             width={600}
           />
@@ -364,8 +369,9 @@ function Eclipse2 () {
         </figure>
         <figure className='flex flex-col items-center'>
           <img
+            loading='lazy'
             className=''
-            alt=' '
+            alt='Minerva eclipse 2034Mar20 2'
             src='/projectsResources/minerva/2034Mar20T11-00.webp'
             width={600}
           />

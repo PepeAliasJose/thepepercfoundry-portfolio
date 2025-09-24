@@ -87,10 +87,7 @@ function OptionMenu ({ menu }) {
       )}
 
       <div ref={ref} className=' w-full overflow-scroll hide-scroll'>
-        <div
-          ref={list}
-          className='inline-flex py-7 pb-10 items-center pr-12 hover:cursor-grab active:cursor-grabbing'
-        >
+        <div ref={list} className='inline-flex py-7 pb-10 items-center pr-12 '>
           {menu}
         </div>
       </div>

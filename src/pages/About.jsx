@@ -1,13 +1,16 @@
 import { useTranslation } from 'react-i18next'
 import Footer from '../components/organisms/Footer'
 import Logo from '../components/atoms/Logo'
-import { useHire } from '../App'
-import { motion } from 'motion/react'
+import { useEffect } from 'react'
 
 function About () {
   const { t } = useTranslation(['about'])
   const { t: c } = useTranslation()
-  const { hire } = useHire()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <>
       <header className=''></header>
