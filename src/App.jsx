@@ -1,4 +1,4 @@
-import { lazy, useEffect, useLayoutEffect, useState } from 'react'
+import { useEffect, useLayoutEffect } from 'react'
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
 import Menu from './components/organisms/Menu'
 import { AnimatePresence } from 'motion/react'
