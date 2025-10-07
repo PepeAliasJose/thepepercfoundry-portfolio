@@ -125,7 +125,7 @@ function Selene () {
               className='max-w-4xl flex flex-col md:flex-row gap-5 md:gap-10
              items-center md:items-start justify-between self-center'
             >
-              <figure className='w-fit max-w-xl '>
+              <figure className='w-full sm:max-w-xl flex flex-col items-center justify-center'>
                 <video
                   preload='none'
                   loop
@@ -136,11 +136,11 @@ function Selene () {
                   src='/projectsResources/selene/rob_vid1.webm'
                   className='up object-cover h-80'
                 />
-                <figcaption className='text-sm text-[var(--soft-text)] text-center mt-2'>
+                <figcaption className='text-sm text-[var(--soft-text)] max-w-md text-center mt-2'>
                   {t('v1')}
                 </figcaption>
               </figure>
-              <figure className='w-fit max-w-xl'>
+              <figure className='w-full sm:max-w-xl flex flex-col items-center justify-center'>
                 <video
                   preload='none'
                   loop
@@ -151,7 +151,7 @@ function Selene () {
                   src='/projectsResources/selene/rob_vid2.webm'
                   className='up object-cover h-80'
                 />
-                <figcaption className='text-sm text-[var(--soft-text)] text-center mt-2'>
+                <figcaption className='text-sm text-[var(--soft-text)] max-w-md text-center mt-2'>
                   {t('v2')}
                 </figcaption>
               </figure>

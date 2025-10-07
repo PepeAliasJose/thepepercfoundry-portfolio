@@ -25,7 +25,7 @@ function DBD () {
           animate={{
             willChange: 'transform',
             scale: 1,
-            mask: 'radial-gradient(circle at 0vmax -40vmax, rgb(0,0,0) 70vmax, rgba(0,0,0,0) 90vmax)'
+            mask: 'radial-gradient(circle at 0vmax -40vmax, rgb(0,0,0) 90vmax, rgba(0,0,0,0) 90vmax)'
           }}
           transition={{
             mask: { duration: 1, delay: 0, ease: 'easeIn' },

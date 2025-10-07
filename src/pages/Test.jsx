@@ -1,4 +1,11 @@
+import { useMemo, useRef } from "react"
+
 function Test () {
+
+  const div = useRef()
+  
+  const { Custom } = Prueba()
+  const Test = "p"
   return (
     <>
       <header></header>
@@ -47,10 +54,24 @@ function Test () {
             }}
           />
         </div>
+       
+        <Custom
+        ref={div}
+        data-element-type={"div"} >
+          Hola
+        </Custom>
+        <Test>
+          Hey
+        </Test>
       </main>
       <footer></footer>
     </>
   )
+}
+
+const Prueba = () => {
+  const Custom = useMemo(() => "div",[])
+  return { Custom }
 }
 
 export default Test
