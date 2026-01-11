@@ -34,6 +34,7 @@ function Minerva() {
             className="w-full md:-translate-y-[41%] md:mx-auto object-cover"
             src={"projectsResources/minerva/min_small.png"}
             alt="Virtual sky hero"
+            loading="eager"
             width={770}
           />
         </motion.picture>
@@ -69,7 +70,7 @@ function Minerva() {
 
         <div className="inline-flex gap-4 justify-center items-center">
           <div
-            className="border-[1px] border-[var(--soft-text)] rounded-full
+            className="border  border-[var(--soft-text)] rounded-full
            py-1.5 px-4 hover:cursor-pointer hover:text-[var(--hover)]
             hover:border-[var(--hover)]"
           >

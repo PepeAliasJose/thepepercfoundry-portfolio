@@ -66,13 +66,14 @@ function DBD() {
             className="mx-auto -mt-[17%] -mb-[14%] md:my-0  object-contain"
             src={t("hero_small")}
             alt="dbd_hero"
+            loading="eager"
             width={350}
           />
         </picture>
 
         <div className="inline-flex gap-4 justify-center items-center ">
           <div
-            className="border-[1px] border-[var(--soft-text)] rounded-full
+            className="border  border-[var(--soft-text)] rounded-full
            py-1.5 px-4 hover:cursor-pointer hover:text-[var(--hover)]
             hover:border-[var(--hover)]"
           >

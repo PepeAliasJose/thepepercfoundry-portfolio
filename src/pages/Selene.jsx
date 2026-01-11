@@ -27,7 +27,8 @@ function Selene() {
             style={{ height: window.innerHeight }} //100svh not working idk
             className="w-full h-svh object-cover"
             src="/projectsResources/selene/selene2.webp"
-            alt="dbd_hero"
+            alt="selene_hero"
+            loading="eager"
             width={2000}
           />
         </picture>
@@ -52,13 +53,14 @@ function Selene() {
             className="w-full  object-cover"
             src="/projectsResources/selene/selene_f.webp"
             alt="dbd_hero"
+            loading="eager"
             width={2000}
           />
         </picture>
 
         <div className="inline-flex gap-4 justify-center items-center ">
           <div
-            className="border-[1px] border-[var(--soft-text)] rounded-full
+            className="border border-[var(--soft-text)] rounded-full
            py-1.5 px-4 hover:cursor-pointer hover:text-[var(--hover)]
             hover:border-[var(--hover)]"
           >
@@ -77,7 +79,7 @@ function Selene() {
       <main>
         <section>
           <ul
-            className=" p-5 inline-flex text-nowrap gap-2 md:gap-3 
+            className="p-5 inline-flex text-nowrap gap-2 md:gap-3 
              text-sm md:text-lg font-semibold flex-wrap justify-center w-full"
           >
             <AptLi>Tensorflow</AptLi>
