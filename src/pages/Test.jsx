@@ -1,11 +1,10 @@
-import { useMemo, useRef } from "react"
+import { useMemo, useRef } from 'react'
 
 function Test () {
-
   const div = useRef()
-  
+
   const { Custom } = Prueba()
-  const Test = "p"
+  const Test = 'p'
   return (
     <>
       <header></header>
@@ -54,15 +53,11 @@ function Test () {
             }}
           />
         </div>
-       
-        <Custom
-        ref={div}
-        data-element-type={"div"} >
+
+        <Custom ref={div} data-element-type={'div'}>
           Hola
         </Custom>
-        <Test>
-          Hey
-        </Test>
+        <Test>Hey</Test>
       </main>
       <footer></footer>
     </>
@@ -70,7 +65,7 @@ function Test () {
 }
 
 const Prueba = () => {
-  const Custom = useMemo(() => "div",[])
+  const Custom = useMemo(() => 'div', [])
   return { Custom }
 }
 

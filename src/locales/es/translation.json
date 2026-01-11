@@ -63,6 +63,11 @@
     ],
     "experience": [
       {
+        "content": "1xInternet / 2025",
+        "subtitle": "Ingeniero de frontend junior",
+        "link": "/education#main-content"
+      },
+      {
         "content": "AKTIOS S.L. / 2023",
         "subtitle": "Programador React",
         "link": "/education#main-content"
@@ -96,12 +101,18 @@
     "desc": "No me gusta estancarme sin hacer nada, así que siempre que puedo me gusta estudiar cosas que mejoren mis conocimientos o me enseñen cosas nuevas.",
     "experience": [
       {
+        "title": "Ingeniero de frontend junior L1",
+        "company": "1xInternet",
+        "date": "12/2025 - Actual",
+        "highlight": [1],
+        "content": "- Creación de componentes en NextJS y React.:- Creación de funciones en TypeScript.:- Verificación de calidad de código.:- Drupal:- Git",
+        "id": "1xI"
+      },
+      {
         "title": "Desarrollador React",
         "company": "Aktios S.L.",
         "date": "03/2023 - 07/2023",
-        "highlight": [
-          1
-        ],
+        "highlight": [1],
         "content": "- Creación de componentes en NextJS y React.:- Creación de funciones en TypeScript.:- Creación de interfaces de usuario responsivas con Chakra UI.:- Verificación de calidad de código.:- Git y Scrum.",
         "id": "aks"
       }
@@ -109,10 +120,7 @@
     "studies": [
       {
         "title": "Desarrollo de aplicaciones multiplataforma",
-        "highlight": [
-          0,
-          3
-        ],
+        "highlight": [0, 3],
         "school": "IES Laguna de Tollón",
         "date": "2023-2025",
         "content": "- Creación y pruebas de BackEnds Java y Node.:- Creación de sitios web dinámicos y responsivos usando NextJS y ReactJS.:- CRUDs a bases de datos MySQL Y APIs.:- Gestión de hilos y procesos en Java.:- Aplicaciones Android en Java.",
@@ -121,10 +129,7 @@
       {
         "title": "Desarrollo de aplicaciones web",
         "hl": true,
-        "highlight": [
-          0,
-          3
-        ],
+        "highlight": [0, 3],
         "school": "CDP José Cabrera",
         "date": "2021-2023",
         "content": "- Creación y pruebas de aplicaciones Java.:- Creación de sitios web dinámicos usando ReactJS.:- Administración de sistemas operativos y redes.:- CRUDs a bases de datos MySQL y Oracle SQL junto PL/SQL.:- Gestión de Bases de Datos Oracle.",
@@ -132,9 +137,7 @@
       },
       {
         "title": "Automatización y robótica industrial",
-        "highlight": [
-          2
-        ],
+        "highlight": [2],
         "school": "Colegio Salesiano Manuel Lora Tamayo",
         "date": "2019-2021",
         "content": "- Programación IA en Python:- Instalación de redes eléctricas de potencia.:- Programación en C++ y de robots ABB y FANUC.:- Desarrollo de programas de control de instalaciones con PLC Siemens usando módulos digitales y analógicos.:- Comunicación en red de varios PLC Siemens.:- Programación de pantallas SCADA.",
@@ -142,10 +145,7 @@
       },
       {
         "title": "Sistemas microinformaticos y redes",
-        "highlight": [
-          0,
-          3
-        ],
+        "highlight": [0, 3],
         "school": "IES Laguna de Tollón",
         "date": "2017-2019",
         "content": "",

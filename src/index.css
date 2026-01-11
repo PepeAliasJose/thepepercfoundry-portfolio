@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -36,7 +36,7 @@
 --bgT: #27282aa0;
 */
 
-[data-theme='light'] {
+[data-theme="light"] {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -77,28 +77,28 @@ oklch(80.652% 0.13068 96.259)
 oklch(75.652% 0.13068 96.259);
 */
 
-body[data-menu='true'] {
+body[data-menu="true"] {
   overflow: hidden;
 }
 
 @font-face {
-  font-family: 'Bio Sans';
-  src: url('./fonts/biosans/BioBold.otf');
+  font-family: "Bio Sans";
+  src: url("./fonts/biosans/BioBold.otf");
 }
 
 @font-face {
-  font-family: 'Koulen';
-  src: url('./fonts/Koulen/Koulen-Regular.ttf');
+  font-family: "Koulen";
+  src: url("./fonts/Koulen/Koulen-Regular.ttf");
 }
 
 @font-face {
-  font-family: 'Bills';
-  src: url('./fonts/Stick_No_Bills/static/StickNoBills-ExtraBold.ttf');
+  font-family: "Bills";
+  src: url("./fonts/Stick_No_Bills/static/StickNoBills-ExtraBold.ttf");
 }
 
 @font-face {
-  font-family: 'Kaushan';
-  src: url('./fonts/Kaushan_Script/KaushanScript-Regular.ttf');
+  font-family: "Kaushan";
+  src: url("./fonts/Kaushan_Script/KaushanScript-Regular.ttf");
 }
 
 .center {
