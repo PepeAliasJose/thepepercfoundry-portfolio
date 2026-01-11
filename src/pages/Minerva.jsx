@@ -52,7 +52,8 @@ function Minerva() {
             mask: { duration: 1.25, delay: 0, ease: "easeIn" },
             scale: { duration: 1.25, delay: 0, ease: "easeInOut" },
           }}
-          className="flex flex-col gap-0 absolute translate-y-[calc(50svh-50%)]"
+          style={{ "--h": window.innerHeight / 2 + "px" }} //100svh not working idk
+          className="flex flex-col gap-0 absolute translate-y-[calc(var(--h)-50%)]"
         >
           <h1
             className="text-8xl sm:text-9xl 

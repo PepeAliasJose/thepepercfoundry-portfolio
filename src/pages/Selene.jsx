@@ -24,6 +24,7 @@ function Selene() {
       >
         <picture className="absolute top-0 w-screen -z-30">
           <img
+            style={{ height: window.innerHeight }} //100svh not working idk
             className="w-full h-svh object-cover"
             src="/projectsResources/selene/selene2.webp"
             alt="dbd_hero"
