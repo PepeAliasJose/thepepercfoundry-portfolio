@@ -1,4 +1,4 @@
-function Logo ({ color = 'var(--text)' }) {
+function Logo({ color = 'var(--text)' }) {
   return (
     <svg
       width='250'
@@ -20,7 +20,7 @@ function Logo ({ color = 'var(--text)' }) {
         strokeWidth='20'
       />
     </svg>
-  )
+  );
 }
 
-export default Logo
+export default Logo;

@@ -1,6 +1,6 @@
-import LinkList from '../molecules/LinkList'
+import LinkList from '../molecules/LinkList';
 
-function Footer () {
+function Footer() {
   return (
     <div className='w-screen p-4 mb:p-2 min-h-20 inline-flex items-center'>
       <div
@@ -10,7 +10,7 @@ function Footer () {
         <LinkList />
       </div>
     </div>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

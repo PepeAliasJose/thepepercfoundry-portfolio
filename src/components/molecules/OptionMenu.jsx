@@ -1,8 +1,7 @@
-/* eslint-disable no-unused-vars */
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
-import { motion } from "motion/react";
-import { useEffect, useRef, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
+import { motion } from 'motion/react';
+import { useEffect, useRef, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 function OptionMenu({ menu }) {
   const location = useLocation();
@@ -37,10 +36,10 @@ function OptionMenu({ menu }) {
       updateNavButtons(scroll);
     };
 
-    window.addEventListener("resize", f);
+    window.addEventListener('resize', f);
 
     return () => {
-      window.removeEventListener("resize", f);
+      window.removeEventListener('resize', f);
     };
   }, []);
 
@@ -48,37 +47,37 @@ function OptionMenu({ menu }) {
     let scroll = list.current.offsetWidth - ref.current.offsetWidth;
     updateNavButtons(scroll);
 
-    ref.current.addEventListener("scroll", () => {
+    ref.current.addEventListener('scroll', () => {
       scroll = list.current.offsetWidth - ref.current.offsetWidth;
       updateNavButtons(scroll);
     });
 
     return () =>
-      ref?.current?.removeEventListener("scroll", () => {
+      ref?.current?.removeEventListener('scroll', () => {
         scroll = list.current.offsetWidth - ref.current.offsetWidth;
         updateNavButtons(scroll);
       });
   }, []);
 
   return (
-    <div className="w-full relative">
+    <div className='w-full relative'>
       {buttonBack && (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.25, ease: "easeInOut" }}
-          className="absolute top-7 up-flat out-rounded rounded-full p-2
-      hover:cursor-pointer"
+          transition={{ duration: 0.25, ease: 'easeInOut' }}
+          className='absolute top-7 up-flat out-rounded rounded-full p-2
+      hover:cursor-pointer'
         >
           <ChevronLeftIcon
             onClick={() => {
               ref.current.scroll({
                 top: 0,
                 left: 0,
-                behavior: "smooth",
+                behavior: 'smooth',
               });
             }}
-            className="size-5 md:size-6 stroke-2 "
+            className='size-5 md:size-6 stroke-2 '
           />
         </motion.div>
       )}
@@ -86,10 +85,10 @@ function OptionMenu({ menu }) {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.25, ease: "easeInOut" }}
+          transition={{ duration: 0.25, ease: 'easeInOut' }}
           className={
-            "absolute top-7 up-flat out-rounded rounded-full p-2 hover:cursor-pointer" +
-            (location.pathname !== "/" ? " right-12 " : " right-0")
+            'absolute top-7 up-flat out-rounded rounded-full p-2 hover:cursor-pointer' +
+            (location.pathname !== '/' ? ' right-12 ' : ' right-0')
           }
         >
           <ChevronRightIcon
@@ -97,16 +96,16 @@ function OptionMenu({ menu }) {
               ref.current.scroll({
                 top: 0,
                 left: 10000,
-                behavior: "smooth",
+                behavior: 'smooth',
               });
             }}
-            className="size-5 md:size-6 stroke-2 "
+            className='size-5 md:size-6 stroke-2 '
           />
         </motion.div>
       )}
 
-      <div ref={ref} className=" w-full overflow-scroll hide-scroll">
-        <div ref={list} className="inline-flex py-7 pb-10 items-center pr-12 ">
+      <div ref={ref} className=' w-full overflow-scroll hide-scroll'>
+        <div ref={list} className='inline-flex py-7 pb-10 items-center pr-12 '>
           {menu}
         </div>
       </div>

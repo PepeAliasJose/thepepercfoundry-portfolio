@@ -1,4 +1,4 @@
-function GraphBar ({ data, tag, height = 'h-[0%]', color = 'bg-blue-400' }) {
+function GraphBar({ data, tag, height = 'h-[0%]', color = 'bg-blue-400' }) {
   return (
     <div className='flex flex-col gap-4 items-center'>
       <div className='h-72 down w-6  flex items-end relative'>
@@ -20,9 +20,7 @@ function GraphBar ({ data, tag, height = 'h-[0%]', color = 'bg-blue-400' }) {
       </div>
       {tag && <p className='text-sm'>{tag}</p>}
     </div>
-  )
+  );
 }
 
-export default GraphBar
-{
-}
+export default GraphBar;

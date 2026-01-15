@@ -1,15 +1,15 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react-refresh/only-export-components */
-import { useEffect, useLayoutEffect } from "react";
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
-import Menu from "./components/organisms/Menu";
-import { AnimatePresence } from "motion/react";
-import { Bars2Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { useEffect, useLayoutEffect } from 'react';
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
+import Menu from './components/organisms/Menu';
+import { AnimatePresence } from 'motion/react';
+import { Bars2Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
-import i18n from "i18next";
-import { initReactI18next } from "react-i18next";
-import LanguageDetector from "i18next-browser-languagedetector";
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
 
 /*/Pages
 const Index = lazy(() => import('./pages/Index'))
@@ -22,34 +22,34 @@ const NX = lazy(() => import('./pages/NxInventory'))
 const Selene = lazy(() => import('./pages/Selene'))
 const About = lazy(() => import('./pages/About'))*/
 
-import Index from "./pages/Index";
-import Test from "./pages/Test";
-import _404 from "./pages/_404";
-import Education from "./pages/Education";
-import DBD from "./pages/DBD";
-import Minerva from "./pages/Minerva";
-import NxInventory from "./pages/NxInventory";
-import Selene from "./pages/Selene";
-import About from "./pages/About";
+import Index from './pages/Index';
+import Test from './pages/Test';
+import _404 from './pages/_404';
+import Education from './pages/Education';
+import DBD from './pages/DBD';
+import Minerva from './pages/Minerva';
+import NxInventory from './pages/NxInventory';
+import Selene from './pages/Selene';
+import About from './pages/About';
 
 //Locales
-import global_en from "./locales/en/translation.json";
-import global_es from "./locales/es/translation.json";
+import global_en from './locales/en/translation.json';
+import global_es from './locales/es/translation.json';
 //Dragonball-dle
-import dbd_en from "./locales/en/dbd.json";
-import dbd_es from "./locales/es/dbd.json";
+import dbd_en from './locales/en/dbd.json';
+import dbd_es from './locales/es/dbd.json';
 //Minerva I
-import minerva_en from "./locales/en/minerva.json";
-import minerva_es from "./locales/es/minerva.json";
+import minerva_en from './locales/en/minerva.json';
+import minerva_es from './locales/es/minerva.json';
 //SELENE III
-import selene_en from "./locales/en/selene.json";
-import selene_es from "./locales/es/selene.json";
+import selene_en from './locales/en/selene.json';
+import selene_es from './locales/es/selene.json';
 
 //About me
-import about_en from "./locales/en/about.json";
-import about_es from "./locales/es/about.json";
+import about_en from './locales/en/about.json';
+import about_es from './locales/es/about.json';
 
-import { create } from "zustand";
+import { create } from 'zustand';
 
 i18n
   .use(LanguageDetector)
@@ -57,14 +57,14 @@ i18n
   .init({
     debug: false,
     resources: {
-      "en-EN": {
+      'en-EN': {
         translation: global_en,
         dbd: dbd_en,
         minerva: minerva_en,
         selene: selene_en,
         about: about_en,
       },
-      "es-ES": {
+      'es-ES': {
         translation: global_es,
         dbd: dbd_es,
         minerva: minerva_es,
@@ -72,11 +72,11 @@ i18n
         about: about_es,
       },
     },
-    fallbackLng: "en-EN",
+    fallbackLng: 'en-EN',
   });
 
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import { initializeApp } from 'firebase/app';
+import { getAnalytics } from 'firebase/analytics';
 
 function App() {
   const firebaseConfig = {
@@ -128,10 +128,10 @@ const MenuSwitch = ({ setShow, show, location }) => {
       onClick={() => {
         setShow(!show);
       }}
-      className="fixed top-7 right-7 up-flat out-rounded p-1.5 hover:cursor-pointer"
+      className='fixed top-7 right-7 up-flat out-rounded p-1.5 hover:cursor-pointer'
     >
-      {show && <XMarkIcon className="size-6 md:size-7 stroke-2" />}
-      {!show && <Bars2Icon className="size-6 md:size-7 stroke-2" />}
+      {show && <XMarkIcon className='size-6 md:size-7 stroke-2' />}
+      {!show && <Bars2Icon className='size-6 md:size-7 stroke-2' />}
     </div>
   );
 };
@@ -141,7 +141,7 @@ const Switch = () => {
   const { show, setShow, submenu } = useMenu();
 
   useEffect(() => {
-    if (location.pathname == "/") {
+    if (location.pathname == '/') {
       setShow(true);
     } else {
       setShow(false);
@@ -149,34 +149,34 @@ const Switch = () => {
   }, [location]);
 
   useLayoutEffect(() => {
-    const savedTheme = localStorage.getItem("pepercfoundry-theme");
+    const savedTheme = localStorage.getItem('pepercfoundry-theme');
     if (savedTheme) {
-      document.body.setAttribute("data-theme", savedTheme);
+      document.body.setAttribute('data-theme', savedTheme);
     }
   }, []);
 
   useLayoutEffect(() => {
-    document.body.setAttribute("data-menu", show);
+    document.body.setAttribute('data-menu', show);
   }, [show]);
 
   return (
     <>
-      <Routes location={location} key={location.pathname + ":"}>
-        <Route path="/" element={<Index />} />
-        <Route path="/education" element={<Education />} />
-        <Route path="/dragonballdle" element={<DBD />} />
-        <Route path="/minerva" element={<Minerva />} />
-        <Route path="/nx-inventory" element={<NxInventory />} />
-        <Route path="/selene" element={<Selene />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/test" element={<Test />} />
-        <Route path="*" element={<_404 />} />
+      <Routes location={location} key={location.pathname + ':'}>
+        <Route path='/' element={<Index />} />
+        <Route path='/education' element={<Education />} />
+        <Route path='/dragonballdle' element={<DBD />} />
+        <Route path='/minerva' element={<Minerva />} />
+        <Route path='/nx-inventory' element={<NxInventory />} />
+        <Route path='/selene' element={<Selene />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/test' element={<Test />} />
+        <Route path='*' element={<_404 />} />
       </Routes>
       <AnimatePresence>
-        {show && <Menu key={"menu"} fixed={true} />}
+        {show && <Menu key={'menu'} fixed={true} />}
       </AnimatePresence>
 
-      {location.pathname !== "/" && (
+      {location.pathname !== '/' && (
         <MenuSwitch setShow={setShow} show={show} location={location} />
       )}
     </>

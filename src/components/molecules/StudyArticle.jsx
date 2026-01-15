@@ -1,8 +1,8 @@
-import { BuildingLibraryIcon } from '@heroicons/react/24/outline'
-import { StarIcon } from '@heroicons/react/24/solid'
-import { useTranslation } from 'react-i18next'
+import { BuildingLibraryIcon } from '@heroicons/react/24/outline';
+import { StarIcon } from '@heroicons/react/24/solid';
+import { useTranslation } from 'react-i18next';
 
-function StudyArticle ({
+function StudyArticle({
   title,
   highlight,
   date,
@@ -10,13 +10,13 @@ function StudyArticle ({
   school,
   size,
   id,
-  hl
+  hl,
 }) {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
   const data = content.split(':').map((info, i) => {
-    return <p key={title + '-' + i}>{info}</p>
-  })
+    return <p key={title + '-' + i}>{info}</p>;
+  });
 
   return (
     <article id={id} className={'flex flex-col gap-2' + (size ? size : '')}>
@@ -50,7 +50,7 @@ function StudyArticle ({
         </section>
       </div>
     </article>
-  )
+  );
 }
 
-export default StudyArticle
+export default StudyArticle;

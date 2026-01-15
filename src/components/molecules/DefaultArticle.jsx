@@ -1,15 +1,15 @@
-function DefaultArticle ({
+function DefaultArticle({
   title,
   highlight,
   date,
   content,
   company,
   size,
-  id
+  id,
 }) {
   const data = content.split(':').map((info, i) => {
-    return <p key={title + '-' + i}>{info}</p>
-  })
+    return <p key={title + '-' + i}>{info}</p>;
+  });
 
   return (
     <article id={id} className={'flex flex-col gap-2' + (size ? size : '')}>
@@ -24,7 +24,7 @@ function DefaultArticle ({
         <section className='max-w-lg w-full md:ml-auto'>{data}</section>
       </div>
     </article>
-  )
+  );
 }
 
-export default DefaultArticle
+export default DefaultArticle;

@@ -1,20 +1,20 @@
-import { MoonIcon, SunIcon } from '@heroicons/react/24/outline'
-import { useLayoutEffect, useState } from 'react'
+import { MoonIcon, SunIcon } from '@heroicons/react/24/outline';
+import { useLayoutEffect, useState } from 'react';
 
-function ThemeSwitch () {
-  const [currentTheme, setCurrentTheme] = useState('dark')
+function ThemeSwitch() {
+  const [currentTheme, setCurrentTheme] = useState('dark');
   useLayoutEffect(() => {
-    const savedTheme = localStorage.getItem('pepercfoundry-theme')
+    const savedTheme = localStorage.getItem('pepercfoundry-theme');
     if (savedTheme) {
-      setCurrentTheme(savedTheme)
-      document.body.setAttribute('data-theme', savedTheme)
+      setCurrentTheme(savedTheme);
+      document.body.setAttribute('data-theme', savedTheme);
     }
-  }, [])
+  }, []);
 
-  function updateTheme (mode) {
-    localStorage.setItem('pepercfoundry-theme', mode)
-    setCurrentTheme(mode)
-    document.body.setAttribute('data-theme', mode)
+  function updateTheme(mode) {
+    localStorage.setItem('pepercfoundry-theme', mode);
+    setCurrentTheme(mode);
+    document.body.setAttribute('data-theme', mode);
   }
 
   return (
@@ -25,7 +25,7 @@ function ThemeSwitch () {
           (currentTheme == 'light' && ' text-yellow-400')
         }
         onClick={() => {
-          updateTheme('light')
+          updateTheme('light');
         }}
       >
         <SunIcon className='size-6 md:size-7 xl:size-8' />
@@ -37,13 +37,13 @@ function ThemeSwitch () {
           (currentTheme == 'dark' && ' text-cyan-500')
         }
         onClick={() => {
-          updateTheme('dark')
+          updateTheme('dark');
         }}
       >
         <MoonIcon className='size-6 md:size-7 xl:size-8' />
       </div>
     </div>
-  )
+  );
 }
 
-export default ThemeSwitch
+export default ThemeSwitch;

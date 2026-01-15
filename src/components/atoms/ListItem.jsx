@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom';
 
 const ListItem = ({
   hover,
@@ -8,9 +8,9 @@ const ListItem = ({
   subtitle,
   link,
   size = '',
-  newTab = false
+  newTab = false,
 }) => {
-  const location = useLocation()
+  const location = useLocation();
 
   return (
     <Link
@@ -33,7 +33,7 @@ const ListItem = ({
         </p>
       )}
     </Link>
-  )
-}
+  );
+};
 
-export default ListItem
+export default ListItem;

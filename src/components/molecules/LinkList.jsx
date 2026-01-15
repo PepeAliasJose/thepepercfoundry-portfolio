@@ -1,9 +1,9 @@
-import { useTranslation } from 'react-i18next'
-import { useHire } from '../../App'
+import { useTranslation } from 'react-i18next';
+import { useHire } from '../../App';
 
-function LinkList () {
-  const { t } = useTranslation()
-  const { hire } = useHire()
+function LinkList() {
+  const { t } = useTranslation();
+  const { hire } = useHire();
   return (
     <>
       <a
@@ -50,7 +50,7 @@ function LinkList () {
         </p>
       )}
     </>
-  )
+  );
 }
 
-export default LinkList
+export default LinkList;

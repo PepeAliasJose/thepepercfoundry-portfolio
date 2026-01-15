@@ -1,11 +1,11 @@
-import { motion } from 'motion/react'
-import { useTranslation } from 'react-i18next'
-import Logo from './Logo'
-import { useHire } from '../../App'
+import { motion } from 'motion/react';
+import { useTranslation } from 'react-i18next';
+import Logo from './Logo';
+import { useHire } from '../../App';
 
 const Landing = () => {
-  const { t } = useTranslation()
-  const { hire } = useHire()
+  const { t } = useTranslation();
+  const { hire } = useHire();
   return (
     <motion.div
       key={'div_hero'}
@@ -29,8 +29,8 @@ const Landing = () => {
         )}
       </div>
     </motion.div>
-  )
-}
+  );
+};
 
 /*
 <h2
@@ -41,4 +41,4 @@ const Landing = () => {
 </h2>
 */
 
-export default Landing
+export default Landing;
