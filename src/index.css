@@ -1,8 +1,43 @@
 @import 'tailwindcss';
+
+@theme {
+  --breakpoint-2xl: 125rem;
+  --breakpoint-3xl: 200rem;
+
+  /* COLORS */
+  --color-bg: var(--bg);
+  --color-bgT: var(--bgT);
+
+  --color-light-border: var(--light-border);
+  --color-dark-border: var(--dark-border);
+
+  --color-light-bg: var(--light-bg);
+  --color-dark-bg: var(--dark-bg);
+
+  --color-soft-text: var(--soft-text);
+  --color-pure: var(--pure);
+  --color-semi: var(--semi);
+  --color-text: var(--text);
+
+  /*SPECIAL COLORS*/
+  --color-selene: var(--selene);
+
+  --color-hl: var(--hl);
+  --color-hover: var(--hover);
+  --color-golden: var(--golden);
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* COLORS */
   --bg: #222326;
   --bgT: #22232670;
 
@@ -24,11 +59,6 @@
   --hl: oklch(70.652% 0.13068 254.655);
   --hover: oklch(70.652% 0.13068 254.655);
   --golden: hsl(50, 85%, 50%);
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 /*
@@ -40,6 +70,14 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* COLORS */
+
   --bg: #f3f3fa;
   --bgT: #f3f3fa70;
 
@@ -61,11 +99,6 @@
   --hl: oklch(70.652% 0.13068 254.655);
   --hover: oklch(70.652% 0.13068 254.655);
   --golden: oklch(79.524% 0.1616 86.05);
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .selene {

@@ -16,13 +16,13 @@ const Landing = () => {
     >
       <div className='flex flex-col justify-center items-center gap-3 h-full'>
         <Logo />
-        <h1 className='text-center md:text-lg max-w-lg'>
+        <h1 className='text-center md:text-lg max-w-lg 2xl:max-w-xl 2xl:text-2xl'>
           {t('menu.main.subtitle')}
         </h1>
         {hire && (
           <p
             className='font-semibold text-center flex flex-row gap-2 rounded-full bg-blue-400
-        px-4 py-2 text-white'
+        px-4 py-2 text-white 2xl:text-xl'
           >
             {t('menu.main.hire')}
           </p>

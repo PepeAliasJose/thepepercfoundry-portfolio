@@ -101,7 +101,7 @@ function App() {
 }
 
 export const useHire = create((set) => ({
-  hire: false,
+  hire: true,
 }));
 
 const useMenu = create((set) => ({
@@ -128,10 +128,10 @@ const MenuSwitch = ({ setShow, show, location }) => {
       onClick={() => {
         setShow(!show);
       }}
-      className='fixed top-7 right-7 up-flat out-rounded p-1.5 hover:cursor-pointer'
+      className='fixed top-7 right-7 up-flat out-rounded rounded-full! p-1.5 2xl:p-3 hover:cursor-pointer'
     >
-      {show && <XMarkIcon className='size-6 md:size-7 stroke-2' />}
-      {!show && <Bars2Icon className='size-6 md:size-7 stroke-2' />}
+      {show && <XMarkIcon className='size-6 md:size-7 2xl:size-8 stroke-2' />}
+      {!show && <Bars2Icon className='size-6 md:size-7 2xl:size-8 stroke-2' />}
     </div>
   );
 };

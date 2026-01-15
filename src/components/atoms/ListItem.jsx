@@ -20,15 +20,15 @@ const ListItem = ({
       target={newTab ? '_blank' : ''}
       rel={newTab ? 'noopener noreferrer' : ''}
       className={
-        ' hover:cursor-pointer mx-7 w-fit leading-none overflow-clip hover:text-[var(--hover)] pb-2' +
-        (location.pathname == link ? ' text-[var(--hl)] ' : '')
+        ' hover:cursor-pointer mx-7 w-fit leading-none overflow-clip hover:text-hover pb-2' +
+        (location.pathname == link ? ' text-hl ' : '')
       }
     >
-      <p className='text-5xl sm:text-6xl md:text-[3.4rem] lg:text-7xl koulen'>
+      <strong className='text-5xl sm:text-6xl md:text-[3.4rem] lg:text-7xl 2xl:text-8xl 3xl:text-9xl koulen'>
         {content}
-      </p>
+      </strong>
       {subtitle && (
-        <p className='text-sm -mt-1.5 font-normal helvetica leading-none text-[var(--soft-text)] tracking-normal'>
+        <p className='text-sm -mt-1.5 font-normal helvetica leading-none text-soft-text 2xl:text-xl tracking-normal'>
           {subtitle}
         </p>
       )}

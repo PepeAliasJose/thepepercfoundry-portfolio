@@ -66,7 +66,7 @@ function OptionMenu({ menu }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.25, ease: 'easeInOut' }}
-          className='absolute top-7 up-flat out-rounded rounded-full p-2
+          className='absolute top-7 up-flat out-rounded rounded-full! p-2  2xl:p-3
       hover:cursor-pointer'
         >
           <ChevronLeftIcon
@@ -77,7 +77,7 @@ function OptionMenu({ menu }) {
                 behavior: 'smooth',
               });
             }}
-            className='size-5 md:size-6 stroke-2 '
+            className='size-5 md:size-6 2xl:size-8 stroke-2 '
           />
         </motion.div>
       )}
@@ -87,8 +87,8 @@ function OptionMenu({ menu }) {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.25, ease: 'easeInOut' }}
           className={
-            'absolute top-7 up-flat out-rounded rounded-full p-2 hover:cursor-pointer' +
-            (location.pathname !== '/' ? ' right-12 ' : ' right-0')
+            'absolute top-7 up-flat out-rounded rounded-full! p-2 2xl:p-3 hover:cursor-pointer' +
+            (location.pathname !== '/' ? ' right-12 2xl:right-16 ' : ' right-0')
           }
         >
           <ChevronRightIcon
@@ -99,7 +99,7 @@ function OptionMenu({ menu }) {
                 behavior: 'smooth',
               });
             }}
-            className='size-5 md:size-6 stroke-2 '
+            className='size-5 md:size-6 2xl:size-8 stroke-2 '
           />
         </motion.div>
       )}

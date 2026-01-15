@@ -108,7 +108,7 @@ function Menu({ fixed }) {
       }}
       transition={{ duration: 0.25, ease: 'easeInOut', delay: 0 }}
       className={
-        'w-screen h-dvh overflow-clip inline-flex bg-[var(--bgT)] ' +
+        'w-screen h-dvh overflow-clip inline-flex bg-bgT ' +
         (fixed ? ' fixed top-0 left-0 ' : '')
       }
     >
@@ -160,7 +160,7 @@ function Menu({ fixed }) {
         exit={{ opacity: 0 }}
         transition={{ duration: 0.2, ease: 'easeInOut', delay: 0 }}
         className=' w-full md:max-w-[50vw] lg:w-5xl
-       h-dvh lg:min-w-xl flex flex-col justify-between bg-[var(--bg)]'
+       h-dvh lg:min-w-xl 2xl:min-w-2xl 3xl:min-w-5xl flex flex-col justify-between bg-bg'
       >
         <header
           className='px-7 text-sm md:text-[1rem] font-semibold 
@@ -181,10 +181,10 @@ function Menu({ fixed }) {
         <footer className='inline-flex gap-2 md:gap-4 px-7 py-5 font-semibold items-center'>
           <Link
             to={'/about'}
-            className=' mr-auto hover:text-[var(--hover)] 
-           inline-flex gap-1 items-center flex-nowrap'
+            className=' mr-auto hover:text-hover 2xl:text-2xl
+           inline-flex gap-1 2xl:gap-2 items-center flex-nowrap'
           >
-            <LinkIcon className='size-4  stroke-2' />
+            <LinkIcon className='size-4 2xl:size-6 stroke-2' />
             {t('menu.about')}
           </Link>
           <ThemeSwitch />
@@ -266,8 +266,8 @@ const SectionButton = memo(({ onClick, option, selected, content }) => {
     <p
       onClick={onClick}
       className={
-        ' hover:cursor-pointer p-2 px-4 ' +
-        (option == selected ? ' down ' : ' text-[var(--soft-text)] ')
+        ' hover:cursor-pointer p-2 2xl:py-3 px-4 2xl:px-6 2xl:text-2xl ' +
+        (option == selected ? ' down rounded-full! ' : ' text-soft-text ')
       }
     >
       {content}
@@ -276,9 +276,3 @@ const SectionButton = memo(({ onClick, option, selected, content }) => {
 });
 
 export default Menu;
-
-/*
-<div className=' fixed top-7 right-7 up out-rounded p-2 md:p-2.5'>
-            <XMarkIcon className='size-6 md:size-7 ' />
-          </div>
-*/
