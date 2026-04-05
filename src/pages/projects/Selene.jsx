@@ -34,7 +34,7 @@ function Selene() {
             width={2000}
           />
         </picture>
-        <div className='flex flex-col gap-2 h-full justify-between mt-10 mb-5 relative -z-20'>
+        <div className='flex flex-col gap-2 h-full justify-between mt-10 mb-5 relative -z-20 2xl:mt-20'>
           <h1
             style={{ opacity: showTitle ? 1 : 0 }}
             className='text-7xl relative sm:text-[9rem] md:text-[11rem] lg:text-[13rem]
