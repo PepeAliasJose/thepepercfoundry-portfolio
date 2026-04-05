@@ -28,7 +28,7 @@ function ThemeSwitch() {
           updateTheme('light');
         }}
       >
-        <SunIcon className='size-6 md:size-7 xl:size-8 2xl:size-10' />
+        <SunIcon className='size-6 md:size-7 xl:size-8 2xl:size-8' />
       </div>
 
       <div
@@ -40,7 +40,7 @@ function ThemeSwitch() {
           updateTheme('dark');
         }}
       >
-        <MoonIcon className='size-6 md:size-7 xl:size-8 2xl:size-10' />
+        <MoonIcon className='size-6 md:size-7 xl:size-8 2xl:size-8' />
       </div>
     </div>
   );

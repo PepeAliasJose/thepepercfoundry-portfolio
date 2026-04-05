@@ -1,10 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react-refresh/only-export-components */
-import { useEffect, useLayoutEffect } from 'react';
+import { useLayoutEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import Menu from './components/organisms/Menu';
-import { AnimatePresence } from 'motion/react';
 import { Bars2Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 import i18n from 'i18next';
@@ -26,10 +25,10 @@ import Index from './pages/Index';
 import Test from './pages/Test';
 import _404 from './pages/_404';
 import Education from './pages/Education';
-import DBD from './pages/DBD';
-import Minerva from './pages/Minerva';
-import NxInventory from './pages/NxInventory';
-import Selene from './pages/Selene';
+import DBD from './pages/projects/DBD';
+import Minerva from './pages/projects/Minerva';
+import NxInventory from './pages/projects/NxInventory';
+import Selene from './pages/projects/Selene';
 import About from './pages/About';
 
 //Locales
@@ -101,13 +100,18 @@ function App() {
 }
 
 export const useHire = create((set) => ({
-  hire: true,
+  hire: false,
 }));
 
-const useMenu = create((set) => ({
-  show: true,
-  setShow: (s) => set(() => ({ show: s })),
-}));
+const useMenu = (isLanding) => {
+  const [show, setShow] = useState(isLanding);
+
+  return {
+    show,
+    setShow,
+  };
+};
+
 /**
  *
  * 0 projects
@@ -128,19 +132,19 @@ const MenuSwitch = ({ setShow, show, location }) => {
       onClick={() => {
         setShow(!show);
       }}
-      className='fixed top-7 right-7 up-flat out-rounded rounded-full! p-1.5 2xl:p-3 hover:cursor-pointer'
+      className='fixed top-7 right-7 up-flat out-rounded rounded-full! p-1.5 2xl:p-2 hover:cursor-pointer'
     >
-      {show && <XMarkIcon className='size-6 md:size-7 2xl:size-8 stroke-2' />}
-      {!show && <Bars2Icon className='size-6 md:size-7 2xl:size-8 stroke-2' />}
+      {show && <XMarkIcon className='size-6 md:size-7 stroke-2' />}
+      {!show && <Bars2Icon className='size-6 md:size-7 stroke-2' />}
     </div>
   );
 };
 
 const Switch = () => {
   const location = useLocation();
-  const { show, setShow, submenu } = useMenu();
+  const { show, setShow, submenu } = useMenu(location.pathname == '/');
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (location.pathname == '/') {
       setShow(true);
     } else {
@@ -156,8 +160,8 @@ const Switch = () => {
   }, []);
 
   useLayoutEffect(() => {
-    document.body.setAttribute('data-menu', show);
-  }, [show]);
+    document.body.setAttribute('data-menu', show ? 'open' : 'close');
+  }, [show, location]);
 
   return (
     <>
@@ -172,9 +176,8 @@ const Switch = () => {
         <Route path='/test' element={<Test />} />
         <Route path='*' element={<_404 />} />
       </Routes>
-      <AnimatePresence>
-        {show && <Menu key={'menu'} fixed={true} />}
-      </AnimatePresence>
+
+      <Menu key={'menu'} fixed={true} />
 
       {location.pathname !== '/' && (
         <MenuSwitch setShow={setShow} show={show} location={location} />

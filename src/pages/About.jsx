@@ -1,28 +1,28 @@
-import { useTranslation } from 'react-i18next'
-import Footer from '../components/organisms/Footer'
-import Logo from '../components/atoms/Logo'
-import { useEffect } from 'react'
+import { useTranslation } from 'react-i18next';
+import Footer from '../components/organisms/Footer';
+import Logo from '../components/atoms/Logo';
+import { useEffect } from 'react';
 
-function About () {
-  const { t } = useTranslation(['about'])
-  const { t: c } = useTranslation()
+function About() {
+  const { t } = useTranslation(['about']);
+  const { t: c } = useTranslation();
 
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
       <header className=''></header>
       <main className='p-10 flex flex-col items-center'>
-        <div className='flex flex-col md:flex-row gap-10 items-center max-w-4xl md:my-20'>
+        <div className='flex flex-col md:flex-row gap-10 items-start w-full max-w-4xl md:my-20'>
           <img
             src='me.webp'
             width={250}
             alt='me'
-            className='rounded-full shadow-xl border-2'
+            className='rounded-full shadow-xl border-2 hidden'
           />
-          <div className='flex flex-col gap-4 items-center text-lg'>
+          <div className='flex flex-col gap-4 items-start text-lg'>
             <p className='max-w-xl'>{t('p1')}</p>
             <p className='max-w-xl'>{t('p2')}</p>
           </div>
@@ -56,16 +56,16 @@ function About () {
         <Footer />
       </footer>
     </>
-  )
+  );
 }
 
-function AboutImg ({ src, alt, title }) {
+function AboutImg({ src, alt, title }) {
   return (
     <div className='overflow-clip w-full rounded-none relative'>
       <h3 className='absolute px-5 py-3 font-bold text-white'>{title}</h3>
       <img src={src} width={1500} alt={alt} className='' />
     </div>
-  )
+  );
 }
 
-export default About
+export default About;

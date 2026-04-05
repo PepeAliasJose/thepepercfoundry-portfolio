@@ -1,0 +1,2 @@
+@custom-variant open (&:where([data-menu=open], [data-menu=open] *));
+@custom-variant show (&:where([data-media=show], [data-media=show] *));

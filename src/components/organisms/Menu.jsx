@@ -2,9 +2,8 @@ import { memo, useRef, useState } from 'react';
 import ThemeSwitch from '../molecules/ThemeSwitch';
 
 import ListItem from '../atoms/ListItem';
-import { AnimatePresence, motion } from 'motion/react';
-import { MotionVideo } from '../atoms/MotionVideo';
-import { MotionImg } from '../atoms/MotionImg';
+import MotionVideo from '../atoms/MotionVideo';
+import MotionImg from '../atoms/MotionImg';
 import LangSwitch from '../molecules/LangSwitch';
 
 import { useTranslation } from 'react-i18next';
@@ -85,82 +84,58 @@ function Menu({ fixed }) {
   ];
 
   return (
-    <motion.div
+    <div
       //Blur de pantalla general y foto/video de presentación del proyecto
-      key={'menu'}
-      initial={{
-        backdropFilter: index ? 'blur(0px)' : 'blur(50px)',
-        opacity: index ? 0 : 1,
-        //mask: index
-        //  ? 'radial-gradient(circle at calc(100vw - 3rem) 3rem, rgb(0,0,0) 0vmax, rgba(0,0,0,0) 0vmax)'
-        //  : 'radial-gradient(circle at calc(100vw - 3rem) 3rem, rgb(0,0,0) 120vmax, rgba(0,0,0,0) 130vmax)'
-      }}
-      animate={{
-        backdropFilter: 'blur(50px)',
-        opacity: 1,
-        // mask: 'radial-gradient(circle at calc(100vw - 3rem) 3rem, rgb(0,0,0) 120vmax, rgba(0,0,0,0) 130vmax)',
-        transition: { duration: 0.2, ease: 'easeInOut' },
-      }}
-      exit={{
-        backdropFilter: 'blur(0px)',
-        opacity: 0,
-        //mask: 'radial-gradient(circle at calc(100vw - 3rem) 3rem, rgb(0,0,0) 0vmax, rgba(0,0,0,0) 0vmax)',
-      }}
-      transition={{ duration: 0.25, ease: 'easeInOut', delay: 0 }}
-      className={
-        'w-screen h-dvh overflow-clip inline-flex bg-bgT ' +
-        (fixed ? ' fixed top-0 left-0 ' : '')
-      }
+      className='w-screen h-dvh overflow-clip inline-flex bg-bgT
+      open:backdrop-blur-2xl opacity-0 open:opacity-100 
+      pointer-events-none open:pointer-events-auto
+      transition-all duration-300 
+      fixed top-0 left-0 '
     >
-      <motion.div
-        initial={{ opacity: index ? 0 : 1 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.2, ease: 'easeInOut', delay: 0 }}
-        className=' w-full h-dvh  hidden md:block relative '
+      <div
+        className='w-full h-dvh hidden md:block 
+        relative opacity-0 open:opacity-100 transition-opacity 
+        ease-in-out duration-200 open:pointer-events-none'
       >
-        <AnimatePresence mode='sync'>
-          <motion.section
-            key={'hero_content'}
-            id='hero_content'
-            className=' w-full h-dvh  hidden sm:grid relative grid-cols-1 grid-rows-1'
-          >
-            {hero == 0 && <Landing key={'default'} />}
-            <MotionVideo
-              key={'daw'}
-              src={'projectsResources/minerva/daw_hero.webm'}
-              pos={1}
-              selected={hero}
-            />
+        <section
+          key={'hero_content'}
+          id='hero_content'
+          className=' w-full h-dvh hidden sm:grid relative grid-cols-1 grid-rows-1'
+        >
+          {hero == 0 && <Landing key={'default'} />}
+          <MotionVideo
+            key={'daw'}
+            src={'projectsResources/minerva/daw_hero.webm'}
+            pos={1}
+            selected={hero}
+          />
 
-            <MotionVideo
-              key={'dbd'}
-              src={'projectsResources/dbd/dbd_hero.webm'}
-              pos={2}
-              selected={hero}
-            />
+          <MotionVideo
+            key={'dbd'}
+            src={'projectsResources/dbd/dbd_hero.webm'}
+            pos={2}
+            selected={hero}
+          />
 
-            <MotionImg
-              key={'rob'}
-              //TODO: video luz parpadenando con la foto buena
-              src={'projectsResources/selene/sel_hero.webp'}
-              pos={3}
-              selected={hero}
-            />
-          </motion.section>
-        </AnimatePresence>
-      </motion.div>
+          <MotionImg
+            key={'rob'}
+            //TODO: video luz parpadenando con la foto buena
+            src={'projectsResources/selene/sel_hero.webp'}
+            pos={3}
+            selected={hero}
+          />
+        </section>
+      </div>
 
-      <motion.section
+      <section
         //Menu lateral
         key={'lateral_menu'}
         id='Lateral_menu'
-        initial={{ translateX: index ? '100%' : '0%' }}
-        animate={{ translateX: '0%' }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.2, ease: 'easeInOut', delay: 0 }}
         className=' w-full md:max-w-[50vw] lg:w-5xl
-       h-dvh lg:min-w-xl 2xl:min-w-2xl 3xl:min-w-5xl flex flex-col justify-between bg-bg'
+        h-dvh lg:min-w-xl 2xl:min-w-2xl 3xl:min-w-5xl 
+        flex flex-col justify-between bg-bg
+        translate-x-full open:translate-x-0
+        transition-transform duration-300 ease-in-out'
       >
         <header
           className='px-7 text-sm md:text-[1rem] font-semibold 
@@ -181,17 +156,17 @@ function Menu({ fixed }) {
         <footer className='inline-flex gap-2 md:gap-4 px-7 py-5 font-semibold items-center'>
           <Link
             to={'/about'}
-            className=' mr-auto hover:text-hover 2xl:text-2xl
-           inline-flex gap-1 2xl:gap-2 items-center flex-nowrap'
+            className=' mr-auto hover:text-hover 2xl:text-lg
+           inline-flex gap-1 2xl:gap-2 items-center flex-nowrap underline'
           >
-            <LinkIcon className='size-4 2xl:size-6 stroke-2' />
+            <LinkIcon className='size-4 stroke-2' />
             {t('menu.about')}
           </Link>
           <ThemeSwitch />
           <LangSwitch />
         </footer>
-      </motion.section>
-    </motion.div>
+      </section>
+    </div>
   );
 }
 
@@ -266,7 +241,7 @@ const SectionButton = memo(({ onClick, option, selected, content }) => {
     <p
       onClick={onClick}
       className={
-        ' hover:cursor-pointer p-2 2xl:py-3 px-4 2xl:px-6 2xl:text-2xl ' +
+        ' hover:cursor-pointer p-2 px-4 2xl:text-lg ' +
         (option == selected ? ' down rounded-full! ' : ' text-soft-text ')
       }
     >

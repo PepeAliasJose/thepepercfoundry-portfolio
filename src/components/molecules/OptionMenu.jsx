@@ -1,5 +1,4 @@
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
-import { motion } from 'motion/react';
 import { useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -62,12 +61,9 @@ function OptionMenu({ menu }) {
   return (
     <div className='w-full relative'>
       {buttonBack && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.25, ease: 'easeInOut' }}
-          className='absolute top-7 up-flat out-rounded rounded-full! p-2  2xl:p-3
-      hover:cursor-pointer'
+        <div
+          className='absolute top-7 bg-bgT! backdrop-blur-2xl! up-flat out-rounded rounded-full! p-2 2xl:p-3
+      hover:cursor-pointer '
         >
           <ChevronLeftIcon
             onClick={() => {
@@ -79,15 +75,12 @@ function OptionMenu({ menu }) {
             }}
             className='size-5 md:size-6 2xl:size-8 stroke-2 '
           />
-        </motion.div>
+        </div>
       )}
       {buttonForward && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.25, ease: 'easeInOut' }}
+        <div
           className={
-            'absolute top-7 up-flat out-rounded rounded-full! p-2 2xl:p-3 hover:cursor-pointer' +
+            'absolute top-7 up-flat out-rounded rounded-full! p-2 2xl:p-3 hover:cursor-pointer bt-bgT! ' +
             (location.pathname !== '/' ? ' right-12 2xl:right-16 ' : ' right-0')
           }
         >
@@ -101,7 +94,7 @@ function OptionMenu({ menu }) {
             }}
             className='size-5 md:size-6 2xl:size-8 stroke-2 '
           />
-        </motion.div>
+        </div>
       )}
 
       <div ref={ref} className=' w-full overflow-scroll hide-scroll'>

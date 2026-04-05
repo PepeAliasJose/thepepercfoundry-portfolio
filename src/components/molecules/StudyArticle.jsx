@@ -23,7 +23,7 @@ function StudyArticle({
       <div className='flex flex-col md:flex-row gap-5 md:gap-0'>
         <section className='flex md:flex-col gap-4 md:gap-0 w-full md:max-w-72 px-0 '>
           <div className='flex flex-col '>
-            <h3 className=' w-fit text-xl md:text-3xl font-bold text-[var(--hl)]'>
+            <h3 className=' w-fit text-xl md:text-3xl font-bold text-hl'>
               {title}
             </h3>
             <div className='font-semibold self-start text-xs mt-1 text-gray-500'>
@@ -33,7 +33,7 @@ function StudyArticle({
           {hl && (
             <div
               className='inline-flex items-center px-3 text-xs md:text-sm 
-            py-2 h-fit up gap-1 text-[var(--bg)] bg-[var(--golden)] w-fit
+            py-2 h-fit up gap-1 text-bg bg-golden w-fit
              md:my-2 ml-auto sm:ml-0 text-nowrap font-bold '
             >
               <StarIcon className='size-4 ' />

@@ -15,7 +15,7 @@ function DefaultArticle({
     <article id={id} className={'flex flex-col gap-2' + (size ? size : '')}>
       <div className='flex flex-col md:flex-row gap-10 md:gap-0'>
         <section className='flex flex-col gap-0 w-full max-w-72 px-0 '>
-          <h3 className=' w-fit text-xl font-bold text-[var(--hl)]'>{title}</h3>
+          <h3 className=' w-fit text-xl font-bold text-hl'>{title}</h3>
           <h4 className='font-semibold text-xl  whitespace-nowrap'>
             {company}
           </h4>

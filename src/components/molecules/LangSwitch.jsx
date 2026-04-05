@@ -17,15 +17,15 @@ function LangSwitch() {
     >
       <div
         className={
-          'absolute h-8 2xl:h-10 m-1 w-16 rounded-full bg-semi transition-transform ' +
+          'absolute h-8 2xl:h-8 m-1 w-16 rounded-full bg-semi transition-transform ' +
           (lang == 'es-ES' ? ' translate-x-14 ' : ' translate-x-0 ')
         }
       >
         <div className='size-full' />
       </div>
-      <div className='inline-flex justify-between items-center w-full p-2 2xl:h-12'>
-        <p className='w-full 2xl:text-xl'>ES</p>
-        <p className='w-full 2xl:text-xl'>ENG</p>
+      <div className='inline-flex justify-between items-center w-full p-2 2xl:h-10'>
+        <p className='w-full 2xl:text-lg'>ES</p>
+        <p className='w-full 2xl:text-lg'>ENG</p>
       </div>
     </div>
   );
